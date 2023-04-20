@@ -1,19 +1,38 @@
 # Structure
-- 20 Minutes Input: Who are we, why Julia, focus of this workshop, how this workshop works (, setup/install software)
-- 1st lesson: Basics: Variables, Functions, Control Flow, loops, array comprehension, loading packages, namespaces
--> small first project: write a function/algorithmn that can later be used with measurements
-- 2nd lesson: Types: everything has a type, abstract/concrete types, type hierarchy in julia, create your own types (Pokemon?), constructors
-- 3rd lesson: multiple dispatch: what is it, "external dispatch", new types for existing operations (vs. functional) and new operations for existing types (vs. object oriented), parametric types, vs. functional continuation, vs. function overloading
-- 4th lesson: advanced things for fast people (maybe put functional continuation and function overloading here); an advanced programming exercise; package development
+## Input (20 Min)
+- Who are we, why Julia, focus of this workshop, how this workshop works (, setup/install software)
+
+## Basics (30 min)
+- Variables, Functions, Control Flow, loops, array comprehension, loading packages, namespaces
+- exercise: write a function/algorithmn that can later be used with custom types
+
+## Types (30 min)
+- everything has a type, abstract/concrete types, type hierarchy in julia, create your own types, constructors
+- exercise: Pokemon / RPS / ColorTypes.jl
+
+## Multiple Dispatch (30 min)
+- what is it, "external dispatch", new types for existing operations (vs. functional) and new operations for existing types (vs. object oriented), parametric types, vs. functional continuation, vs. function overloading
+- exercise: create methods for your own type (measurements/)
+
+## advanced things for fast people (open end)
+(maybe put functional continuation and function overloading here
+- an advanced programming exercise
+- package development
 
 # Examples
 
 Maybe write first the function programming/"R" way, which is functional continuation
 
+## Promising
+- define a vector/matrix algorithm in "Basics", define RGB colors in "Types", make them into a vector space in "Multiple Dispatch" and use the algorithm on them
+- define an algorithm in Basics, define measurements in types, use the algorithmn on them in "multiple dispatch"
+- OneHotVector (with the bonus of added performance)
+
 ## Introductory
 - Pokemon: https://gdalle.github.io/JuliaComputationSolutions/hw1a_solutions.html
 - Rock, Paper, Scissors: https://giordano.github.io/blog/2017-11-03-rock-paper-scissors/
 - ColorTypes.jl, ColorVectorSpace.jl
+- Square
 
 ## Advanced
 - OneHotVector (also needs *multiple* dispatch)
@@ -51,3 +70,5 @@ Maybe write first the function programming/"R" way, which is functional continua
 
 # Input
 - The expression problem: https://en.wikipedia.org/wiki/Expression_problem
+
+I like how it makes you think!
