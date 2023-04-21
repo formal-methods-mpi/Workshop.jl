@@ -6,7 +6,7 @@ on:
 
 env:
   PR_NUMBER: ${{ github.event.pull_request.number }}
-  GHP_URL: 'https://aaronpeikert.github.io/StenoGraphs.jl/'
+  GHP_URL: 'https://formal-methods-mpi.github.io/Workshop.jl/'
 
 jobs:
   build:
