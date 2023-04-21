@@ -1,6 +1,6 @@
-using JuliaWorkshop
+using Workshop
 using Test
 
-@testset "JuliaWorkshop.jl" begin
+@testset "Workshop.jl" begin
     @test true
 end

@@ -1,4 +1,4 @@
-name = "JuliaWorkshop"
+name = "Workshop"
 uuid = "9f73e154-e032-11ed-1bae-81cc86e26d0a"
 authors = ["Maximilian S. Ernst, Moritz Ketzer, Aaron Peikert and contributors"]
 version = "0.1.0"
