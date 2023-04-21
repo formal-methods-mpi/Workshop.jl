@@ -1,6 +1,14 @@
 ############################################################################################
 # algorithmn
 
+function predict(x, β)
+    return β*x
+end
+
+function loss(x, y, β)
+    return sum((predict(x, β) - y)).^2
+end
+
 function thickness(density, mass, width, length)
     thickness = mass/(density*width*length)
     return thickness

@@ -1,9 +1,15 @@
 # Structure
 ## Input (20 Min)
 - Who are we, why Julia, focus of this workshop, how this workshop works (, setup/install software)
+- maybe dedicated 10 minutes Philosophy of Julia
+
+## Workflow (10 min) ? -> Moritz
 
 ## Basics (30 min)
+### Syntax
 - Variables, Functions, Control Flow, loops, array comprehension, loading packages, namespaces
+- side-by-side to R/python?
+### Exercise
 - exercise: write a function/algorithmn that can later be used with custom types
 
 ## Types (30 min)
@@ -18,6 +24,9 @@
 (maybe put functional continuation and function overloading here
 - an advanced programming exercise
 - package development
+
+## Wrap up (10 min)
+- explain why md gives you what we wanted in the beginning
 
 # Examples
 
@@ -61,6 +70,13 @@ Maybe write first the function programming/"R" way, which is functional continua
 # Setup
 - Install VSCode + julia + julia extension; use Pkg.instantiate to set up
     julia --project -e 'using Pkg; Pkg.instantiate()'
+- Give online alternative
+
+- google colab
+- https://aaronpeikert.github.io/repro-workshop/self-paced/getting-started.html
+- rmarkdown/quarto books/
+- Workshop als Paket, Documenter docs als Workshop
+
 
 # Resources
 - From zero to Julia: https://discourse.julialang.org/t/from-zero-to-julia-learn-how-to-code-in-julia/33595
@@ -72,3 +88,9 @@ Maybe write first the function programming/"R" way, which is functional continua
 - The expression problem: https://en.wikipedia.org/wiki/Expression_problem
 
 I like how it makes you think!
+
+# Additional Input
+- Cheat sheet: Important Modules and their functions
+- Workflow: REPL, pkg.instantiate, help, basic repl/shell stuff, autocompletion, \beta
+
+- rephrase: more nuanced difficulty grading

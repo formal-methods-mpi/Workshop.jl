@@ -2,8 +2,8 @@
 # algorithmn
 # Vielleicht einfache lineare Regression? Also
 
-x = rand(10)
-y = 0.5*x + rand(10)/3
+x = randn(10)
+y = 0.5*x + randn(10)/3
 
 function squared_loss(x, y, β)
     ŷ = β*x

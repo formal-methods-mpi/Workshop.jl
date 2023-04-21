@@ -40,3 +40,5 @@ v2 = rand(RGB, 10)
 v1 + v2
 
 [v1 v2 v1+v2]
+
+@less show(a)
