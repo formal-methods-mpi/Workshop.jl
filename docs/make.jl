@@ -15,13 +15,16 @@ makedocs(;
         canonical="https://formal-methods-mpi.github.io/Workshop.jl",
         edit_link="main",
         assets=String[],
+        collapselevel = 1
     ),
     pages=[
         "Home" => "index.md",
         "Chapter 0: Workflow" => "Chapter0/workflow.md",
         "Chapter 1: Syntax" => [
             "Syntax" => "Chapter1/syntax.md", 
-            "Exercise" => "Chapter1/exercise.md"]
+            "Exercise" => "Chapter1/exercise.md"],
+        "Chapter 2: Types" => [
+            "Types" => "Chapter2/types.md"]
     ],
     doctest = false, # use :fix to auto fix.
 )
