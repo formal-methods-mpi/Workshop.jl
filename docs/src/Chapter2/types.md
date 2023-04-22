@@ -127,3 +127,6 @@ my_crobat = Crobat("Xwing", 105, 100, 210, 112)
 
 !!! danger "Insert footnote for source of pokemon example"
     https://gdalle.github.io/JuliaComputationSolutions/hw1a_solutions.html
+
+## Constructors
+
