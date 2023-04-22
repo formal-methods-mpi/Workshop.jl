@@ -9,13 +9,14 @@ using Random
 Random.seed!(1243)
 
 using Plots
+default(legend = false)
 
 x = 10 .+ 3*randn(20)
 β = 300
 α = 1000
 y = α .+ β*x + 500*randn(20)
 
-plot(x, y; seriestype=:scatter)
+plot(x, y; seriestype=:scatter, xlabel = "Education", ylabel = "Income")
 savefig("data.png")
 ```
 
@@ -37,20 +38,28 @@ As you may recal from university, school, or learn just now, a straight line is 
 
 ```@raw html
 <details>
-<summary>Solution</summary>
+<summary>show solution</summary>
 <br>
 ```
-```@example linreg
-function predict(x, α, β)
-    y = α .+ β*x
-    return y
-end
-nothing # hide
-```
+!!! tip "Solution"
+    ```julia
+    function predict(x, α, β)
+        y = α .+ β*x
+        return y
+    end
+    ```
 ```@raw html
 </details>
 ```
 \
+
+```@setup linreg
+function predict(x, α, β)
+    y = α .+ β*x
+    return y
+end
+```
+
 Let's simulate some data for the task at hand. First, we load the `Random` package (a julia package for random number generation) and set a seed (to make our experiments reproducible):
 
 ```julia
@@ -71,11 +80,15 @@ This produces a vector of 20 values with 10 years of education as the average, a
 
 ```@raw html
 <details>
-<summary>Solution</summary>
+<summary>show solution</summary>
 <br>
 ```
+!!! tip "Solution"
+    ```julia
+    y = predict(x, 1000, 300)
+    ```
 ```@example linreg
-y = predict(x, 1000, 300)
+y = predict(x, 1000, 300) #hide
 ```
 ```@raw html
 </details>
@@ -93,39 +106,74 @@ And viola! We have some data to work with.
 In reality of course, we don't know the values for ``\alpha`` and ``\beta``, but we have to estimate them from the data. To do so, we first need some indication of how good a certain combination of values works for our data. Usually, we use the sum of squared errors for this task:
 
 ```math
-\alpha 
+\sum_{i=1}^n (\hat{y}_i - y_i)^2
 ```
 
-```math
-\sum_{i=1}^n (\hat\y_i - y_i)^2
+So we go through all of our `n` data points (`i = 1, ..., n`) and for each of those data points we compute the squared distance between the prediction, ``\hat{y}_i``, and the value we observed in reality, ``y_i``.
+
+!!! compat "Exercise"
+    Define a function `squared_error` that takes a vector of predicted values and a vector observed values as input and computes the sum of squared errors between them.
+
+```@raw html
+<details>
+<summary>show solution</summary>
+<br>
 ```
-
-So we go through all of our `n` data points (`i = 1, ..., n`) and for each of those data points we compute the squared distance between the prediction and the value we observed in reality.
-
-Task: Define a function `squared_error` that takes a vector of predicted values and observed values as input and computes the squared loss between them.
-
-Solution:
-```julia
-function squared_error(y, ŷ)
-    error = 0.0
-    for i in eachindex(y)
-        error += (y[i] - ŷ[i])^2
+!!! tip "Solution"
+    ```julia
+    function squared_error(y, ŷ)
+        error = 0.0
+        for i in eachindex(y)
+            error += (y[i] - ŷ[i])^2
+        end
+        return error
     end
-    return error
-end
-```
-or, a bit shorter using broadcasting:
-```julia
+    ```
+    or, a bit shorter using broadcasting:
+    ```julia
+    function squared_error(y, ŷ)
+        return sum((y - ŷ).^2)
+    end
+    ```
+```@setup linreg
 function squared_error(y, ŷ)
     return sum((y - ŷ).^2)
 end
 ```
-
-Task: Using your previously defined `predict` and `squared_error` functions to define a function `squared_error_regression` that takes as input values for `α`, `β`, `x` and `y` and returns as output the squared error between predictions and observed values. Then, use this function to compute the squared error for the parameters
-
-Solution:
-```julia
-function squared_error_regression(α, β, y, x)
-    return squared_error(y, predict(x, α, β))
-end
+```@raw html
+</details>
 ```
+\
+
+!!! compat "Exercise"
+    Using your previously defined `predict` and `squared_error` functions to define a function `squared_error_regression` that takes as input values for `α`, `β`, `x` and `y` and returns as output the squared error between predictions and observed values. Then, use this function to compute the squared error for the parameter values 1. `β = 100, α = 200` and 2. `β = 300, α = 1000`
+
+```@raw html
+<details>
+<summary>show solution</summary>
+<br>
+```
+!!! tip "Solution"
+    ```julia
+    function squared_error_regression(α, β, y, x)
+        return squared_error(y, predict(x, α, β))
+    end
+
+    squared_error_regression(200, 100, y, x)
+    squared_error_regression(1000, 300, y, x)
+    ```
+```@example linreg
+function squared_error_regression(α, β, y, x) #hide
+    return squared_error(y, predict(x, α, β)) #hide
+end #hide
+ #hide
+squared_error_regression(200, 100, y, x) #hide
+```
+```@example linreg
+squared_error_regression(1000, 300, y, x) #hide
+```
+```@raw html
+</details>
+```
+\
+You should see that the error corresponding to the true parameters we used to simulate the data is much lower.
