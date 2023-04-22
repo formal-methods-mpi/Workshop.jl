@@ -112,7 +112,7 @@ In reality of course, we don't know the values for ``\alpha`` and ``\beta``, but
 So we go through all of our `n` data points (`i = 1, ..., n`) and for each of those data points we compute the squared distance between the prediction, ``\hat{y}_i``, and the value we observed in reality, ``y_i``.
 
 !!! compat "Exercise"
-    Define a function `squared_error` that takes a vector of predicted values and a vector observed values as input and computes the sum of squared errors between them.
+    Define a function `squared_error` that takes a vector of predicted values and a vector of observed values as input and computes the sum of squared errors between them.
 
 ```@raw html
 <details>
