@@ -163,6 +163,8 @@ and if we plug in the values for education with measurement error, we achieve
 ```@example exercise_dispatch
     predict(x, 1000, 300)
 ```
+a prediction of income with the respective measurement error.
+
 
 Hopefully, this serves a a nice illustration of what multiple dispatch together with julias type system is able to achieve.
 When you wrote the `predict` function at the beginning of this workshop, you probably had no idea what multiple dispatch even is.

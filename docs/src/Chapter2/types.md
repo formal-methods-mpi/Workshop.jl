@@ -80,17 +80,23 @@ end
 ```
 We now have an abstract type `Pokemon` with subtypes `Normal`, `Fire`, `Flying` and `Electric`,
 and a composite type `Pikachu` which is a subtype of `Electric`.
+The composite type `Pikachu` has the "fields" `nickname`, `attack`, `defense`, `speed` and `hp`, where we can store the respective values.
+    
 We are now able to create our very own `Pikachu` to fight in our team:
 
 ```@example types
 my_pikachu = Pikachu("Pika", 135, 80, 110, 132)
-typeof(my_pikachu)
 ```
 
 which creates a variable `my_pikachu` of type `Pikachu`.
 
+We can retrieve the values stored in the fields as
+```@example types
+my_pikachu.defense
+```
+
 !!! compat "Exercise"
-    Create a new composite type for a pokemon of your choice of type `Flying`, and create an instance of that pokemon.
+    Create a new composite type for a pokemon of your choice of type `Flying`, create an instance of that pokemon, and retrieve it's nickname.
 
 ```@raw html
 <details>
@@ -108,6 +114,7 @@ which creates a variable `my_pikachu` of type `Pikachu`.
     end
 
     my_crobat = Crobat("Xwing", 105, 100, 210, 112)
+    my_crobat.nickname
     ```
 ```@setup types
 struct Crobat <: Flying
@@ -119,6 +126,7 @@ struct Crobat <: Flying
 end
 
 my_crobat = Crobat("Xwing", 105, 100, 210, 112)
+my_crobat.nickname
 ```
 ```@raw html
 </details>
@@ -128,4 +136,65 @@ my_crobat = Crobat("Xwing", 105, 100, 210, 112)
     https://gdalle.github.io/JuliaComputationSolutions/hw1a_solutions.html
 
 ## Constructors
+
+Let's talk about how we create new objects. In the example above, we called the type (`Pikachu`, `Crobat`) with the values we want to store in the respective fields (`Pikachu("Pika", 135, 80, 110, 132)`) to create a new instance of that pokemon.
+However, we may like to have more convenience or safety.
+For this purpose, we have Constructors: functions that create new objects.
+
+### Outer Constructors
+Outer constructors are mainly for conveniece reasons, and we define them just like functions.
+For example, we may want to have the option of not giving a new Pokemon a nickname:
+
+```@example types
+import Random: randstring
+Pikachu(attack, defense, speed, hp) = Pikachu(randstring(10), attack, defense, speed, hp)
+```
+
+So if I want to be lazy and not come up with a nickname, i just sample a random one:
+
+```@example types
+my_lazy_pikachu = Pikachu(132, 34, 23, 343)
+```
+
+### Inner Constructors
+Inner constructors can be used for enforcing that newly created objects obey certain rules.
+For example, the way we defined our `Pikachu` type, there was nothing to tell julia which kind of objects we actually can store in the fields.
+This allows us to do something like this:
+
+```@example types
+weird_pikachu = Pikachu(132, 34, 23, -12)
+```
+
+Of course, this is not a valid Pokemon, as the maximum health points can't be negative.
+To fix this, we use an inner constructor. This is just another function, but defined inside the type definition.
+Suppose we define another type of Pokemon like this:
+
+```@example types
+struct Pichu <: Electric
+    nickname
+    attack
+    defense
+    speed
+    hp
+    function Pichu(nickname, attack, defense, speed, hp)
+        if (attack < 0) | (defense < 0) | (speed < 0) | (hp < 0)
+            error("Your Pokemon's stats are outside the valide range")
+        else
+            return new(nickname, attack, defense, speed, hp)
+        end
+    end
+end
+```
+
+So we add a function to the type definition that has the same name as the type.
+This function checks whether the inputs are valid and throws an error if not.
+If they are valid, it uses the special `new` function (which is only available inside type definitions) to create a new (hopefully valid) object.
+
+Let's check if it works:
+
+```@example types
+try  #hide
+weird_pichu = Pichu("Pika_2.0", 132, 34, 23, -12)
+catch err; showerror(stderr, err); end  #hide
+```
 
