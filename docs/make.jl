@@ -25,7 +25,10 @@ makedocs(;
             "Exercise" => "Chapter1/exercise.md"],
         "Chapter 2: Types" => [
             "Types" => "Chapter2/types.md",
-            "Exercise" => "Chapter2/exercise.md"]
+            "Exercise" => "Chapter2/exercise.md"],
+        "Chapter 3: Multiple Dispatch" => [
+            "Methods" => "Chapter3/dispatch.md",
+            "Exercise" => "Chapter3/exercise.md"]
     ],
     doctest = false, # use :fix to auto fix.
 )
