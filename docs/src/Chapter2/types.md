@@ -65,7 +65,6 @@ we could define some abstract types
 ```@example types
 abstract type Pokemon end
 abstract type Normal <: Pokemon end
-abstract type Fire <: Pokemon end
 abstract type Flying <: Pokemon end
 abstract type Electric <: Pokemon end
 ```
