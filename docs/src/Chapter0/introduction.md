@@ -114,7 +114,9 @@ Press Ctrl+R (Windows/Linux) or Cmd+R (Mac) to enter Search mode. This mode allo
 2. Create another Julia file in the current directory: `touch chapter1.jl`.
 3. Create a new directory called "resources": `mkdir resources`.
 4. Go into the directoty with the cd command: `cd resources`.
-5. Now go back to the parent directory: `cd ..`.
+5. Go back to the parent directory: `cd ..`.
+6. Display the contents of the folder with the ls command: `ls`.
+7. Display the contents of the (saved) file "Introduction.jl": `cat Introduction.jl`.
 ### Package mode ] exercises:
 1. Add the Example package: `add Example`.
 2. List the installed packages: `status`.
