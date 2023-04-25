@@ -10,7 +10,6 @@ import Markdown; Markdown.parse_file("../src/abstract.md")
 
 # How to get started
 
-# Introduction - Getting Started with Julia and VSCode
 
 Hello and welcome to our Julia workshop!
 
