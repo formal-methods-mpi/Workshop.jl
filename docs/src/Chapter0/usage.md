@@ -66,7 +66,7 @@ Press Enter to execute the selected command or Ctrl+C (Windows/Linux/Mac) to can
 
 ### Shell mode ; exercises
 
-1. List the files in the current directory: ls.
+1. List the files in the current directory: `ls`.
 2. Create another Julia file in the current directory: `touch chapter1.jl`.
 3. Create a new directory called "resources": `mkdir resources`.
 4. Go into the directoty with the cd command: `cd resources`.
