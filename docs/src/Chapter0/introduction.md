@@ -1,6 +1,4 @@
-Title: Getting Started with Julia: Workflow and Tools
-
-# Introduction
+# Introduction - Getting Started with Julia and VSCode
 
 Hello and welcome to our Julia workshop!
 
@@ -169,7 +167,7 @@ Press Ctrl+R (Windows/Linux) or Cmd+R (Mac) to enter Search mode. This mode allo
 a. See what you typed before by pressing up arrow repeatedly.
 b. Find the last command related to variable assignment: Press Ctrl+R, type "=" and then up arrow to select the last command that contains an equal sign.
 
-# Summary
+## Summary
 
 You've made great progress learning about Julia and VSCode. In this chapter, we covered setting up the Julia environment, which involved installing Julia, Visual Studio Code, and the Julia extension for VSCode.
 We created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, Shell mode, Package mode, and Search mode.
