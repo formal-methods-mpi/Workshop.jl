@@ -2,23 +2,13 @@
 CurrentModule = Workshop
 ```
 
-# What is this Workshop about?
+# Abstract
 
 ```@eval
 import Markdown; Markdown.parse_file("../src/abstract.md")
 ```
 
-# How to get started
-
-
-The core of this workshop consists of 4 chapters (Chapter 0 - Chapter 3) that you can see in the sidebar on the left.
-You should do them in this order.
-The first Chapter "Workflow" explains how to use julia (how to setup your environment, write scripts, load packages, etc.).
-Chapters 1-3 introduce you to different aspects of the julia language.
-Each of those chapters has a "Theory" part and an "Exercise" part.
-Should you be finished with all chapters and still have time left, you can take a look at the "Advanced Materials" section.
-
-# Introduction - Getting Started with Julia and VSCode
+# What this workshop is about
 
 Hello and welcome to our Julia workshop!
 
@@ -33,36 +23,47 @@ Julia is not only known for its ease of use, but also its incredible speed and f
 5. Rapid prototyping: With Julia, it's easy to add and prototype new algorithms right from the start, allowing you to quickly create efficient, high-performance solutions.
 6. Built-in project management and reproducibility: Julia's standard library includes robust tools for project management and creating reproducible environments. This makes it much easier to manage your codebase and collaborate with others.
 
-## Workshop overview
+# How to get started
 
 As this is an asynchronous workshop, you might be reading this before, during, or after the workshop. Regardless of when you're engaging with the material, we hope you'll find this workshop useful and informative.
 
 To ensure a smooth learning experience, we have divided the workshop into three main stages: pre-workshop preparation, hands-on activities during the workshop, and post-workshop exploration.
 
-### Pre-workshop preparation
+## Pre-workshop preparation
 
-Before diving into the intricacies of Julia, we will first discuss the workflow and tools you'll need to get started with the language.
-This will help you familiarize yourself with the environment, become proficient in using Julia, and empower you to troubleshoot any issues you may encounter.
+It is important that you install Julia and Visual Studio Code following the steps outlined in Chapter 0.
 
-### During the workshop
+## During the workshop
 
 We will focus on what sets Julia apart from other programming languages working hands-on with Julia in Visual Studio Code (VSCode) and the terminal.
 Through hands-on activities, you'll gain practical experience to reinforce your understanding of the concepts.
 
-### Post-workshop exploration
+The core of this workshop consists of 5 chapters (Chapter 0 - Chapter 4) that you can see in the sidebar on the left.
+They are meant to be completed in your own pace but in this order (0-4).
+
+!!! warning "Todo before the workshop"
+    We expect that you have Julia and Visual Studio Code installed before the workshop.
+    Just follow the steps outlined in Chapter 0.
+
+**Chapter 0** should aready be completed **before** the workshop begins, unless you are doing it on your own.
+There we guide you through the installation of the Julia and Visual Studio Code.
+
+**Chapter 1** is the first chapter that we tackle together (unless you are on your own).
+Before diving into the intricacies of Julia, we will first discuss the workflow and tools you'll need to get started with the language.
+This will help you familiarize yourself with the environment, become proficient in using Julia, and empower you to troubleshoot any issues you may encounter.
+
+**Chapter 2** is meant to make the Julia syntax more familiar to you.
+This is meant to help you translate concepts that you already know from other programming languages like, e.g., assignment, control flow, functions, etc.
+
+**Chapter 3** everything that exists in Julia has a type.
+Without understanding types, you can not understand Julia.
+What better why to understand than to create your own type?
+
+**Chapter 4** everything that happens in Julia is because of functions.
+What functions do is deeply integrated with Julia's type system trough a prosses called mutliple dispatch.
+This chapter shows you how to leverage this system to do amazing things, hardly possible somewhere else.
+
+## Post workshop exploration
 
 After the workshop, we encourage you to continue experimenting with Julia, apply the skills you've learned to real-world projects, and leverage the resources and community support available to further your knowledge.
 By thoughtfully engaging with the workshop content and activities, you'll be well-prepared to harness the full potential of Julia and excel in your projects.
-
-TODO: Objective of the Workshop. What are the goals of the workshop? What are the expected outcomes?
-The core of this workshop consists of 4 chapters (Chapter 0 - Chapter 3) that you can see in the sidebar on the left.
-You should do them in this order.
-
-# Stuff
-
-The first Chapter "Workflow" explains how to use julia (how to setup your environment, write scripts, load packages, etc.).
-Chapters 1-3 introduce you to different aspects of the julia language.
-Each of those chapters has a "Theory" part and an "Exercise" part.
-Should you be finished with all chapters and still have time left, you can take a look at the "Advanced Materials" section.
-
-TODO: Objective of the Workshop. What are the goals of the workshop? What are the expected outcomes?
