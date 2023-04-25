@@ -1,3 +1,5 @@
+# Exercise: Linear Regression
+
 We will finish this chapter with an exercise that makes use of some of the basic syntax elements described before.
 Our goal is to implement linear regression.
 During the course of the workshop, we will come back to this example several times.

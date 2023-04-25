@@ -1,4 +1,4 @@
-# Exercise
+# Exercise: Measurements
 In this exercise, you will define a type which is (hopefully) more closely related to your research than Pokemon.
 We will continue our example from the first chapter, linear regression.
 Suppose you collected your data on education, but with some measurement error (people lie about their education, or they are not shure what exactly counts into the number of years, ...).

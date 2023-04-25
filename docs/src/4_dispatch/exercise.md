@@ -10,7 +10,7 @@ end
 ±(val, err) = Measurement(val, err)
 ```
 
-# Exercise
+# Exercise: Combining Linear Regression and Measurements
 
 Let's return to our example from the previous chapter, where we defined a new type called `Measurement` to store a measurement and it's measurement error.
 We will now define appropriate methods for this type.
