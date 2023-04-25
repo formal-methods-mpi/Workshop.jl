@@ -5,7 +5,7 @@ For example, in numerical optimization, we often need derivatives to find the mi
 However, deriving derivatives by hand can be quite tedious, especially if you work with frequently changing functions.
 As numerical differentiation is computationally quite expensive, automatic differentiation libraries have been developed.
 For example, most Deep Learning libraries employ a form of automatic differentiation called "backpropagation".
-In this example, we will implement one form of automatic differentiation, called "Forward mode AD".
+In this example, we will implement one form of automatic differentiation, called "Forward mode AD".[^1]
 
 To do so, we heavily rely on the chain rule: 
 suppose we have functions ``f: \mathbb{R} \to \mathbb{R}, \; g: \mathbb{R} \to \mathbb{R}``.
@@ -269,8 +269,5 @@ squared_error(y, predict(x, 1000, Dual(200.0, 1.0))) #hide
 ```@raw html
 </details>
 ```
-\
 
-!!! danger "Link"
-    Insert a footnote to https://www.wias-berlin.de/people/fuhrmann/AdSciComp-WS2223/week3/
-    for the dual example
+[^1]: This example is inspired by https://www.wias-berlin.de/people/fuhrmann/AdSciComp-WS2223/week3/
