@@ -19,7 +19,7 @@ Julia is not only known for its ease of use, but also its incredible speed and f
 
 The core of this workshop consists of 5 chapters (Chapter 0 - Chapter 4) that you can see in the sidebar on the left.
 You should do them in this order.
-Chapter 0 is about installing julia and VScode. If you are an in-person participant of this workshop, you should have received a mail prior to the workshop to complete this chapter beforehand, and if you did so, you can skip this chapter.
+Chapter 0 is about installing Julia and VScode. If you are an in-person participant of this workshop, you should have received a mail prior to the workshop to complete this chapter beforehand, and if you did so, you can skip this chapter.
 The first Chapter "Workflow" explains how to use julia (how to setup your environment, write scripts, load packages, etc.).
 Chapters 2-4 introduce you to different aspects of the julia language.
 Each of those chapters has a "Theory" part and an "Exercise" part.
