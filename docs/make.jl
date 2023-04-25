@@ -32,7 +32,7 @@ makedocs(;
         ],
         "Chapter 1: Workflow" => ["Working with Julia in VSCode" => "1_workflow/usage.md"],
         "Chapter 2: Syntax" => [
-            "Theory" => "2_syntax/syntax.md",
+            "Theory" => "2_syntax/foundations.md",
             "Exercise" => "2_syntax/exercise.md"
         ],
         "Chapter 3: Types" => [
