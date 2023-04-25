@@ -41,8 +41,7 @@ To enter Shell mode, press ;. In this mode, you can execute shell commands (e.g.
 
 ### Package mode
 
-Access Package mode by pressing ]. This mode is dedicated to managing Julia packages using the built-in package manager, Pkg. In
-Package mode, you can add, update, remove, and list installed packages, among other tasks.
+Access Package mode by pressing ]. This mode is dedicated to managing Julia packages using the built-in package manager, Pkg. In Package mode, you can add, update, remove, and list installed packages, among other tasks.
 
 ### Search mode
 
