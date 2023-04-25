@@ -28,17 +28,21 @@ makedocs(;
         "Home" => "index.md",
         "Chapter 0: Preparation" => [
             "Introduction" => "0_preparation/introduction.md",
-            "Setup" => "0_preparation/preparation.md"],
+            "Setup" => "0_preparation/preparation.md"
+        ],
         "Chapter 1: Workflow" => ["Working with Julia in VSCode" => "1_workflow/usage.md"],
         "Chapter 2: Syntax" => [
-            "Theory" => "2_syntax/syntax.md", 
-            "Exercise" => "2_syntax/exercise.md"],
+            "Theory" => "2_syntax/syntax.md",
+            "Exercise" => "2_syntax/exercise.md"
+        ],
         "Chapter 3: Types" => [
             "Theory" => "3_types/types.md",
-            "Exercise" => "3_types/exercise.md"],
+            "Exercise" => "3_types/exercise.md"
+        ],
         "Chapter 4: Multiple Dispatch" => [
             "Theory" => "4_dispatch/dispatch.md",
-            "Exercise" => "4_dispatch/exercise.md"],
+            "Exercise" => "4_dispatch/exercise.md"
+        ],
         "Advanced Materials" => [
             "Introduction" => "5_advanced/intro.md",
             "Automatic Differentiation" => "5_advanced/dual.md",
