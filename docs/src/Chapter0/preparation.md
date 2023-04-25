@@ -18,7 +18,6 @@ Now that you have Julia installed, we can proceed to set up your development env
 Visual Studio Code (VSCode) is a popular and versatile integrated development environment (IDE) that offers excellent support for Julia, making it our recommended choice for this workshop.
 
 1. Download the installer at <https://code.visualstudio.com/>.
-
 2. Once the download is complete, locate the installer file and run it. Follow the prompts and instructions to install VSCode.
 
 3. After the installation is complete, open VSCode from your applications menu or search for it using your operating system's search functionality.
