@@ -12,10 +12,6 @@ First we need to get acuainted with julias number types, variables, logical oper
 # broadcast square over array
 
 ```julia
-
-```julia
-
-```julia
 x = 1
 ```
 
