@@ -45,7 +45,10 @@ Access Package mode by pressing ]. This mode is dedicated to managing Julia pack
 
 ### Search mode
 
-Press Ctrl+R (Windows/Linux) or Cmd+R (Mac) to enter Search mode. This mode allows you to search for previously executed commands in the REPL history. You can navigate through matching commands using the up and down arrow keys. Press Enter to execute the selected command or Ctrl+C (Windows/Linux/Mac) to cancel the search and return to the previous mode.
+Press Ctrl+R (Windows/Linux) or Cmd+R (Mac) to enter Search mode.
+This mode allows you to search for previously executed commands in the REPL history.
+You can navigate through matching commands using the up and down arrow keys.
+Press Enter to execute the selected command or Ctrl+C (Windows/Linux/Mac) to cancel the search and return to the previous mode.
 
 ## Exercises
 
