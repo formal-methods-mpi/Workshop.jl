@@ -88,5 +88,6 @@ b. Find the last command related to variable assignment: Press Ctrl+R, type `=` 
 
 ## Summary
 
-You've made great progress learning about Julia and VSCode. In this chapter, we covered setting up the Julia environment, which involved installing Julia, Visual Studio Code, and the Julia extension for VSCode.
+You've made great progress learning about Julia and VSCode.
+In this chapter, we covered setting up the Julia environment, which involved installing Julia, Visual Studio Code, and the Julia extension for VSCode.
 We created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, Shell mode, Package mode, and Search mode.
