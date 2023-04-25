@@ -14,7 +14,7 @@ Julia supports both regular (ASCII) variable names and Unicode variable names.
 
 Regular variables are named using alphanumeric characters and underscores, starting with a letter or underscore.
 
-```julia
+```@example variables
 x = 1
 my_variable = "awesome"
 φ = 1.618
@@ -24,7 +24,7 @@ Unicode variables allow you to use a wider range of characters, including mathem
 To create a Unicode variable, type a backslash followed by the Unicode character name, and then press the Tab key to convert it into the corresponding Unicode symbol.
 For example, type \alpha and then press Tab to create the α variable.
 
-```julia
+```@example variables
 α = 0.05
 β₁ = 1.2
 Δt = 0.01
@@ -44,7 +44,7 @@ In programming, functions are reusable blocks of code that serve a specific purp
 
 The basic syntax for defining a function in Julia is as follows:
 
-```julia
+```@example variables
 function function_name(arguments)
     # function body
     return output
@@ -58,7 +58,7 @@ This approach helps to eliminate ambiguity and ensures that the function's expec
 
 For example:
 
-```julia
+```@example variables
 function add(x, y)
     return x + y
 end
@@ -66,13 +66,13 @@ end
 
 You can also write:
 
-```julia
+```@example variables
 my_function(arguments) = "function body"
 ```
 
 For example:
 
-```julia
+```@example variables
 square(x) = x * x
 ```
 
@@ -82,6 +82,27 @@ square(x) = x * x
 2. Write a function called cube that takes one argument and returns the cube of the input number.
 3. Write a function that checks if a number is even. The function should take one argument and return a `Bool`.
 
+TODO: Solutions.
+
+```@raw html
+<details>
+<summary>Show solution</summary>
+<br>
+```
+!!! tip "Solution"
+    ```julia
+    x = 123
+    y = "another solutions I have to do"
+    ```
+```@setup variables
+# some solutions
+
+```
+```@raw html
+</details>
+```
+
+
 ## Vectors
 
 In Julia, vectors are a fundamental data structure used to store and manipulate collections of values. A vector is a one-dimensional array that can store elements of the same type (e.g., integers, floating-point numbers, or strings). Vectors are useful for representing and processing sequences of data, such as time series, feature vectors, or lists of names.
@@ -90,19 +111,19 @@ Show How to Create, Access, and Manipulate Vectors in Julia
 
 To create a vector in Julia, you can use square brackets [] and separate the elements by commas. For example, to create a vector of integers, you would write:
 
-```julia
+```@example variables
 integer_vector = [1, 2, 3, 4, 5]
 ```
 
 You can access elements of a vector by specifying the index in square brackets. Note that Julia uses 1-based indexing, which means the first element has an index of 1:
 
-```julia
+```@example variables
 first_element = integer_vector[1]
 ```
 
 You can also assign a new value to an element of a vector by specifying the index in square brackets and using the assignment operator:
 
-```julia
+```@example variables
 integer_vector[1] = 10
 ```
 
@@ -110,7 +131,7 @@ However, you cannot assign a new value to an element of a vector if the vector i
 For example, if you try to assign a value to index 6 you will get an `BoundsError`.
 To add a new element to a vector, you can use the `push!` function:
 
-```julia
+```@example variables
 push!(integer_vector, 6)
 ```
 
@@ -119,41 +140,41 @@ This means that the function modifies the original data passed as an argument in
 
 This will already help you to predict the behavior of the `pop!` function:
 
-```julia
+```@example variables
 last_element = pop!(integer_vector)
 ```
 
 Lets create two vectors and see what we can do with them:
 
-```julia
+```@example variables
 vector1 = [1, 2, 3]
 vector2 = [4, 5, 6]
 ```
 
 When you use standard arithmetic operators (+, -) on vectors, Julia performs element-wise operations.
 
-```julia
+```@example variables
 added_vectors = vector1 + vector2
 subtracted_vectors = vector1 - vector2
 ```
 
 Scalar multiplication and division using the standard arithmetic operators (*, /):
 
-```julia
+```@example variables
 multiplied_vector = 2 * vector1
 divided_vector = vector1 / 2
 ```
 
 Vectors can be concetenated with the `vcat` function or the `;` operator:
 
-```julia
+```@example variables
 concatenated_vector = vcat(vector1, vector2)
 concatenated_vector = [vector1; vector2]
 ```
 
 However, when we want to multiply two vectors like this:
 
-```julia
+```@example variables
 multiplied_vectors = vector1 * vector2
 ```
 
@@ -162,7 +183,7 @@ We get a `MethodError` because the `*` operator is not defined for `Vector`s.
 Now, it depends on what we mean when we want to multiply two vectors.
 If we want to perform an element-wise multiplication, we need to use the broadcast `.` operator:
 
-```julia
+```@example variables
 vector = [1, 2, 3]
 squared_vector = vector .* 2
 ```
@@ -171,21 +192,21 @@ However, maybe you want to perform the dot product, that is related to matrix mu
 It is also known as the scalar product, because it always returns a single number, i.e., a scalar.
 We can do this with the `dot` function or the `⋅` operator:
 
-```julia
+```@example variables
 dot_product = dot(vector1, vector2)
 dot_product = vector1 ⋅ vector2
 ```
 
 Now, at last we can transpose a vector with the `transpose` function or the `'` operator:
 
-```julia
+```@example variables
 transposed_vector = transpose(vector)
 transposed_vector = vector'
 ```
 
 Equipped with the transpose operator `'`, we can now multiply two vectors:
 
-```julia
+```@example variables
 dot_product = vector1' * vector2
 ```
 
@@ -199,19 +220,19 @@ In Julia, sequences can be created using ranges and comprehensions. Ranges repre
 
 For example, you can create a range of integers from 1 to 10:
 
-```julia
+```@example variables
 integer_sequence = 1:10
 ```
 
 To create a range with a specific step size, you can use the following syntax:
 
-```julia
+```@example variables
 even_sequence = 2:2:10
 ```
 
 To convert a sequence to a vector, you can use the collect function:
 
-```julia
+```@example variables
 integer_vector = collect(integer_sequence)
 ```
 
@@ -230,6 +251,26 @@ The concept of arrays generalizes vectors and matrices by extending their proper
 3. Create another vector and calculate the scalar product with the first vector in the way you like.
 4. Read out an index, set an index, append an element, and pop an element from a vector.
 
+TODO: Solutions.
+
+```@raw html
+<details>
+<summary>Show solution</summary>
+<br>
+```
+!!! tip "Solution"
+    ```julia
+    x = 456
+    y = "another solutions I have to do"
+    ```
+```@setup variables
+# some solutions
+
+```
+```@raw html
+</details>
+```
+
 # Matrices
 
 In Julia, matrices are a fundamental data structure used to store and manipulate two-dimensional arrays of values. A matrix is a rectangular grid of elements, organized into rows and columns, where each element can be accessed by its row and column indices. Matrices are useful for representing and processing structured data, such as images, tables, or linear systems of equations.
@@ -237,13 +278,13 @@ In Julia, matrices are a fundamental data structure used to store and manipulate
 To create a `Matrix` in Julia, you can use square brackets `[]` and separate the elements within each row by spaces or commas, and separate the rows by semicolons `;`.
 For example, to create a square matrix of integers, you would write:
 
-```julia
+```@example variables
 square_matrix = [1 2 3; 4 5 6; 7 8 9]
 ```
 
 You can access elements of a matrix by specifying the row and column indices in square brackets, separated by a comma. Note that Julia uses 1-based indexing, which means the first row and column have an index of 1:
 
-```julia
+```@example variables
 upper_left_element = integer_matrix[1, 1]
 lower_right_element = integer_matrix[3, 3]
 ```
@@ -252,34 +293,34 @@ As you can see, many things are the same as with vectors, which is not surprisin
 
 Lets define a 2x3 `Matrix` ...
 
-```julia
+```@example variables
 non_square_matrix = [1 2 3; 4 5 6]
 ```
 
 ... and transpose it with the `transpose` function or the `'` operator:
 
-```julia
+```@example variables
 transposed_matrix = transpose(non_square_matrix)
 transposed_matrix = non_square_matrix'
 ```
 
 Let's create two matrices and see what we can do with them:
 
-```julia
+```@example variables
 matrix1 = [1 2; 3 4]
 matrix2 = [5 6; 7 8]
 ```
 
 We already know from the chapter about `Vector`s that we can use the vcat function or semicolon `;` for vertical concatenation:
 
-```julia
+```@example variables
 vertically_concatenated_matrix = vcat(matrix1, matrix2)  # Returns [1 2; 3 4; 5 6; 7 8]
 vertically_concatenated_matrix = [matrix1; matrix2]      # Also returns [1 2; 3 4; 5 6; 7 8]
 ```
 
 Concatenate two matrices horizontally using the hcat function or space ` ` :
 
-```julia
+```@example variables
 concatenated_matrix = hcat(matrix1, matrix2)
 concatenated_matrix = [matrix1 matrix2]
 ```
@@ -300,7 +341,7 @@ Control flow refers to the order in which statements or instructions are execute
 
 For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an array or a tuple. The syntax for a for loop is as follows:
 
-```julia
+```@example variables
 for variable in collection
     # Code to be executed for each value in the collection
 end
@@ -308,7 +349,7 @@ end
 
 For example:
 
-```julia
+```@example variables
 for i in 1:5
     println(i^2)
 end
@@ -316,7 +357,7 @@ end
 
 If statements in Julia are used to execute a block of code only if a specific condition is met. The syntax for an `if` statement is as follows:
 
-```julia
+```@example variables
 if condition
     # Code to be executed if the condition is true
 end
@@ -324,7 +365,7 @@ end
 
 You can also use `elseif` and `else` to test multiple conditions:
 
-```julia
+```@example variables
 if condition1
     # Code to be executed if condition1 is true
 elseif condition2
@@ -336,7 +377,7 @@ end
 
 For example, to check if a number is positive, negative, or zero:
 
-```julia
+```@example variables
 number = -3
 
 if number > 0
@@ -350,7 +391,7 @@ end
 
 Let's remember what we learned about functions!
 
-```julia
+```@example variables
 function classify_sign(number)
     if number > 0
         println("The number is positive")
@@ -364,7 +405,7 @@ end
 
 Now we can use the function to classify any number we want:
 
-```julia
+```@example variables
 classify_sign(3)
 classify_sign(-3)
 classify_sign(0)
@@ -376,3 +417,23 @@ classify_sign(0)
 2. Create a 2x2 Matrix and print out the value of each index. Tip: use the `length` function.
 3. Write a nested loop with `i` and `j` and add each index if both are equal and prints the result.
 4. Create a 3-dimension and 4-dimensional array and call `size` and `length` on them.
+
+TODO: Solutions.
+
+```@raw html
+<details>
+<summary>Show solution</summary>
+<br>
+```
+!!! tip "Solution"
+    ```julia
+    x = 123
+    y = "another solutions I have to do"
+    ```
+```@setup variables
+# some solutions
+
+```
+```@raw html
+</details>
+```
