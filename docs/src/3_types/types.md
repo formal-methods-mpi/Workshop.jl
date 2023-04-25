@@ -46,8 +46,8 @@ Caling `subtypes` on `AbstractFloat`, we see that `Float64` is "bundled" togethe
 for example single precision floating point numbers (`Float32`).
 If we would explore this type hierarchy further, we could see something like:
 
-!!! danger "Insert picture of type hierarchy"
-    https://en.wikibooks.org/wiki/Introducing_Julia/Types#/media/File:Julia-number-type-hierarchy.svg
+![Type hiearchy](https://upload.wikimedia.org/wikipedia/commons/d/d9/Julia-number-type-hierarchy.svg)
+*By Cormullion - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=83858572*
 
 In julia, we can easily define new abstract types:
 
@@ -60,7 +60,7 @@ defines a new abstract type `MySpecialNumber` that is a subtype of `Number`.
 ## Composite types
 The most import kind of type we will encounter during this workshop is called a "composite type".
 Composite types are also called "structs" and they allow us to create very useful objects. 
-For example, suppose we are writing a video game for the well-known Pokemon series, 
+For example, suppose we are writing a video game for the well-known Pokemon series [^1], 
 we could define some abstract types
 ```@example types
 abstract type Pokemon end
@@ -130,10 +130,7 @@ my_crobat.nickname
 ```
 ```@raw html
 </details>
-```
-
-!!! danger "Insert footnote for source of pokemon example"
-    https://gdalle.github.io/JuliaComputationSolutions/hw1a_solutions.html
+``` 
 
 ## Constructors
 
@@ -198,3 +195,4 @@ weird_pichu = Pichu("Pika_2.0", 132, 34, 23, -12)
 catch err; showerror(stderr, err); end  #hide
 ```
 
+[^1]: Inspired by https://gdalle.github.io/JuliaComputationSolutions/hw1a_solutions.html

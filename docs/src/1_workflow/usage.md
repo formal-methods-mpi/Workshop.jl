@@ -1,8 +1,8 @@
 # Working with Julia in VSCode
 
-In this workshop we will learn Visual Studio Code (VSCode) through hands-on learning, so let's tackle everything together.
+We will now learn how to use Julia in Visual Studio Code (VSCode) through some examples, so let's tackle everything together.
 If you feel slightly overwhelmed at first, don't worry — that's perfectly natural.
-It takes time to become familiar with a powerful tool like VSCode.
+It takes time to become familiar with a tool like VSCode.
 
 ## Create a folder for the workshop
 
@@ -23,18 +23,18 @@ println("Hello, Julia!")
 
 Now, we'll execute this code using the Command Palette.
 To open the Command Palette, press Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac).
-In the Command Palette search bar, type "execute," and then look for the option "Julia: Execute Code in REPL."
-Take note of the shortcut for executing code in the REPL is and use it in the future.
-Click on it, and the code you've written should be executed, displaying "Hello Julia" in the REPL (Read-Eval-Print Loop) window that opens up at the bottom of the VSCode window.
+In the Command Palette search bar, type "execute," and then look for the option "Julia: Execute Code in REPL and Move"
+Take note what the displayed shortcut for executing code in the REPL is - you can use this shortcut in the the future to execute a line of code from your script.
+Leave the command palette by clicking on the background, click on the line of code you just worte, and hit the shortcut to execute it. The code you've written should be executed, displaying "Hello, Julia!" in the REPL window that opens up at the bottom of VSCode.
 
-Great! You've just executed your first Julia code in VSCode!
+Great! You've just executed your first line of Julia in VSCode!
 
 ## The Julia REPL
 
 The Julia REPL (Read-Eval-Print Loop) is an interactive and modern command-line interface for the Julia programming language. It allows you to enter Julia expressions, execute them, and see the results immediately.
 This makes the REPL a great place to experiment with Julia, test ideas, get help, and much more.
 
-Because this is still the pre-workshop stage, we will not go into too much detail about the REPL. We will provide you with insights into the capabilities and functionality of the Julia REPL, and then encourage you to explore it on your own.
+The REPL has several differend modes:
 
 ### Julia mode
 
@@ -42,14 +42,42 @@ This is the default mode when you start the REPL.
 Here, you can enter and execute Julia expressions.
 To return to Julia mode from any other mode, press Backspace.
 
+!!! compat "Exercise"
+    Add two numbers in the REPL.
+
+```@raw html
+<details>
+<summary>show solution</summary>
+<br>
+```
+!!! tip "Solution"
+    ```julia
+    julia> 3+4
+    7
+    ```
+```@setup xxx
+```
+```@raw html
+</details>
+```
+
 ### Help mode
 
 To access Help mode, press ?. In this mode, you can search for documentation and information about various Julia functions, types, and keywords.
+
+!!! compat "Exercise"
+    1. To find information on the println function, enter Help mode by pressing ?. Once in Help mode, simply type println and press Enter to retrieve the relevant documentation.
+    2. Look for an alternative print function by entering "print" (with quotation marks) in the search field. Julia will subsequently provide a list of definitions where the string "print" appears in the associated documentation.
 
 ### Shell mode
 
 To enter Shell mode, press `;`.
 In this mode, you can execute shell commands (e.g., `ls`, `cd`, `mkdir`) as you would in your operating system's command prompt or terminal. This allows you to perform file and directory operations, or to start a command-line interface without leaving the Julia REPL.
+
+!!! compat "Exercise"
+    Enter Shell mode by pressing ;. 
+    1. List the files in the current directory with `ls`.
+    2. Create another Julia file in the current directory with `touch chapter1.jl`.
 
 ### Package mode
 
@@ -57,51 +85,12 @@ Access Package mode by pressing `]`.
 This mode is dedicated to managing Julia packages using the built-in package manager, Pkg.
 In Package mode, you can add, update, remove, and list installed packages, among other tasks.
 
-### Search mode
-
-Press Ctrl+R (Windows/Linux) or Cmd+R (Mac) to enter Search mode.
-This mode allows you to search for previously executed commands in the REPL history.
-You can navigate through matching commands using the up and down arrow keys.
-Press Enter to execute the selected command or Ctrl+C (Windows/Linux/Mac) to cancel the search and return to the previous mode.
-
-## Exercises
-
-### Julia mode exercises
-
-1. Enter and execute a simple arithmetic expression: 3 + 4.
-2. Define a variable x and assign it the value of 7: x = 7.
-3. Create a simple function that adds two numbers: function add(a, b) return a + b end.
-
-### Help mode ? exercises
-
-1. To find information on the println function, enter Help mode by pressing ?. Once in Help mode, simply type println and press Enter to retrieve the relevant documentation.
-2. Look for an alternative print function by entering "print" (with quotation marks) in the search field. Julia will subsequently provide a list of definitions where the string "print" appears in the associated documentation.
-3. Find out what the difference is between println and print. There was also something that was called @show. What is that?
-
-### Shell mode ; exercises
-
-1. List the files in the current directory: `ls`.
-2. Create another Julia file in the current directory: `touch chapter1.jl`.
-3. Create a new directory called "resources": `mkdir resources`.
-4. Go into the directoty with the cd command: `cd resources`.
-5. Go back to the parent directory: `cd ..`.
-6. Display the contents of the folder with the ls command: `ls`.
-7. Display the contents of the (saved) file "Introduction.jl": `cat Introduction.jl`.8.
-
-### Package mode ] exercises
-
-1. Add the Example package: `add Example`.
-2. List the installed packages: `status`.
-3. Remove the Example package: `remove Example` or `rm Example`.
-4. Discover what else you can type in Package mode by entering `help` or `?`.
-
-### Search mode exercises
-
-1. See what you typed before by pressing up arrow repeatedly.
-2. Find the last command related to variable assignment: Press Ctrl+R, type `=` and then up arrow to select the last command that contains an equal sign.
+!!! compat "Exercise"
+    Enter Package mode by pressing `]`. 
+    1. Add the Example package: `add Example`.
+    2. List the installed packages: `status`.
+    4. Discover what else you can type in Package mode by entering `help` or `?`.
 
 ## Summary
 
-You've made great progress learning about Julia and VSCode.
-In this chapter, we covered setting up the Julia environment, which involved installing Julia, Visual Studio Code, and the Julia extension for VSCode.
-We created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, Shell mode, Package mode, and Search mode.
+In this chapter, we created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, Shell mode, and Package mode.
