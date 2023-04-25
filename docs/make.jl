@@ -19,7 +19,7 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
-        "Chapter 0: Workflow" => "Chapter0/workflow.md",
+        "Chapter 0: Workflow" => "Chapter0/introduction.md",
         "Chapter 1: Syntax" => [
             "Syntax" => "Chapter1/syntax.md", 
             "Exercise" => "Chapter1/exercise.md"],
