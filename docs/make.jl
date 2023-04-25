@@ -21,7 +21,7 @@ makedocs(;
         "Home" => "index.md",
         "Chapter 0: Workflow" => "Chapter0/introduction.md",
         "Chapter 1: Syntax" => [
-            "Syntax" => "Chapter1/syntax.md", 
+            "Syntax" => "Chapter1/syntax.md",
             "Exercise" => "Chapter1/exercise.md"],
         "Chapter 2: Types" => [
             "Types" => "Chapter2/types.md",
