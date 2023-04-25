@@ -176,4 +176,5 @@ squared_error_regression(1000, 300, y, x) #hide
 </details>
 ```
 \
+
 You should see that the error corresponding to the true parameters we used to simulate the data is much lower.
