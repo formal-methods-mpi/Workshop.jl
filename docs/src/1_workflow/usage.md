@@ -14,7 +14,7 @@ Once you've done that, you can open the folder in VSCode by navigating to the Me
 
 Next, let's create a new file within our workshop folder.
 To do this, right-click within the folder's file explorer in VSCode, and select "New File."
-Name this file "Introduction.jl" and then open it by double-clicking on the file name.
+Name this file `introduction.jl` and then open it by double-clicking on the file name.
 In this file, write the following code:
 
 ```julia
