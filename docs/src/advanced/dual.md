@@ -270,6 +270,7 @@ squared_error(y, predict(x, 1000, Dual(200.0, 1.0))) #hide
 </details>
 ```
 \
+
 !!! danger "Link"
     Insert a footnote to https://www.wias-berlin.de/people/fuhrmann/AdSciComp-WS2223/week3/
     for the dual example
