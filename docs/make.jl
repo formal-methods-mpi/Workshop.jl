@@ -21,7 +21,8 @@ makedocs(;
         canonical="https://formal-methods-mpi.github.io/Workshop.jl",
         edit_link="main",
         assets=String[],
-        collapselevel = 1
+        collapselevel = 1,
+        footer = "Got a question? Something confuses you? [Don't hesitate to open an issue to ask for help!](https://github.com/formal-methods-mpi/Workshop.jl/issues/new)"
     ),
     pages=[
         "Home" => "index.md",
