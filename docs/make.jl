@@ -21,7 +21,7 @@ makedocs(;
         "Home" => "index.md",
         "Chapter 0: Workflow" => "Chapter0/introduction.md",
         "Chapter 1: Syntax" => [
-            "Theory" => "Chapter1/syntax.md", 
+            "Theory" => "Chapter1/syntax.md",
             "Exercise" => "Chapter1/exercise.md"],
         "Chapter 2: Types" => [
             "Theory" => "Chapter2/types.md",
@@ -30,7 +30,8 @@ makedocs(;
             "Theory" => "Chapter3/dispatch.md",
             "Exercise" => "Chapter3/exercise.md"],
         "Advanced Materials" => [
-            "Introduction" => "advanced/intro.md"
+            "Introduction" => "advanced/intro.md",
+            "Syntax" => "advanced/syntax.md",
             "Automatic Differentiation" => "advanced/dual.md"
         ]
     ],
