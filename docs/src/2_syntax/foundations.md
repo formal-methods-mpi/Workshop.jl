@@ -375,4 +375,4 @@ classify_sign(0)
 1. Write a for loop that prints the first 10 even numbers.
 2. Create a 2x2 Matrix and print out the value of each index. Tip: use the `length` function.
 3. Write a nested loop with `i` and `j` and add each index if both are equal and prints the result.
-4. Create a 3-dimension and 4-dimensional array.
+4. Create a 3-dimension and 4-dimensional array and call `size` and `length` on them.
