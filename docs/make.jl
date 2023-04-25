@@ -21,17 +21,17 @@ makedocs(;
         "Home" => "index.md",
         "Chapter 0: Workflow" => "Chapter0/introduction.md",
         "Chapter 1: Syntax" => [
-            "Syntax" => "Chapter1/syntax.md",
+            "Theory" => "Chapter1/syntax.md", 
             "Exercise" => "Chapter1/exercise.md"],
         "Chapter 2: Types" => [
-            "Types" => "Chapter2/types.md",
+            "Theory" => "Chapter2/types.md",
             "Exercise" => "Chapter2/exercise.md"],
         "Chapter 3: Multiple Dispatch" => [
-            "Methods" => "Chapter3/dispatch.md",
+            "Theory" => "Chapter3/dispatch.md",
             "Exercise" => "Chapter3/exercise.md"],
-        "Chapter 4: Exercises" => [
-            "Introduction" => "Chapter4/intro.md"
-            "Automatic Differentiation" => "Chapter4/dual.md"
+        "Advanced Materials" => [
+            "Introduction" => "advanced/intro.md"
+            "Automatic Differentiation" => "advanced/dual.md"
         ]
     ],
     doctest = false, # use :fix to auto fix.

@@ -34,7 +34,7 @@
 
     ```
 ```@example xxx
- #hide
+
 ```
 ```@raw html
 </details>
