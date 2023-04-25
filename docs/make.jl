@@ -14,7 +14,7 @@ on_ci() = get(ENV, "CI", "false") == "true"
 makedocs(;
     modules=[Workshop],
     authors="Maximilian S. Ernst, Moritz Ketzer, Aaron Peikert and contributors",
-    repo="https://github.com/aaronpeikert/Workshop.jl/blob/{commit}{path}#{line}",
+    repo="https://github.com/formal-methods-mpi/Workshop.jl/blob/{commit}{path}#{line}",
     sitename="A fresh approach to scientific computing",
     format=Documenter.HTML(;
         prettyurls=on_ci(),
