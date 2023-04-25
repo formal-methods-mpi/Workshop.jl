@@ -175,7 +175,9 @@ concatenated_vector = [vector1; vector2]
 However, when we want to multiply two vectors like this:
 
 ```@example variables
+try  #hide
 multiplied_vectors = vector1 * vector2
+catch err; showerror(stderr, err); end  #hide
 ```
 
 We get a `MethodError` because the `*` operator is not defined for `Vector`s.
@@ -190,9 +192,10 @@ squared_vector = vector .* 2
 
 However, maybe you want to perform the dot product, that is related to matrix multiplication.
 It is also known as the scalar product, because it always returns a single number, i.e., a scalar.
-We can do this with the `dot` function or the `⋅` operator:
+We can do this with the `dot` function or the `⋅` operator from the `LinearAlgebra` package:
 
 ```@example variables
+using LinearAlgebra
 dot_product = dot(vector1, vector2)
 dot_product = vector1 ⋅ vector2
 ```
@@ -285,8 +288,8 @@ square_matrix = [1 2 3; 4 5 6; 7 8 9]
 You can access elements of a matrix by specifying the row and column indices in square brackets, separated by a comma. Note that Julia uses 1-based indexing, which means the first row and column have an index of 1:
 
 ```@example variables
-upper_left_element = integer_matrix[1, 1]
-lower_right_element = integer_matrix[3, 3]
+upper_left_element = square_matrix[1, 1]
+lower_right_element = square_matrix[3, 3]
 ```
 
 As you can see, many things are the same as with vectors, which is not surprising, since vectors are just 1-dimensional matrices.
@@ -341,7 +344,7 @@ Control flow refers to the order in which statements or instructions are execute
 
 For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an array or a tuple. The syntax for a for loop is as follows:
 
-```@example variables
+```julia
 for variable in collection
     # Code to be executed for each value in the collection
 end
@@ -357,7 +360,7 @@ end
 
 If statements in Julia are used to execute a block of code only if a specific condition is met. The syntax for an `if` statement is as follows:
 
-```@example variables
+```julia
 if condition
     # Code to be executed if the condition is true
 end
@@ -365,7 +368,7 @@ end
 
 You can also use `elseif` and `else` to test multiple conditions:
 
-```@example variables
+```julia
 if condition1
     # Code to be executed if condition1 is true
 elseif condition2
