@@ -38,7 +38,7 @@ This will help you familiarize yourself with the environment, become proficient 
 
 ### During the workshop
 
-We will focus on setting up your Julia environment, working with Julia in Visual Studio Code (VSCode) and the terminal.
+We will focus on what sets Julia apart from other programming languages working hands-on with Julia in Visual Studio Code (VSCode) and the terminal.
 Through hands-on activities, you'll gain practical experience to reinforce your understanding of the concepts.
 
 ### Post-workshop exploration
