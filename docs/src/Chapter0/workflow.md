@@ -2,20 +2,37 @@ Title: Getting Started with Julia: Workflow and Tools
 
 # Introduction
 
+<<<<<<< HEAD:docs/src/Chapter0/workflow.md
 Welcome to our Julia workshop! In this session, we will explore the powerful and versatile world of Julia, a high-performance programming language for technical computing.
 Julia is known for its ease of use, speed, and flexibility, making it a popular choice among developers, data scientists, and researchers.
+=======
+Hello and welcome to our Julia workshop!
+
+Together, we'll be exploring the amazing world of Julia, a powerful programming language that's taking the world of scientific computing, data science, and research by storm.
+
+Julia is not only known for its ease of use, but also its incredible speed and flexibility. These qualities make it an excellent choice for developers, data scientists, and researchers alike. Let's dive into some of the key reasons why Julia is so awesome:
+
+1. Superior performance: Julia is fast – very fast. It eliminates the need to use C/C++, Fortran, or other "slow-productivity" or "slow-prototyping" languages, effectively solving the "two-language problem." This means you can focus on one language for both development and performance optimization.
+2. User-friendly syntax: Julia boasts a simple and intuitive syntax that makes it easy for beginners to pick up and for experts to master.
+3. Hassle-free installation: Installing Julia is a breeze – no need to worry about a C++ toolchain like you would with other programming languages.
+4. Advanced support for Unicode and $\LaTeX$ characters: Julia makes it simple to incorporate Unicode and $\LaTeX$ characters into your code. Say goodbye to "alpha" and "beta" and embrace the elegance of α and β.
+5. Rapid prototyping: With Julia, it's easy to add and prototype new algorithms right from the start, allowing you to quickly create efficient, high-performance solutions.
+6. Built-in project management and reproducibility: Julia's standard library includes robust tools for project management and creating reproducible environments. This makes it much easier to manage your codebase and collaborate with others.
+
+## Workshop overview
+>>>>>>> f3dbc5d (minor changes to introduction):docs/src/Chapter0/introduction.md
 
 As this is an asynchronous workshop, you might be reading this before, during, or after the workshop. Regardless of when you're engaging with the material, we hope you'll find this workshop useful and informative.
 
 To ensure a smooth learning experience, we have divided the workshop into three main stages: pre-workshop preparation, hands-on activities during the workshop, and post-workshop exploration.
 
-## Pre-workshop preparation:
+### Pre-workshop preparation
 Before diving into the intricacies of Julia, we will first discuss the workflow and tools you'll need to get started with the language.
 This will help you familiarize yourself with the environment, become proficient in using Julia, and empower you to troubleshoot any issues you may encounter.
-## During the workshop:
+### During the workshop
 We will focus on setting up your Julia environment, working with Julia in Visual Studio Code (VSCode) and the terminal.
 Through hands-on activities, you'll gain practical experience to reinforce your understanding of the concepts.
-## Post-workshop exploration:
+### Post-workshop exploration
 After the workshop, we encourage you to continue experimenting with Julia, apply the skills you've learned to real-world projects, and leverage the resources and community support available to further your knowledge.
 By thoughtfully engaging with the workshop content and activities, you'll be well-prepared to harness the full potential of Julia and excel in your projects.
 
@@ -50,7 +67,7 @@ Visual Studio Code (VSCode) is a popular and versatile integrated development en
 
 3. After the installation is complete, open VSCode from your applications menu or search for it using your operating system's search functionality.
 
-## Installing Julia extension for VSCode:
+## Installing Julia extension for VSCode
 Now that you have VSCode installed, you'll need to add the Julia extension to enable language support and additional features. Follow these steps to install the Julia extension:
 
 1. Open the Extensions view: Launch VSCode, and click on the square icon on the left-hand sidebar (or press Ctrl+Shift+X / Cmd+Shift+X) to open the Extensions view.
@@ -101,15 +118,15 @@ Access Package mode by pressing ]. This mode is dedicated to managing Julia pack
 Press Ctrl+R (Windows/Linux) or Cmd+R (Mac) to enter Search mode. This mode allows you to search for previously executed commands in the REPL history. You can navigate through matching commands using the up and down arrow keys. Press Enter to execute the selected command or Ctrl+C (Windows/Linux/Mac) to cancel the search and return to the previous mode.
 
 ## Exercises
-### Julia mode exercises:
+### Julia mode exercises
 1. Enter and execute a simple arithmetic expression: 3 + 4.
 2. Define a variable x and assign it the value of 7: x = 7.
 3. Create a simple function that adds two numbers: function add(a, b) return a + b end.
-### Help mode ? exercises:
+### Help mode ? exercises
 1. To find information on the println function, enter Help mode by pressing ?. Once in Help mode, simply type println and press Enter to retrieve the relevant documentation.
 2. Look for an alternative print function by entering "print" (with quotation marks) in the search field. Julia will subsequently provide a list of definitions where the string "print" appears in the associated documentation.
 3. Find out what the difference is between println and print. There was also something that was called @show. What is that?
-### Shell mode ; exercises:
+### Shell mode ; exercises
 1. List the files in the current directory: ls.
 2. Create another Julia file in the current directory: `touch chapter1.jl`.
 3. Create a new directory called "resources": `mkdir resources`.
@@ -117,13 +134,13 @@ Press Ctrl+R (Windows/Linux) or Cmd+R (Mac) to enter Search mode. This mode allo
 5. Go back to the parent directory: `cd ..`.
 6. Display the contents of the folder with the ls command: `ls`.
 7. Display the contents of the (saved) file "Introduction.jl": `cat Introduction.jl`.
-### Package mode ] exercises:
+### Package mode ] exercises
 1. Add the Example package: `add Example`.
 2. List the installed packages: `status`.
 3. Remove the Example package: `remove Example` or `rm Example`.
 4. Discover what else you can type in Package mode by entering `help` or `?`.
 
-### Search mode exercises:
+### Search mode exercises
 a. See what you typed before by pressing up arrow repeatedly.
 b. Find the last command related to variable assignment: Press Ctrl+R, type "=" and then up arrow to select the last command that contains an equal sign.
 
