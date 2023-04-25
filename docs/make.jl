@@ -1,5 +1,11 @@
 using Workshop
 using Documenter
+import Downloads
+
+mkpath("./docs/src/assets/")
+Downloads.download("https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-logo-color.svg", "./docs/src/assets/logo.svg")
+Downloads.download("https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-logo-dark.svg", "./docs/src/assets/logo-dark.svg")
+
 
 DocMeta.setdocmeta!(Workshop, :DocTestSetup, :(using Workshop); recursive=true)
 
@@ -8,7 +14,7 @@ on_ci() = get(ENV, "CI", "false") == "true"
 makedocs(;
     modules=[Workshop],
     authors="Maximilian S. Ernst, Moritz Ketzer, Aaron Peikert and contributors",
-    repo="https://github.com/aaronpeikert/Workshop.jl/blob/{commit}{path}#{line}",
+    repo="https://github.com/formal-methods-mpi/Workshop.jl/blob/{commit}{path}#{line}",
     sitename="A fresh approach to scientific computing",
     format=Documenter.HTML(;
         prettyurls=on_ci(),

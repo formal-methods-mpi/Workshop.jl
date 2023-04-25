@@ -14,7 +14,7 @@ Once you've done that, you can open the folder in VSCode by navigating to the Me
 
 Next, let's create a new file within our workshop folder.
 To do this, right-click within the folder's file explorer in VSCode, and select "New File."
-Name this file "Introduction.jl" and then open it by double-clicking on the file name.
+Name this file `introduction.jl` and then open it by double-clicking on the file name.
 In this file, write the following code:
 
 ```julia
@@ -97,8 +97,8 @@ Press Enter to execute the selected command or Ctrl+C (Windows/Linux/Mac) to can
 
 ### Search mode exercises
 
-a. See what you typed before by pressing up arrow repeatedly.
-b. Find the last command related to variable assignment: Press Ctrl+R, type `=` and then up arrow to select the last command that contains an equal sign.
+1. See what you typed before by pressing up arrow repeatedly.
+2. Find the last command related to variable assignment: Press Ctrl+R, type `=` and then up arrow to select the last command that contains an equal sign.
 
 ## Summary
 
