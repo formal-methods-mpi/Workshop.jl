@@ -55,8 +55,8 @@ m1 + m2
 Work's like a charm!
 Subtraction works similarly, so I will define this method for you:
 ```@example exercise_dispatch
-    import Base: -
-    -(x::Measurement, y::Measurement) = Measurement(x.value - y.value, x.error + y.error)
+import Base: -
+-(x::Measurement, y::Measurement) = Measurement(x.value - y.value, x.error + y.error)
 ```
 
 To make working with our `Measurement` type a bit more aesthetic, we can even define a new method for `Base.show` that defines how our type is printed to the REPL:
@@ -111,21 +111,21 @@ c \cdot (a \pm b) = ca \pm cb
 ```
 
 ```@example exercise_dispatch
-    -(x::Measurement, y::Real) = Measurement(x.value - y, x.error)
-    -(x::Real, y::Measurement) = Measurement(x - y.value, y.error)
+-(x::Measurement, y::Real) = Measurement(x.value - y, x.error)
+-(x::Real, y::Measurement) = Measurement(x - y.value, y.error)
 
-    import Base: *
-    *(x::Measurement, y::Real) = Measurement(x.value*y, abs(x.error*y))
-    *(x::Real, y::Measurement) = y*x
+import Base: *
+*(x::Measurement, y::Real) = Measurement(x.value*y, abs(x.error*y))
+*(x::Real, y::Measurement) = y*x
 ```
 
 Let's see if it all works as planned:
 ```@example exercise_dispatch
-    m1 + m2
-    9.34 + m1
-    m2 + 4.52
-    3.5 * m2
-    m2 * 3.5
+m1 + m2
+9.34 + m1
+m2 + 4.52
+3.5 * m2
+m2 * 3.5
 ```
 
 Now for the fun part: 
@@ -133,42 +133,42 @@ In the exercise to the first chapter, we tried to predict income from years of e
 Let's simulate some data again:
 
 ```@example exercise_dispatch
-    using Random
-    Random.seed!(1243)
+using Random
+Random.seed!(1243)
 
-    x = 10 .+ 3*randn(20)
-    β = 300
-    α = 1000
-    y = α .+ β*x + 500*randn(20)
-    nothing #hide
+x = 10 .+ 3*randn(20)
+β = 300
+α = 1000
+y = α .+ β*x + 500*randn(20)
+nothing #hide
 ```
 This time, let's asume we observed education with some measurement error:
 
 ```@example exercise_dispatch
-    x = Measurement.(x, 2*randn(20))
+x = Measurement.(x, 2*randn(20))
 ```
 
 But what happens when we us the education data with measurement error to predict income?
 Let's find out! We defined our prediction function as
 
 ```@example exercise_dispatch
-    function predict(x, α, β)
-        y = α .+ β*x
-        return y
-    end
-    nothing #hide
+function predict(x, α, β)
+    y = α .+ β*x
+    return y
+end
+nothing #hide
 ```
 
 and if we plug in the values for education with measurement error, we achieve
 ```@example exercise_dispatch
-    predict(x, 1000, 300)
+predict(x, 1000, 300)
 ```
 a prediction of income with the respective measurement error.
 
 
 Hopefully, this serves a a nice illustration of what multiple dispatch together with julias type system is able to achieve.
 When you wrote the `predict` function at the beginning of this workshop, you probably had no idea what multiple dispatch even is.
-But because we are able to define methods for important operations (like `*`, `+`), we can use any function or algorithmns that is composed of these operations.
+But because we are able to define methods for important operations (like `*`, `+`), we can use any function or algorithmn that is composed of these operations.
 This is a very powerful idea that allows for great extensibility and interaperability of different packages.
 If you don't believe me, imagine somebody has written an `R` package for linear regression.
 Now you are in the situation that you have to deal with measurement error.
