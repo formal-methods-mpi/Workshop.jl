@@ -97,8 +97,8 @@ Press Enter to execute the selected command or Ctrl+C (Windows/Linux/Mac) to can
 
 ### Search mode exercises
 
-a. See what you typed before by pressing up arrow repeatedly.
-b. Find the last command related to variable assignment: Press Ctrl+R, type `=` and then up arrow to select the last command that contains an equal sign.
+1. See what you typed before by pressing up arrow repeatedly.
+2. Find the last command related to variable assignment: Press Ctrl+R, type `=` and then up arrow to select the last command that contains an equal sign.
 
 ## Summary
 
