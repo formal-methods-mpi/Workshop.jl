@@ -1,22 +1,31 @@
 # Working with Julia in VSCode
 
-In this workshop we will learn Visual Studio Code (VSCode) through hands-on learning, so let's tackle everything together. If you feel slightly overwhelmed at first, don't worry – that's perfectly natural.
+In this workshop we will learn Visual Studio Code (VSCode) through hands-on learning, so let's tackle everything together.
+If you feel slightly overwhelmed at first, don't worry — that's perfectly natural.
 It takes time to become familiar with a powerful tool like VSCode.
 
 ## Create a folder for the workshop
 
-First, we'll want to create a dedicated folder for our workshop. It's important to note that VSCode isn't particularly friendly when it comes to navigating your file system. So don't try to use VSCode for that.
+First, we'll want to create a dedicated folder for our workshop.
+VSCode isn't particularly friendly when it comes to navigating files/folders.
+So don't try to use VSCode for that.
 Instead, we will use our operating system for that, i.e., just use your Explorer/Finder and create a folder in a location that makes sense to you.
 Once you've done that, you can open the folder in VSCode by navigating to the Menu Bar and selecting File > Open Folder and then selecting the folder you just created.
 
-Next, let's create a new file within our workshop folder. To do this, right-click within the folder's file explorer in VSCode, and select "New File." Name this file "Introduction.jl" and then open it by double-clicking on the file name.
+Next, let's create a new file within our workshop folder.
+To do this, right-click within the folder's file explorer in VSCode, and select "New File."
+Name this file "Introduction.jl" and then open it by double-clicking on the file name.
 In this file, write the following code:
 
 ```julia
 println("Hello, Julia!")
 ```
 
-Now, we'll execute this code using the Command Palette. To open the Command Palette, press Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac). In the Command Palette search bar, type "execute," and then look for the option "Julia: Execute Code in REPL." Click on it, and the code you've written should be executed, displaying "Hello Julia" in the REPL (Read-Eval-Print Loop) window that opens up at the bottom of the VSCode window.
+Now, we'll execute this code using the Command Palette.
+To open the Command Palette, press Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac).
+In the Command Palette search bar, type "execute," and then look for the option "Julia: Execute Code in REPL."
+Take note of the shortcut for executing code in the REPL is and use it in the future.
+Click on it, and the code you've written should be executed, displaying "Hello Julia" in the REPL (Read-Eval-Print Loop) window that opens up at the bottom of the VSCode window.
 
 Great! You've just executed your first Julia code in VSCode!
 
@@ -29,7 +38,9 @@ Because this is still the pre-workshop stage, we will not go into too much detai
 
 ### Julia mode
 
-This is the default mode when you start the REPL. Here, you can enter and execute Julia expressions. To return to Julia mode from any other mode, press Backspace.
+This is the default mode when you start the REPL.
+Here, you can enter and execute Julia expressions.
+To return to Julia mode from any other mode, press Backspace.
 
 ### Help mode
 
@@ -37,7 +48,8 @@ To access Help mode, press ?. In this mode, you can search for documentation and
 
 ### Shell mode
 
-To enter Shell mode, press ;. In this mode, you can execute shell commands (e.g., ls, cd, mkdir) as you would in your operating system's command prompt or terminal. This allows you to perform file and directory operations, or to start a command-line interface without leaving the Julia REPL.
+To enter Shell mode, press `;`.
+In this mode, you can execute shell commands (e.g., `ls`, `cd`, `mkdir`) as you would in your operating system's command prompt or terminal. This allows you to perform file and directory operations, or to start a command-line interface without leaving the Julia REPL.
 
 ### Package mode
 
