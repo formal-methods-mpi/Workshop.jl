@@ -369,8 +369,6 @@ else
 end
 ```
 
-## Exercises
-
 !!! compat "Exercise"
     1. Write a for loop that prints the first 10 even numbers.
     2. Create a 2x2 Matrix and print out the value of each index. Tip: use the `eachindex` function.
@@ -397,4 +395,3 @@ end
 ```@raw html
 </details>
 ```
-\
