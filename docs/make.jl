@@ -1,5 +1,11 @@
 using Workshop
 using Documenter
+import Downloads
+
+mkpath("./docs/src/assets/")
+Downloads.download("https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-logo-color.svg", "./docs/src/assets/logo.svg")
+Downloads.download("https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-logo-dark.svg", "./docs/src/assets/logo-dark.svg")
+
 
 DocMeta.setdocmeta!(Workshop, :DocTestSetup, :(using Workshop); recursive=true)
 
