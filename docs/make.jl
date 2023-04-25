@@ -19,7 +19,10 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
-        "Chapter 0: Workflow" => "Chapter0/introduction.md",
+        "Chapter 0: Workflow" => [
+            "Introduction" => "Chapter0/introduction.md",
+            "Setup" => "Chapter0/preparation.md",
+            "Working with Julia in VSCode" => "Chapter0/usage.md"],
         "Chapter 1: Syntax" => [
             "Theory" => "Chapter1/syntax.md", 
             "Exercise" => "Chapter1/exercise.md"],
@@ -30,8 +33,9 @@ makedocs(;
             "Theory" => "Chapter3/dispatch.md",
             "Exercise" => "Chapter3/exercise.md"],
         "Advanced Materials" => [
-            "Introduction" => "advanced/intro.md"
-            "Automatic Differentiation" => "advanced/dual.md"
+            "Introduction" => "advanced/intro.md",
+            "Automatic Differentiation" => "advanced/dual.md",
+            "Workflow" => "advanced/workflow.md"
         ]
     ],
     doctest = false, # use :fix to auto fix.
