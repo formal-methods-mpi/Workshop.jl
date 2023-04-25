@@ -19,19 +19,23 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
-        "Chapter 0: Workflow" => "Chapter0/introduction.md",
-        "Chapter 1: Syntax" => [
-            "Theory" => "Chapter1/syntax.md", 
-            "Exercise" => "Chapter1/exercise.md"],
-        "Chapter 2: Types" => [
-            "Theory" => "Chapter2/types.md",
-            "Exercise" => "Chapter2/exercise.md"],
-        "Chapter 3: Multiple Dispatch" => [
-            "Theory" => "Chapter3/dispatch.md",
-            "Exercise" => "Chapter3/exercise.md"],
+        "Chapter 0: Preparation" => [
+            "Introduction" => "0_preparation/introduction.md",
+            "Setup" => "0_preparation/preparation.md"],
+        "Chapter 1: Workflow" => ["Working with Julia in VSCode" => "1_workflow/usage.md"],
+        "Chapter 2: Syntax" => [
+            "Theory" => "2_syntax/syntax.md", 
+            "Exercise" => "2_syntax/exercise.md"],
+        "Chapter 3: Types" => [
+            "Theory" => "3_types/types.md",
+            "Exercise" => "3_types/exercise.md"],
+        "Chapter 4: Multiple Dispatch" => [
+            "Theory" => "4_dispatch/dispatch.md",
+            "Exercise" => "4_dispatch/exercise.md"],
         "Advanced Materials" => [
-            "Introduction" => "advanced/intro.md"
-            "Automatic Differentiation" => "advanced/dual.md"
+            "Introduction" => "5_advanced/intro.md",
+            "Automatic Differentiation" => "5_advanced/dual.md",
+            "Workflow" => "5_advanced/workflow.md"
         ]
     ],
     doctest = false, # use :fix to auto fix.
