@@ -18,10 +18,8 @@ Julia is not only known for its ease of use, but also its incredible speed and f
 
 1. Superior performance: Julia is fast – very fast. It eliminates the need to use C/C++, Fortran, or other "slow-productivity" or "slow-prototyping" languages, effectively solving the "two-language problem." This means you can focus on one language for both development and performance optimization.
 2. User-friendly syntax: Julia boasts a simple and intuitive syntax that makes it easy for beginners to pick up and for experts to master.
-3. Hassle-free installation: Installing Julia is a breeze – no need to worry about a C++ toolchain like you would with other programming languages.
-4. Advanced support for Unicode and $\LaTeX$ characters: Julia makes it simple to incorporate Unicode and $\LaTeX$ characters into your code. Say goodbye to "alpha" and "beta" and embrace the elegance of α and β.
-5. Rapid prototyping: With Julia, it's easy to add and prototype new algorithms right from the start, allowing you to quickly create efficient, high-performance solutions.
-6. Built-in project management and reproducibility: Julia's standard library includes robust tools for project management and creating reproducible environments. This makes it much easier to manage your codebase and collaborate with others.
+3. Advanced support for Unicode and $\LaTeX$ characters: Julia makes it simple to incorporate Unicode and $\LaTeX$ characters into your code. Say goodbye to "alpha" and "beta" and embrace the elegance of α and β.
+4. Rapid prototyping: With Julia, it's easy to add and prototype new algorithms right from the start, allowing you to quickly create efficient, high-performance solutions.
 
 # How to get started
 
@@ -66,4 +64,6 @@ This chapter shows you how to leverage this system to do amazing things, hardly 
 ## Post workshop exploration
 
 After the workshop, we encourage you to continue experimenting with Julia, apply the skills you've learned to real-world projects, and leverage the resources and community support available to further your knowledge.
+To start you on this journey we have prepared the [Advanced Materials](@ref) section.
 By thoughtfully engaging with the workshop content and activities, you'll be well-prepared to harness the full potential of Julia and excel in your projects.
+

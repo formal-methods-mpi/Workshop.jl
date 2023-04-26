@@ -1,5 +1,7 @@
+# Exercise: Linear Regression
+
 We will finish this chapter with an exercise that makes use of some of the basic syntax elements described before.
-Our goal is to implement linear regression. 
+Our goal is to implement linear regression.
 During the course of the workshop, we will come back to this example several times.
 Let's first have a look at what linear regression is:
 Suppose you observe the two variables education (in years) and income (per month in dollar), and you want to predict a persons income based on their education. One way to do this is linear regression. Suppose we conducted a study and observed the following data points:
@@ -95,7 +97,7 @@ y = predict(x, 1000, 300) #hide
 ```
 \
 
-Since in reality, income dose not perfectly depend on education, but there is some random variation, we add this random variation to `y`:
+Since in reality, income does not perfectly depend on education, but there is some random variation, we add this random variation to `y`:
 
 ```@example linreg
 y += 500*randn(20)
