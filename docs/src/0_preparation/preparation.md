@@ -12,7 +12,10 @@ Follow the steps below to install Julia:
 
 1. Go to the official [Julia Website](https://julialang.org/downloads/) and navigate to the "Downloads" section.
 2. Choose the current stable release for your operating system (Windows, macOS, or Linux), download it, and install it.
-3. To verify the installation, open a terminal and execute the `julia` command. This should launch Julia, indicating it is successfully installed on your system.
+3. (Optional:) To verify the installation:
+    1. open the terminal (Windows: `Windows key` for Windows then type `cmd`, Mac: `Cmd + Space` for Spotlight then type `terminal`)
+    2. In the terminal: type `julia`.
+    3. If a new prompt appears, you have successfully installed Julia on your system. Try, e.g., `1 + 1`
 
 Now that you have Julia installed, we can proceed to set up your development environment.
 
