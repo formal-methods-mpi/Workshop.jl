@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Exercise · A fresh approach to scientific computing</title><script data-outdated-warner src="../../assets/warner.js"></script><link rel="canonical" href="https://formal-methods-mpi.github.io/Workshop.jl/2_syntax/exercise/"/><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.045/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.24/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="A fresh approach to scientific computing logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="A fresh approach to scientific computing logo"/></a><div class="docs-package-name"><span class="docs-autofit"><a href="../../">A fresh approach to scientific computing</a></span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../0_preparation/preparation/">Chapter 0: Preparation</a></li><li><input class="collapse-toggle" id="menuitem-3" type="checkbox"/><label class="tocitem" for="menuitem-3"><span class="docs-label">Chapter 1: Workflow</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../1_workflow/usage/">Working with Julia in VSCode</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-4" type="checkbox" checked/><label class="tocitem" for="menuitem-4"><span class="docs-label">Chapter 2: Syntax</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../foundations/">Theory</a></li><li class="is-active"><a class="tocitem" href>Exercise</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-5" type="checkbox"/><label class="tocitem" for="menuitem-5"><span class="docs-label">Chapter 3: Types</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../3_types/types/">Theory</a></li><li><a class="tocitem" href="../../3_types/exercise/">Exercise</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-6" type="checkbox"/><label class="tocitem" for="menuitem-6"><span class="docs-label">Chapter 4: Multiple Dispatch</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../4_dispatch/dispatch/">Theory</a></li><li><a class="tocitem" href="../../4_dispatch/exercise/">Exercise</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-7" type="checkbox"/><label class="tocitem" for="menuitem-7"><span class="docs-label">Advanced Materials</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../5_advanced/intro/">Introduction</a></li><li><a class="tocitem" href="../../5_advanced/dual/">Automatic Differentiation</a></li><li><a class="tocitem" href="../../5_advanced/workflow/">Workflow</a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Chapter 2: Syntax</a></li><li class="is-active"><a href>Exercise</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Exercise</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/formal-methods-mpi/Workshop.jl/blob/main/docs/src/2_syntax/exercise.md#" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Exercise:-Linear-Regression"><a class="docs-heading-anchor" href="#Exercise:-Linear-Regression">Exercise: Linear Regression</a><a id="Exercise:-Linear-Regression-1"></a><a class="docs-heading-anchor-permalink" href="#Exercise:-Linear-Regression" title="Permalink"></a></h1><p>We will finish this chapter with an exercise that makes use of some of the basic syntax elements described before. Our goal is to implement linear regression. During the course of the workshop, we will come back to this example several times. Let&#39;s first have a look at what linear regression is: Suppose you observe the two variables education (in years) and income (per month in dollar), and you want to predict a persons income based on their education. One way to do this is linear regression. Suppose we conducted a study and observed the following data points:</p><p><img src="../data.png" alt="data"/></p><p>On the x-axis, you see the years of education, and on the y-axis you see the monthly income. The task of linear regression is to find a straight line that best describes this relationship:</p><p><img src="../lr.png" alt="lr"/></p><p>As you may recal from university, school, or learn just now, a straight line is mathematically described by <span>$y = \alpha + \beta x$</span>, where in our case, <span>$y$</span> corresponds to income and <span>$x$</span> to years of education.</p><div class="admonition is-compat"><header class="admonition-header">Exercise</header><div class="admonition-body"><p>Write a function <code>predict</code> that takes <code>x, α</code> and <code>β</code> as inputs and returns the predicted value for <code>y</code>.</p></div></div><details>
+<summary>show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">function predict(x, α, β)
+    y = α .+ β*x
+    return y
+end</code></pre></div></div></details><p><br/></p><p>Let&#39;s simulate some data for the task at hand. First, we load the <code>Random</code> package (a julia package for random number generation) and set a seed (to make our experiments reproducible):</p><pre><code class="language-julia hljs">using Random
+Random.seed!(1243)</code></pre><p>Next, we generate some random values for years of education:</p><pre><code class="language-julia hljs">x = 10 .+ 3*randn(20)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">20-element Vector{Float64}:
+ 13.116025283577589
+ 11.356663727732775
+  4.018952341087944
+  9.600251658629814
+ 10.489482131157526
+  7.710265590017107
+ 14.16002104641104
+ 14.726544271979687
+ 14.376561114088712
+  8.682658902543643
+  7.530847432691564
+ 15.371078835509365
+  8.004682258907811
+ 10.170847239195059
+  5.355107648309216
+ 13.336655909843952
+ 13.59946687466142
+  6.576957736788565
+  9.171015497579846
+  7.302119739123987</code></pre><p>This produces a vector of 20 values with 10 years of education as the average, and some normally distributed random variation.</p><div class="admonition is-compat"><header class="admonition-header">Exercise</header><div class="admonition-body"><p>Use your previously defined function <code>predict</code> to generate some values for income (<code>y</code>) with <code>α = 1000, β = 300</code></p></div></div><details>
+<summary>show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">y = predict(x, 1000, 300)</code></pre></div></div><pre class="documenter-example-output"><code class="nohighlight hljs ansi">20-element Vector{Float64}:
+ 4934.807585073277
+ 4406.999118319833
+ 2205.6857023263833
+ 3880.075497588944
+ 4146.844639347258
+ 3313.079677005132
+ 5248.0063139233125
+ 5417.963281593906
+ 5312.9683342266135
+ 3604.797670763093
+ 3259.254229807469
+ 5611.32365065281
+ 3401.4046776723435
+ 4051.2541717585177
+ 2606.532294492765
+ 5000.996772953185
+ 5079.840062398426
+ 2973.08732103657
+ 3751.304649273954
+ 3190.635921737196</code></pre></details><p><br/> Since in reality, income does not perfectly depend on education, but there is some random variation, we add this random variation to <code>y</code>:</p><pre><code class="language-julia hljs">y += 500*randn(20)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">20-element Vector{Float64}:
+ 4569.5324380034235
+ 4401.7368192919075
+ 2085.41216907894
+ 3917.9803976680655
+ 4064.3947162468003
+ 4284.11999001945
+ 5254.407220966737
+ 4449.137251201013
+ 5484.618009616066
+ 3913.251941788397
+ 2609.1868715110995
+ 6132.671218234935
+ 3945.6688376628163
+ 3936.615889927559
+ 1531.192762423906
+ 5864.837739023354
+ 4939.341325639505
+ 2618.521185197386
+ 2864.5747773736684
+ 3298.8749837404703</code></pre><p>And viola! We have some data to work with.</p><p>In reality of course, we don&#39;t know the values for <span>$\alpha$</span> and <span>$\beta$</span>, but we have to estimate them from the data. To do so, we first need some indication of how good a certain combination of values works for our data. Usually, we use the sum of squared errors for this task:</p><p class="math-container">\[\sum_{i=1}^n (\hat{y}_i - y_i)^2\]</p><p>So we go through all of our <code>n</code> data points (<code>i = 1, ..., n</code>) and for each of those data points we compute the squared distance between the prediction, <span>$\hat{y}_i$</span>, and the value we observed in reality, <span>$y_i$</span>.</p><div class="admonition is-compat"><header class="admonition-header">Exercise</header><div class="admonition-body"><p>Define a function <code>squared_error</code> that takes a vector of predicted values and a vector of observed values as input and computes the sum of squared errors between them.</p></div></div><details>
+<summary>show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">function squared_error(y, ŷ)
+    error = 0.0
+    for i in eachindex(y)
+        error += (y[i] - ŷ[i])^2
+    end
+    return error
+end</code></pre><p>or, a bit shorter using broadcasting:</p><pre><code class="language-julia hljs">function squared_error(y, ŷ)
+    return sum((y - ŷ).^2)
+end</code></pre></div></div></details><p><br/></p><div class="admonition is-compat"><header class="admonition-header">Exercise</header><div class="admonition-body"><p>Using your previously defined <code>predict</code> and <code>squared_error</code> functions to define a function <code>squared_error_regression</code> that takes as input values for <code>α</code>, <code>β</code>, <code>x</code> and <code>y</code> and returns as output the squared error between predictions and observed values. Then, use this function to compute the squared error for the parameter values 1. <code>β = 100, α = 200</code> and 2. <code>β = 300, α = 1000</code></p></div></div><details>
+<summary>show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">function squared_error_regression(α, β, y, x)
+    return squared_error(y, predict(x, α, β))
+end
+
+squared_error_regression(200, 100, y, x)
+squared_error_regression(1000, 300, y, x)</code></pre></div></div><pre class="documenter-example-output"><code class="nohighlight hljs ansi">1.7201301120694494e8</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">6.012141097505945e6</code></pre></details><p><br/> You should see that the error corresponding to the true parameters we used to simulate the data is much lower.</p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../foundations/">« Theory</a><a class="docs-footer-nextpage" href="../../3_types/types/">Theory »</a><div class="flexbox-break"></div><p class="footer-message">Got a question? Something confuses you? <a href="https://github.com/formal-methods-mpi/Workshop.jl/issues/new">Don&#39;t hesitate to open an issue to ask for help!</a></p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.24 on <span class="colophon-date" title="Wednesday 26 April 2023 07:49">Wednesday 26 April 2023</span>. Using Julia version 1.8.5.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
