@@ -14,3 +14,7 @@ In the menu to the left, you should see the Chapters 0-4:
 ```@eval
 import Markdown; Markdown.parse_file("../src/reuse/chapter-overview.md")
 ```
+
+# Let's go
+
+[Working with Julia in VSCode](@ref)
