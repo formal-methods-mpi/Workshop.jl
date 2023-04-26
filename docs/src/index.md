@@ -2,12 +2,6 @@
 CurrentModule = Workshop
 ```
 
-# Abstract
-
-```@eval
-import Markdown; Markdown.parse_file("../src/abstract.md")
-```
-
 # What this workshop is about
 
 Hello and welcome to our Julia workshop!
