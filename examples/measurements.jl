@@ -84,3 +84,88 @@ A = [m1 m1
 b = [m1; m2]
 
 A*b
+
+→
+
+############################################################################################
+
+struct Measurement <: AbstractFloat
+    value
+    error
+    Measurement(val, err) = new(val, abs(err))
+end
+
+±(val, err) = Measurement(val, err)
+
+m1 = 2.98 ± 0.43
+m2 = 0.34 ± 1.34
+
+import Base: +, -, *
++(x::Measurement, y::Measurement) = Measurement(x.value + y.value, x.error + y.error)
+-(x::Measurement, y::Measurement) = Measurement(x.value - y.value, x.error + y.error)
++(a::Real, b::Measurement) = Measurement(a + b.value, b.error)
++(a::Measurement, b::Real) = b + a
+-(x::Measurement, y::Real) = Measurement(x.value - y, x.error)
+-(x::Real, y::Measurement) = Measurement(x - y.value, y.error)
+*(x::Measurement, y::Real) = Measurement(x.value*y, abs(x.error*y))
+*(x::Real, y::Measurement) = y*x
+
+import Base: show
+
+function show(io::IO, m::Measurement)
+    value_as_string = string(round(m.value, digits = 2))
+    error_as_string = string(round(m.error, digits = 2))
+    print(io, value_as_string*" ± "*error_as_string)
+end
+
+using Random
+Random.seed!(1243)
+
+x = 10 .+ 3*randn(20)
+β = 300
+α = 1000
+y = α .+ β*x + 500*randn(20)
+
+function predict(x, α, β)
+    y = α .+ β*x
+    return y
+end
+
+m1 .+ [m1; m2]
+
+x = 10 .+ 3*randn(20)
+β = 300
+α = 1000
+y = α .+ β*x + 500*randn(20)
+x = Measurement.(x, 2*randn(20))
+
+
+function squared_error(y, ŷ)
+    return sum((y - ŷ).^2)
+end
+
+function Base.:*(a::Measurement, b::Measurement)
+    val = a.val*b.val
+    lower = (a.val - a.err)*(b.val - b.err)
+    upper = (a.val + a.err)*(b.val + b.err)
+    err = maximum([abs(val-lower), abs(val-upper)])
+    return(Measurement(val, err))
+end
+
+
+function Base.:^(a::Measurement, k::Int)
+    if k != 2
+        error("not implemented")
+    else
+        value = a.value^2
+        lower = (a.value - a.error)*(a.value - a.error)
+        upper = (a.value + a.error)*(a.value + a.error)
+        error = maximum([abs(value-lower), abs(value-upper)])
+        return(Measurement(value, error))
+    end
+end
+
+
+m1^2
+
+squared_error(y, predict(x, 1000, 300))

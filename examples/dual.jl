@@ -34,7 +34,7 @@ solution.minimizer
 ############################################################################################
 # type
 
-struct Dual
+struct Dual <: Number
     v
     ϵ
 end
@@ -52,6 +52,9 @@ import Base: +, -, *, ^, convert, promote_rule
 *(a::Dual, b::Dual) = Dual(a.v * b.v, a.v*b.ϵ + b.v*a.ϵ)
 ^(a::Dual, k::Int) = Dual(a.v^k, k*a.v^(k-1)*a.ϵ)
 
+Base.convert(::Type{Dual}, x::Real) = Dual(x, zero(x))
+Base.promote_rule(::Type{Dual}, ::Type{<:Real}) = Dual
+
 +(a::Dual, b::Real) = a + convert(Dual, b)
 +(a::Real, b::Dual) = b + a
 
@@ -64,8 +67,7 @@ import Base: +, -, *, ^, convert, promote_rule
 *(a::Dual, b::Vector) = [a * b[i] for i in eachindex(b)]
 *(a::Vector, b::Dual) = b*a
 
-Base.convert(::Type{Dual}, x::Real) = Dual(x, zero(x))
-Base.promote_rule(::Type{Dual}, ::Type{<:Real}) = Dual
+
 
 
 squared_loss(x, y, Dual(β₀, 1.0))
