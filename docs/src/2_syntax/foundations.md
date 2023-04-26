@@ -17,22 +17,24 @@ Regular variables are named using alphanumeric characters and underscores, start
 ```@example variables
 x = 1
 my_variable = "awesome"
+nothing #hide
 ```
 
 Unicode variables allow you to use a wider range of characters, including mathematical symbols, Greek letters, and other special characters.
 To create a Unicode variable, type a backslash followed by the Unicode character name, and then press the Tab key to convert it into the corresponding Unicode symbol.
-For example, type \alpha and then press Tab to create the α variable.
+For example, type \alpha and then press Tab to create the α variable. If you are interested you can find a [table of all available unicode characters](https://docs.julialang.org/en/v1/manual/unicode-input/) and how to type them in the Julia documentation.
 
 ```@example variables
 α = 0.05
 β₁ = 1.2
 Δt = 0.01
+nothing #hide
 ```
 
 !!! compat "Exercise"
-    1. Assign the integer value 42 to a variable named the_answer_to_life.
-    2. Assign the string "Julia is fun!" to a variable named yay.
-    3. Assign the value of 1 + √2 divided by 2 to the variable φ (phi). Remember to use the Unicode character: type \phi or \sqrt and press Tab to convert it.
+    1. Assign the `Integer` value `42` to a variable named `the_answer_to_life`.
+    2. Assign the `String` `"Julia is fun!"` to a variable named `yay`.
+    3. Assign the value of 1 + √2 divided by 2 to the variable `φ` (phi). Remember to use the Unicode character: type \phi or \sqrt and press Tab to convert it.
 
 ```@raw html
 <details>
@@ -163,10 +165,17 @@ This will already help you to predict the behavior of the `pop!` function:
 last_element = pop!(integer_vector)
 ```
 
+```@example variables
+print(integer_vector)
+```
+
 Lets create two vectors and see what we can do with them:
 
 ```@example variables
 vector1 = [1, 2, 3]
+```
+
+```@example variables
 vector2 = [4, 5, 6]
 ```
 
@@ -174,6 +183,9 @@ When you use standard arithmetic operators (+, -) on vectors, Julia performs ele
 
 ```@example variables
 added_vectors = vector1 + vector2
+```
+
+```@example variables
 subtracted_vectors = vector1 - vector2
 ```
 
@@ -181,6 +193,9 @@ Scalar multiplication and division using the standard arithmetic operators (*, /
 
 ```@example variables
 multiplied_vector = 2 * vector1
+```
+
+```@example variables
 divided_vector = vector1 / 2
 ```
 
@@ -188,6 +203,9 @@ Vectors can be concetenated with the `vcat` function or the `;` operator:
 
 ```@example variables
 concatenated_vector = vcat(vector1, vector2)
+```
+
+```@example variables
 concatenated_vector = [vector1; vector2]
 ```
 
@@ -206,39 +224,6 @@ If we want to perform an element-wise multiplication, we need to use the broadca
 
 ```@example variables
 vector1 .* vector2
-```
-
-However, maybe you want to perform the dot product, that is related to matrix multiplication.
-It is also known as the scalar product, because it always returns a single number, i.e., a scalar.
-We can do this with the `dot` function or the `⋅` operator from the `LinearAlgebra` package:
-
-```@example variables
-using LinearAlgebra
-dot_product = dot(vector1, vector2)
-dot_product = vector1 ⋅ vector2
-```
-Another important concept before we move on is the concept of sequences in Julia.
-
-In programming, sequences are ordered collections of elements, typically used to represent a series of values or data points. Sequences are essential in various applications, such as iterating through data, generating series of numbers, and organizing data in specific orders.
-
-In Julia, sequences can be created using ranges. They represent a series of evenly spaced values and can be created using the colon operator `:` or the `range` function.
-
-For example, you can create a range of integers from 1 to 10:
-
-```@example variables
-integer_sequence = 1:10
-```
-
-To create a range with a specific step size, you can use the following syntax:
-
-```@example variables
-even_sequence = 2:2:10
-```
-
-To convert a sequence to a vector, you can use the collect function:
-
-```@example variables
-integer_vector = collect(integer_sequence)
 ```
 
 !!! compat "Exercises"
@@ -263,6 +248,46 @@ a .^ 2
 ```
 \
 
+However, maybe you want to perform the dot product, that is related to matrix multiplication.
+It is also known as the scalar product, because it always returns a single number, i.e., a scalar.
+We can do this with the `dot` function or the `⋅` operator – \cdot <Tab> – from the `LinearAlgebra` package:
+
+```@example variables
+using LinearAlgebra
+```
+
+```@example variables
+dot_product = vector1 ⋅ vector2
+```
+
+```@example variables
+dot_product = dot(vector1, vector2)
+```
+
+Another important concept before we move on is the concept of sequences in Julia.
+
+In programming, sequences are ordered collections of elements, typically used to represent a series of values or data points. Sequences are essential in various applications, such as iterating through data, generating series of numbers, and organizing data in specific orders.
+
+In Julia, sequences can be created using ranges. They represent a series of evenly spaced values and can be created using the colon operator `:` or the `range` function.
+
+For example, you can create a range of integers from 1 to 10:
+
+```@example variables
+integer_sequence = 1:5
+```
+
+To create a range with a specific step size, you can use the following syntax:
+
+```@example variables
+even_sequence = 2:2:10
+```
+
+To convert a sequence to a vector, you can use the collect function:
+
+```@example variables
+integer_vector = collect(integer_sequence)
+```
+
 # Matrices
 
 Matrices are a data structure used to store and manipulate two-dimensional arrays of values. A matrix is a rectangular grid of elements, organized into rows and columns, where each element can be accessed by its row and column indices.
@@ -285,7 +310,7 @@ As you can see, things are very similar to vectors.
 
 !!! compat "Exercises"
     1. Define two square matrices and add and subtract them to/from each other.
-    2. Perform an element-wise multiplication of two matrices and then a matrix multiplication.
+    2. Then do a broadcasted multiplication and a normal matrix multiplication and compare the results.
 
 ```@raw html
 <details>
@@ -317,7 +342,7 @@ a * b
 
 ## For Loops
 
-For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an array or a tuple. The syntax for a for loop is as follows:
+For loops in Julia are used to iterate over a range of values or the elements of a collection. The syntax for a for loop is as follows:
 
 ```julia
 for variable in collection
@@ -370,7 +395,7 @@ end
 ```
 
 !!! compat "Exercise"
-    1. Write a for loop that prints the first 10 even numbers.
+    1. Write a for loop that prints the first 10 uneven numbers.
     2. Create a 2x2 Matrix and print out the value of each index. Tip: use the `eachindex` function.
 
 ```@raw html
@@ -380,7 +405,7 @@ end
 ```
 !!! tip "Solution"
     ```julia
-    for i in 2:2:20
+    for i in 1:2:19
         println(i)
     end
 
