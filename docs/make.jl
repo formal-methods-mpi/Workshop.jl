@@ -26,10 +26,7 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
-        "Chapter 0: Preparation" => [
-            "Introduction" => "0_preparation/introduction.md",
-            "Setup" => "0_preparation/preparation.md"
-        ],
+        "Chapter 0: Preparation" => "0_preparation/preparation.md",
         "Chapter 1: Workflow" => ["Working with Julia in VSCode" => "1_workflow/usage.md"],
         "Chapter 2: Syntax" => [
             "Theory" => "2_syntax/foundations.md",

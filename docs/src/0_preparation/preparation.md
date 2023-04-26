@@ -1,4 +1,9 @@
-# Setup
+# Preparation
+
+In this chapter, you will learn how to use julia (installation, setup, loading packages, creating scripts, etc.)
+If you are an in-person participant in this workshop, you should have received a mail prior to the workshop to complete the [Preparation](@ref) instructions.
+If so, you can skip this part and continue with [Working with Julia in VSCode](@ref).
+If you are doing the workshop online or were too lazy to follow the mailed instructions, you should proceed with [Preparation](@ref).
 
 ## Installing Julia
 
@@ -6,9 +11,7 @@ Before we begin working with Julia, it's essential to have the language properly
 Follow the steps below to install Julia:
 
 1. Go to the official [Julia Website](https://julialang.org/downloads/) and navigate to the "Downloads" section.
-
 2. Choose the current stable release for your operating system (Windows, macOS, or Linux), download it, and install it.
-
 3. To verify the installation, open a terminal and execute the `julia` command. This should launch Julia, indicating it is successfully installed on your system.
 
 Now that you have Julia installed, we can proceed to set up your development environment.
