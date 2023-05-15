@@ -35,7 +35,7 @@ The Julia REPL (Read-Eval-Print Loop) is an interactive and modern command-line 
 This makes the REPL a great place to experiment with Julia, test ideas, get help, and much more.
 
 The REPL has several differend modes:
-- The normal Julia mode
+- The normal Juia mode
 - Help mode
 - Package mode
 - Shell mode
@@ -88,6 +88,18 @@ In Package mode, you can add, update, remove, and list installed packages, among
     3. Remove the Example package: `rm Example`.
     4. Discover what else you can type in Package mode by entering `help` or `?`.
 
+## Restarting the REPL
+
+Now that we have learned about the REPL and the various modes, let's restart the REPL.
+
+The necessity to restart the REPL comes from how Julia handles certain changes in your code. When you define functions, variables or types, they are stored in the current Julia session. However, if you make changes to a type definition, the REPL won't recognize these changes until you restart the session. Although VSCode includes a package called Revise.jl, which alleviates this problem somewhat, it wont help us for all cases we will encounter in this course.
+
+To restart the Julia REPL in VSCode, you can use the keyboard shortcut Alt + J Alt + R. When using this shortcut, it's important to press the keys quickly one after the other. If you wait too long between key presses, VSCode might not recognize it as a single command. Restarting the REPL in this way allows us to ensure that any changes we've made to type definitions are recognized and that our Julia session is up to date with our latest code.
+
+Tip: If you want to look up the shortcut for restarting the REPL, you can do so by opening the Command Palette and searching for "restart".
+
+Because we will need to restart the REPL it is important that you keep your code in a script file, so that you can easily execute it again after restarting the REPL. At the end you should have a single file which solves the entire workshop in a single run.
+
 ## Summary
 
-In this chapter, we created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, Shell mode, and Package mode.
+In this chapter, we created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, and Package mode. We also learned how to restart the REPL and why this is necessary.
