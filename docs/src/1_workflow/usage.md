@@ -100,6 +100,10 @@ Tip: If you want to look up the shortcut for restarting the REPL, you can do so 
 
 Because we will need to restart the REPL it is important that you keep your code in a script file, so that you can easily execute it again after restarting the REPL. At the end you should have a single file which solves the entire workshop in a single run.
 
+## The Tab key
+
+The Tab key is a useful tool in the REPL, which you can use for autocompletion and to see what is available in the current scope. For example, if you type `pr` and then press Tab, the REPL will show you all the available commands, beginning with `pr`. You can also see the namespace of a package by typing e.g., Base.<tab><tab>. If there is only a single possibility, the REPL will automatically complete the command for you. Try it out!
+
 ## Summary
 
-In this chapter, we created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, and Package mode. We also learned how to restart the REPL and why this is necessary.
+In this chapter, we created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, and Package mode. We also learned how to restart the REPL and why this is necessary. Lastly, we learned about the Tab key and how it can be used for autocompletion and to see what is available in the current scope.
