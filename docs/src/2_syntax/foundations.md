@@ -1,84 +1,49 @@
-# Foundations
+# Syntax cheat sheet
 
 Welcome to the next chapter! We hope that you made it through the setup part without too many headaches.
 Please don't hesitate to ask us any questions or provide feedback on what you liked and didn't like or thought was too easy or too hard.
 Your input is always welcome and appreciated!
 
-We are now ready to dive into the foundations of the Julia language.
+In the following, you will find a quick sheet cheat covering the basic julia syntax.
+Since we assume you are elrady familiar with R, python or MATLAB, you will see that the julia syntax is quite similar.
+We therefore recommend you quickly skim this cheat sheet and do the exercises at the and of this chapter. 
+Then you may want to open this page in a new tab, so you can refer to it during the next chapters.
 
 ## Variable assignment
-
-In Julia, variables are used to store data and represent values in your program.
-Variables have a name and are assigned a value using the assignment operator `=`.
-Julia supports both regular (ASCII) variable names (like `alpha`) and Unicode variable names (like `α`).
-
-Regular variables are named using alphanumeric characters and underscores, starting with a letter or underscore.
 
 ```@example variables
 x = 1
 my_variable = "awesome"
+nothing #hide
 ```
 
-Unicode variables allow you to use a wider range of characters, including mathematical symbols, Greek letters, and other special characters.
+Julia also supports Unicode variable names (like `α`).
+They allow you to use a wider range of characters, including mathematical symbols, Greek letters, and other special characters.
 To create a Unicode variable, type a backslash followed by the Unicode character name, and then press the Tab key to convert it into the corresponding Unicode symbol.
-For example, type \alpha and then press Tab to create the α variable.
+For example, type `\alpha` and then press `<tab>` to create the `α` variable.
 
 ```@example variables
 α = 0.05
 β₁ = 1.2
 Δt = 0.01
+nothing #hide
 ```
 
-!!! compat "Exercise"
-    1. Assign the integer value 42 to a variable named the_answer_to_life.
-    2. Assign the string "Julia is fun!" to a variable named yay.
-    3. Assign the value of 1 + √2 divided by 2 to the variable φ (phi). Remember to use the Unicode character: type \phi or \sqrt and press Tab to convert it.
+To find out how a certain unicode character can be created, you can use the help mode of the REPL:
+```
+help?> β₁
+```
 
-```@raw html
-<details>
-<summary>show solution</summary>
-<br>
 ```
-!!! tip "Solution"
-    ```julia
-    the_answer_to_life = 42
-    yay = "Julia is fun!"
-    ϕ = (1 + √2)/2
-    ```
-```@setup variables
-the_answer_to_life = 42
-yay = "Julia is fun!"
-ϕ = (1 + sqrt(2))/2
-```
-```@raw html
-</details>
+"β₁" can be typed by \beta<tab>\_1<tab>
 ```
 
 ## Functions
-
-Excellent! Now that you have an understanding of variables and the use of unicode symbols, let's dive into the topic of functions.
-
-In programming, functions are reusable blocks of code that serve a specific purpose. They play a crucial role in organizing and modularizing code, which in turn enhances its readability and maintainability. For instance, if you've written a chunk of code that performs a specific task or multiple tasks, it would be beneficial to break down the code into individual functions and give each a descriptive name. This approach makes your code more comprehensible and easier to work with. Functions also enable code reuse, minimizing redundancy and simplifying updates, which can save time and effort in the long run.
-
-The basic syntax for defining a function in Julia is as follows:
 
 ```julia
 function function_name(argument1, argument2)
     # function body
     return output
-end
-```
-
-The `return` keyword plays a vital role in specifying the value that a `function` should output. When no return statement is explicitly provided, the function will return the value of the last expression evaluated in the function body.
-
-However, it is generally good practice to include a `return` statement when defining functions using the `function` keyword, even if the function returns `nothing`.
-This approach helps to eliminate ambiguity and ensures that the function's expected output is clear to anyone who reads it.
-
-For example:
-
-```@example variables
-function add(x, y)
-    return x + y
 end
 ```
 
@@ -92,131 +57,72 @@ For example:
 
 ```@example variables
 square(x) = x * x
-```
-
-### Exercises
-
-
-
-!!! compat "Exercise"
-    1. Write a function called divide that takes two arguments and returns the result of dividing the first argument by the second.
-
-```@raw html
-<details>
-<summary>show solution</summary>
-<br>
-```
-!!! tip "Solution"
-    ```julia
-    function divide(a, b)
-        return a/b
-    end
-    # or
-    divide(a, b) = a/b
-    ```
-```@setup variables
-    function divide(a, b)
-        return a/b
-    end
-    # or
-    divide(a, b) = a/b
-```
-```@raw html
-</details>
+nothing #hide
 ```
 
 ## Vectors
 
-In Julia, vectors are a fundamental data structure used to store and manipulate collections of values. A vector is a one-dimensional array that can store elements. Vectors are useful for representing and processing sequences of data, such as time series, feature vectors, or lists of names.
-
-To create a vector in Julia, you can use square brackets `[]` and separate the elements by commas. For example, to create a vector of integers, you can write:
-
 ```@example variables
-integer_vector = [1, 2, 3, 4, 5]
+first_vector = [1, 2, 3]
+nothing #hide
 ```
 
 You can access elements of a vector by specifying the index in square brackets. Note that Julia uses 1-based indexing, which means the first element has an index of 1:
 
 ```@example variables
-first_element = integer_vector[1]
+first_element = first_vector[1]
+nothing #hide
 ```
 
 You can also assign a new value to an element of a vector by specifying the index in square brackets and using the assignment operator:
 
 ```@example variables
-integer_vector[1] = 10
-integer_vector
+first_vector[1] = 10
+nothing #hide
 ```
 
-To add a new element to the end of a vector, you can use the `push!` function:
+## Operations on Vectors
 
 ```@example variables
-push!(integer_vector, 6)
+second_vector = [4, 5, 6]
+nothing #hide
 ```
 
-Notice the exclamation mark at the end of the function name. This is a convention in Julia that indicates that the function mutates its arguments.
-This means that the function modifies the original data passed as an argument instead of creating a new copy of the data.
-
-This will already help you to predict the behavior of the `pop!` function:
+When you use standard arithmetic operators (`+`, `-`) on vectors, Julia performs element-wise operations.
 
 ```@example variables
-last_element = pop!(integer_vector)
+subtracted_vectors = first_vector - second_vector
 ```
 
-Lets create two vectors and see what we can do with them:
+Scalar multiplication and division using the standard arithmetic operators (`*`, `/`):
 
 ```@example variables
-vector1 = [1, 2, 3]
-vector2 = [4, 5, 6]
-```
-
-When you use standard arithmetic operators (+, -) on vectors, Julia performs element-wise operations.
-
-```@example variables
-added_vectors = vector1 + vector2
-subtracted_vectors = vector1 - vector2
-```
-
-Scalar multiplication and division using the standard arithmetic operators (*, /):
-
-```@example variables
-multiplied_vector = 2 * vector1
-divided_vector = vector1 / 2
+multiplied_vector = 2 * first_vector
 ```
 
 Vectors can be concetenated with the `vcat` function or the `;` operator:
 
 ```@example variables
-concatenated_vector = vcat(vector1, vector2)
-concatenated_vector = [vector1; vector2]
+concatenated_vector = vcat(first_vector, second_vector)
+concatenated_vector = [first_vector; second_vector]
 ```
 
-However, when we want to multiply two vectors like this:
+## Broadcasting
+
+All functions can be applied element-wise to a collection (vector/matrix) by using the broadcast `.` operator.
+For example, we can take the elemt-wise square root of a vector:
 
 ```@example variables
-try  #hide
-multiplied_vectors = vector1 * vector2
-catch err; showerror(stderr, err); end  #hide
+sqrt.(first_vector)
 ```
 
-We get a `MethodError` because the `*` operator is not defined for `Vector`s.
-
-Now, it depends on what we mean when we want to multiply two vectors.
-If we want to perform an element-wise multiplication, we need to use the broadcast `.` operator:
-
+Or we mutliply two vectors element-wise:
 ```@example variables
-vector1 .* vector2
+first_vector .* second_vector
 ```
 
-However, maybe you want to perform the dot product, that is related to matrix multiplication.
-It is also known as the scalar product, because it always returns a single number, i.e., a scalar.
-We can do this with the `dot` function or the `⋅` operator from the `LinearAlgebra` package:
+## Sequences
 
-```@example variables
-using LinearAlgebra
-dot_product = dot(vector1, vector2)
-dot_product = vector1 ⋅ vector2
-```
 Another important concept before we move on is the concept of sequences in Julia.
 
 In programming, sequences are ordered collections of elements, typically used to represent a series of values or data points. Sequences are essential in various applications, such as iterating through data, generating series of numbers, and organizing data in specific orders.
@@ -391,6 +297,59 @@ end
     end
     ```
 ```@setup variables
+```
+```@raw html
+</details>
+```
+
+
+# Exercises
+
+!!! compat "Exercise"
+    3. Assign the value of 1 + √2 divided by 2 to the variable φ (phi). Remember to use the Unicode character: type \phi or \sqrt and press Tab to convert it.
+
+```@raw html
+<details>
+<summary>show solution</summary>
+<br>
+```
+!!! tip "Solution"
+    ```julia
+    the_answer_to_life = 42
+    yay = "Julia is fun!"
+    ϕ = (1 + √2)/2
+    ```
+```@setup variables
+the_answer_to_life = 42
+yay = "Julia is fun!"
+ϕ = (1 + sqrt(2))/2
+```
+```@raw html
+</details>
+```
+
+!!! compat "Exercise"
+    1. Write a function called divide that takes two arguments and returns the result of dividing the first argument by the second.
+
+```@raw html
+<details>
+<summary>show solution</summary>
+<br>
+```
+!!! tip "Solution"
+    ```julia
+    function divide(a, b)
+        return a/b
+    end
+    # or
+    divide(a, b) = a/b
+    ```
+```@setup variables
+    function divide(a, b)
+        return a/b
+    end
+    # or
+    divide(a, b) = a/b
 ```
 ```@raw html
 </details>
