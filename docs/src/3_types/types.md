@@ -78,7 +78,7 @@ struct Pikachu <: Electric
     hp
 end
 ```
-We now have an abstract type `Pokemon` with subtypes `Normal`, `Fire`, `Flying` and `Electric`,
+We now have an abstract type `Pokemon` with subtypes `Normal`, `Flying` and `Electric`,
 and a composite type `Pikachu` which is a subtype of `Electric`.
 The composite type `Pikachu` has the "fields" `nickname`, `attack`, `defense`, `speed` and `hp`, where we can store the respective values.
     
@@ -94,6 +94,22 @@ We can retrieve the values stored in the fields as
 ```@example types
 my_pikachu.defense
 ```
+
+One thing to notice is that types can not be re-defined in a running julia session.
+For example, trying to re-define the `Pikachu` type will result in an error:
+
+```julia
+struct Pikachu <: Electric
+    nickname
+    attack
+end
+```
+
+```
+ERROR: invalid redefinition of constant Pikachu
+```
+
+During the "normal" use of julia this is no a problem, but it can be a little bit cumbersome during a workshop, where you might want to try things out or make an error while defining a type that you want to correct. Unfortunately, the only way to do this is to restart your julia session. 
 
 !!! compat "Exercise"
     Create a new composite type for a pokemon of your choice of type `Flying`, create an instance of that pokemon, and retrieve it's nickname.
