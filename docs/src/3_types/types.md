@@ -109,7 +109,7 @@ end
 ERROR: invalid redefinition of constant Pikachu
 ```
 
-During the "normal" use of julia this is no a problem, but it can be a little bit cumbersome during a workshop, where you might want to try things out or make an error while defining a type that you want to correct. Unfortunately, the only way to do this is to restart your julia session. 
+During the "normal" use of julia this is no problem, but it can be a little cumbersome during a workshop, where you might want to try things out or make an error while defining a type that you want to correct. Unfortunately, the only way to do this is to restart julia. 
 
 !!! compat "Exercise"
     Create a new composite type for a pokemon of your choice of type `Flying`, create an instance of that pokemon, and retrieve it's nickname.
