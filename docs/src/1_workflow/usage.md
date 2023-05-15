@@ -35,7 +35,7 @@ The Julia REPL (Read-Eval-Print Loop) is an interactive and modern command-line 
 This makes the REPL a great place to experiment with Julia, test ideas, get help, and much more.
 
 The REPL has several differend modes:
-- The normal Juia mode
+- The normal Julia mode
 - Help mode
 - Package mode
 - Shell mode
