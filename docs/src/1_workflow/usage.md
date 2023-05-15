@@ -35,6 +35,12 @@ The Julia REPL (Read-Eval-Print Loop) is an interactive and modern command-line 
 This makes the REPL a great place to experiment with Julia, test ideas, get help, and much more.
 
 The REPL has several differend modes:
+- The normal Julia mode
+- Help mode
+- Package mode
+- Shell mode
+
+We will cover each of these modes, except the shell mode, in the following sections.
 
 ### Julia mode
 
@@ -69,16 +75,6 @@ To access Help mode, press ?. In this mode, you can search for documentation and
     1. To find information on the println function, enter Help mode by pressing ?. Once in Help mode, simply type println and press Enter to retrieve the relevant documentation.
     2. Look for an alternative print function by entering "print" (with quotation marks) in the search field. Julia will subsequently provide a list of definitions where the string "print" appears in the associated documentation.
 
-### Shell mode
-
-To enter Shell mode, press `;`.
-In this mode, you can execute shell commands (e.g., `ls`, `cd`, `mkdir`) as you would in your operating system's command prompt or terminal. This allows you to perform file and directory operations, or to start a command-line interface without leaving the Julia REPL.
-
-!!! compat "Exercise"
-    Enter Shell mode by pressing ;. 
-    1. List the files in the current directory with `ls`.
-    2. Create another Julia file in the current directory with `touch chapter1.jl`.
-
 ### Package mode
 
 Access Package mode by pressing `]`.
@@ -86,9 +82,10 @@ This mode is dedicated to managing Julia packages using the built-in package man
 In Package mode, you can add, update, remove, and list installed packages, among other tasks.
 
 !!! compat "Exercise"
-    Enter Package mode by pressing `]`. 
+    Enter Package mode by pressing `]`.
     1. Add the Example package: `add Example`.
     2. List the installed packages: `status`.
+    3. Remove the Example package: `rm Example`.
     4. Discover what else you can type in Package mode by entering `help` or `?`.
 
 ## Summary
