@@ -8,7 +8,7 @@ This will help you familiarize yourself with the environment, become proficient 
 **Chapter 2** is meant to make the Julia syntax more familiar to you.
 This is meant to help you translate concepts that you already know from other programming languages like, e.g., assignment, control flow, functions, etc.
 
-**Chapter 3** is about things that exists in Julia.
+**Chapter 3** is about things that exist in Julia.
 Everything that exists in Julia has a type.
 Without understanding types, you can not understand Julia.
 What better why to understand than to create your own type?
