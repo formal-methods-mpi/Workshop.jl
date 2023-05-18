@@ -7,7 +7,11 @@ Your input is always welcome and appreciated!
 In the following, you will find a quick cheat sheet covering the basic Julia syntax.
 This chapter assumes, that you are already familiar with R, Python or MATLAB. If you are, you will see that Julia's syntax is similar to each.
 We recommend that you quickly **skim** this cheat sheet and do the exercises at the and of this chapter.
-Then you may want to open this page in a new tab, so you can look stuff up during the rest of the workshop.
+You might want to keep this page open in another tab to have it as a reference at your disposal.
+Should you encounter questions about how to implement something in Julia, while knowing how you would do it in a language of your choice:
+We have a collection of side-by-side comparisons of Julia and R, Python or Matlab in the Additional Resources section of the Advanced Materials chapter.
+Because these are more comprehensive, you should not need them during the workshop.
+If you do, please let us know, so we can add the missing information to our more streamlined cheat sheet – we designed specifically for you.
 
 ## Variable assignment
 
