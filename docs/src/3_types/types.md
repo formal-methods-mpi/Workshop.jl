@@ -109,7 +109,10 @@ end
 ERROR: invalid redefinition of constant Pikachu
 ```
 
-During the "normal" use of julia this is no problem, but it can be a little cumbersome during a workshop, where you might want to try things out or make an error while defining a type that you want to correct. Unfortunately, the only way to do this is to restart julia. 
+In Julia, once a type is defined, it is locked in place due to the language's "just-in-time" compilation process. This feature enhances performance during normal use, but it can be a little cumbersome during a workshop where you are programming interactively.
+For example, you might want to try things out, or you made an error while defining a type.
+Unfortunately, correcting your error makes it necessary to restart Julia.
+Luckily, you did learn how to do that at the beginning of the workshop – remember that you can use the VSCode command palette.
 
 !!! compat "Exercise"
     Create a new composite type for a pokemon of your choice of type `Flying`, create an instance of that pokemon, and retrieve it's nickname.
