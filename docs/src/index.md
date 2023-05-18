@@ -27,7 +27,7 @@ It is important that you install Julia and Visual Studio Code following the step
 
 ## During the workshop
 
-We will focus on what sets Julia apart from other programming languages working hands-on with Julia in Visual Studio Code (VSCode) and the terminal.
+We will focus on what sets Julia apart from other programming languages working hands-on with Julia in Visual Studio Code (VSCode).
 Through hands-on activities, you'll gain practical experience to reinforce your understanding of the concepts.
 
 The core of this workshop consists of 5 chapters (Chapter 0 - Chapter 4) that you can see in the sidebar on the left.
