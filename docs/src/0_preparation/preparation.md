@@ -19,6 +19,12 @@ Follow the steps below to install Julia:
 
 Now that you have Julia installed, we can proceed to set up your development environment.
 
+The workshop, as it currenty is, was tested with the following Julia version:
+
+```@example version
+VERSION
+```
+
 ## Installing Visual Studio Code (VSCode)
 
 Visual Studio Code (VSCode) is a popular and versatile integrated development environment (IDE) that offers excellent support for Julia, making it our recommended choice for this workshop.
