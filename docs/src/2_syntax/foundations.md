@@ -4,9 +4,9 @@ Welcome to the next chapter! We hope that you made it through the setup part wit
 Please don't hesitate to ask us any questions or provide feedback on what you liked and didn't like or thought was too easy or too hard.
 Your input is always welcome and appreciated!
 
-In the following, you will find a quick sheet cheat covering the basic julia syntax.
-Since we assume you are elrady familiar with R, python or MATLAB, you will see that the julia syntax is quite similar.
-We therefore recommend you quickly **skim** this cheat sheet and do the exercises at the and of this chapter. 
+In the following, you will find a quick cheat sheet covering the basic Julia syntax.
+This chapter assumes, that you are already familiar with R, Python or MATLAB. If you are, you will see that Julia's syntax is similar to each.
+We recommend that you quickly **skim** this cheat sheet and do the exercises at the and of this chapter.
 Then you may want to open this page in a new tab, so you can look stuff up during the rest of the workshop.
 
 ## Variable assignment
