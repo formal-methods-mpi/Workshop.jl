@@ -95,7 +95,7 @@ We can retrieve the values stored in the fields as
 my_pikachu.defense
 ```
 
-One thing to notice is that types can not be re-defined in a running julia session.
+One thing to notice is that types cannot be re-defined in a running julia session.
 For example, trying to re-define the `Pikachu` type will result in an error:
 
 ```julia
