@@ -16,7 +16,9 @@ During the first part (10:00-13:00) of the workshop, we will explore the followi
 * Leveraging Julia's capabilities for numerical and scientific computing
 * Best practices and tips for writing efficient Julia code
 
-In the second part (14:00-17:00), you will tackle a self-chosen project in a small group with our help.
+Notably, even the first part expects you to know a programming language similar to `Python`, `R`, or `Matlab`, so that `Julia` is your second (or nth) programming language.
+
+In the second part (14:00-17:00), you will tackle a self-chosen project in a small group with our help assuming you attended the first part or already used `Julia`.
 
 To secure your spot please sign up using the following form: [Insert Signup Form Link]
 
