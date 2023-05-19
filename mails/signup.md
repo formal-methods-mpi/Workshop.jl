@@ -8,7 +8,7 @@ Instructors: Aaron Peikert, Maximilian Ernst, Moritz Ketzer
 Sign up: [Insert Signup Form Link]
 Preparation: https://formal-methods-mpi.github.io/Workshop.jl/stable/preparation
 
-Julia is a versatile language that combines user-friendliness with unparalleled computational performance, rivaling even low-level languages like C or Fortran. Whether you are an experienced programmer or a beginner eager to dive into the world of data analysis, this workshop will equip you with the tools and knowledge to supercharge your computing tasks.
+Julia is a versatile language that combines user-friendliness with unparalleled computational performance, rivaling even low-level languages like C or Fortran. Whether you are an experienced programmer or a beginner eager to dive into the world of scientific computing, this workshop will equip you with the tools and knowledge to supercharge your computing tasks.
 
 During the first part (10:00-13:00) of the workshop, we will explore the following topics:
 
