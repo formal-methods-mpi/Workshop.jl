@@ -2,7 +2,7 @@
 # Julia Workshop: A fresh approach to scientific computing
 
 Date: 30.05.2023
-Time: 10-13 Hand-on introduction | 14-17 Build your own thing in Julia
+Time: 10-13 Hands-on introduction | 14-17 Build your own thing in Julia
 Location: Online + in person
 Instructors: Aaron Peikert, Maximilian Ernst, Moritz Ketzer
 Sign up: [Insert Signup Form Link]
