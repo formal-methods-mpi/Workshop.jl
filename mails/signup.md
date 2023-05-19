@@ -22,7 +22,7 @@ To secure your spot please sign up using the following form: [Insert Signup Form
 
 Seats are limited, so make sure to reserve your spot early! Feel free to share this invitation with colleagues or friends who might be interested in participating.
 
-To attend, you must follow the steps detailed on [the workshops website under Chapter 0](https://formal-methods-mpi.github.io/Workshop.jl/stable/preparation).
+To attend, you must follow the steps detailed on [the workshops website under Chapter 0](https://formal-methods-mpi.github.io/Workshop.jl/stable/preparation) before the workshop.
 
 The virtual and the in person workshop happen in parallel but are taught by different instructors to make attenting online more pleasant.
 
