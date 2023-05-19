@@ -20,7 +20,7 @@ In the second part (14:00-17:00), you will tackle a self-chosen project in a sma
 
 To secure your spot please sign up using the following form: [Insert Signup Form Link]
 
-Seats are limited, so make sure to reserve your spot early! Feel free to share this invitation with colleagues or friends who might be interested in leveraging Julia's power for their data analysis and computing needs.
+Seats are limited, so make sure to reserve your spot early! Feel free to share this invitation with colleagues or friends who might be interested in participating.
 
 To attend, you must follow the steps detailed on [the workshops website under Chapter 0](https://formal-methods-mpi.github.io/Workshop.jl/stable/preparation).
 
