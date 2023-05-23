@@ -54,10 +54,14 @@ concatenated_vector = [vector1; vector2]</code></pre><pre class="documenter-exam
  4
  5
  6</code></pre><p>However, when we want to multiply two vectors like this:</p><pre><code class="language-julia hljs">multiplied_vectors = vector1 * vector2</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">MethodError: no method matching *(::Vector{Int64}, ::Vector{Int64})
+
 Closest candidates are:
-  *(::Any, ::Any, !Matched::Any, !Matched::Any...) at operators.jl:591
-  *(!Matched::StridedMatrix{T}, ::StridedVector{S}) where {T&lt;:Union{Float32, Float64, ComplexF32, ComplexF64}, S&lt;:Real} at /opt/hostedtoolcache/julia/1.8.5/x64/share/julia/stdlib/v1.8/LinearAlgebra/src/matmul.jl:49
-  *(::StridedVecOrMat, !Matched::LinearAlgebra.Adjoint{&lt;:Any, &lt;:LinearAlgebra.LQPackedQ}) at /opt/hostedtoolcache/julia/1.8.5/x64/share/julia/stdlib/v1.8/LinearAlgebra/src/lq.jl:269
+  *(::Any, ::Any, !Matched::Any, !Matched::Any...)
+   @ Base operators.jl:578
+  *(!Matched::StridedMatrix{T}, ::StridedVector{S}) where {T&lt;:Union{Float32, Float64, ComplexF32, ComplexF64}, S&lt;:Real}
+   @ LinearAlgebra /opt/hostedtoolcache/julia/1.9.0/x64/share/julia/stdlib/v1.9/LinearAlgebra/src/matmul.jl:49
+  *(::StridedVecOrMat, !Matched::LinearAlgebra.Adjoint{&lt;:Any, &lt;:LinearAlgebra.LQPackedQ})
+   @ LinearAlgebra /opt/hostedtoolcache/julia/1.9.0/x64/share/julia/stdlib/v1.9/LinearAlgebra/src/lq.jl:269
   ...</code></pre><p>We get a <code>MethodError</code> because the <code>*</code> operator is not defined for <code>Vector</code>s.</p><p>Now, it depends on what we mean when we want to multiply two vectors. If we want to perform an element-wise multiplication, we need to use the broadcast <code>.</code> operator:</p><pre><code class="language-julia hljs">vector1 .* vector2</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">3-element Vector{Int64}:
   4
  10
@@ -121,4 +125,4 @@ a = [1 2; 3 4]
 
 for i in eachindex(a)
     println(a[i])
-end</code></pre></div></div></details></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../../1_workflow/usage/">« Working with Julia in VSCode</a><a class="docs-footer-nextpage" href="../exercise/">Exercise »</a><div class="flexbox-break"></div><p class="footer-message">Got a question? Something confuses you? <a href="https://github.com/formal-methods-mpi/Workshop.jl/issues/new">Don&#39;t hesitate to open an issue to ask for help!</a></p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.24 on <span class="colophon-date" title="Wednesday 26 April 2023 07:56">Wednesday 26 April 2023</span>. Using Julia version 1.8.5.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+end</code></pre></div></div></details></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../../1_workflow/usage/">« Working with Julia in VSCode</a><a class="docs-footer-nextpage" href="../exercise/">Exercise »</a><div class="flexbox-break"></div><p class="footer-message">Got a question? Something confuses you? <a href="https://github.com/formal-methods-mpi/Workshop.jl/issues/new">Don&#39;t hesitate to open an issue to ask for help!</a></p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.24 on <span class="colophon-date" title="Tuesday 23 May 2023 08:29">Tuesday 23 May 2023</span>. Using Julia version 1.9.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
