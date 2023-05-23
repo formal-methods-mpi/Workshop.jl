@@ -99,7 +99,7 @@ This starts a fresh Julia session, without all variables you previously defined 
 
 Tip: If you want to look up the shortcut for restarting the REPL, or any other shortcut, you can do so by opening the Command Palette and searching for "restart".
 
-Because we will need to restart the REPL it is important that you keep your code in a script file, so that you can easily execute it again after restarting the REPL. At the end you should have a single file which solves the entire workshop in a single run.
+Because we will need to restart Julia during the workshop, and this will delete all variables, functions, etc. you defined, it is important that you keep your code in a script file. You should keep this file clean, so it runs from top to bottom without errors. This way, you can easily execute it again after restarting Julia. The goal is to have a single file which solves the entire workshop in a single run at the end.
 
 ## The Tab key
 
