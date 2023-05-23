@@ -5,49 +5,47 @@ Please don't hesitate to ask us any questions or provide feedback on what you li
 Your input is always welcome and appreciated!
 
 In the following, you will find a quick cheat sheet covering the basic Julia syntax.
-This chapter assumes, that you are already familiar with R, Python or MATLAB. If you are, you will see that Julia's syntax is similar to each.
+You will see that Julia's syntax is similar to `Matlab`, `Python`, and `R` (in this order).
 We recommend that you quickly **skim** this cheat sheet and do the exercises at the and of this chapter.
 You might want to keep this page open in another tab to have it as a reference at your disposal.
-Should you encounter questions about how to implement something in Julia, while knowing how you would do it in a language of your choice:
-We have a collection of side-by-side comparisons of Julia and R, Python or Matlab in the Additional Resources section of the Advanced Materials chapter.
+There is a collection of side-by-side comparisons of Julia and R, Python or Matlab in the Additional Resources section of the Advanced Materials chapter.
 Because these are more comprehensive, you should not need them during the workshop.
-If you do, please let us know, so we can add the missing information to our more streamlined cheat sheet – we designed specifically for you.
 
 ## Variable assignment
 
+In Julia, variables are used to store data and represent values in your program.
+Variables have a name and are assigned a value using the assignment operator `=`.
+Julia supports both regular (ASCII) variable names (like `alpha`) and Unicode variable names (like `α`).
+
 ```@example variables
-x = 1
 my_variable = "awesome"
+α = 1
 nothing #hide
 ```
 
-Julia also supports Unicode variable names (like `α`).
-They allow you to use a wider range of characters, including mathematical symbols, Greek letters, and other special characters.
 To create a Unicode variable, type a backslash followed by the Unicode character name, and then press the Tab key to convert it into the corresponding Unicode symbol.
 For example, type `\alpha` and then press `<tab>` to create the `α` variable.
-
-```@example variables
-α = 0.05
-β₁ = 1.2
-Δt = 0.01
-nothing #hide
-```
-
-To find out how a certain unicode character can be created, you can use the help mode of the REPL:
-```
-help?> β₁
-```
-
-```
-"β₁" can be typed by \beta<tab>\_1<tab>
-```
+If you are interested you can find a [table of all available unicode characters](https://docs.julialang.org/en/v1/manual/unicode-input/) and how to type them out in the Julia documentation.
 
 ## Functions
+
+Excellent! Now that you have an understanding of variables and the use of unicode symbols, let's dive into the topic of functions.
+
+The basic syntax for defining a function in Julia is as follows:
 
 ```julia
 function function_name(argument1, argument2)
     # function body
     return output
+end
+```
+
+
+For example:
+
+```@example variables
+function add(x, y)
+    return x + y
 end
 ```
 
@@ -75,14 +73,14 @@ first_vector = [1, 2, 3]
 nothing #hide
 ```
 
-You can access elements of a vector by specifying the index in square brackets. Note that Julia uses 1-based indexing, which means the first element has an index of 1:
+Julia uses 1-based indexing, which means the first element has an index of 1:
 
 ```@example variables
 first_element = first_vector[1]
 nothing #hide
 ```
 
-You can also assign a new value to an element of a vector by specifying the index in square brackets and using the assignment operator:
+You can also assign a new value to an element of a vector via indexing:
 
 ```@example variables
 first_vector[1] = 10
@@ -96,17 +94,11 @@ second_vector = [4, 5, 6]
 nothing #hide
 ```
 
-When you use standard arithmetic operators (`+`, `-`) on vectors, Julia performs element-wise operations.
 
 ```@example variables
 subtracted_vectors = first_vector - second_vector
 ```
 
-Scalar multiplication and division using the standard arithmetic operators (`*`, `/`):
-
-```@example variables
-multiplied_vector = 2 * first_vector
-```
 
 Vectors can be concetenated with the `vcat` function or the `;` operator:
 
@@ -125,9 +117,11 @@ sqrt.(first_vector)
 ```
 
 Or we mutliply two vectors element-wise:
+
 ```@example variables
 first_vector .* second_vector
 ```
+Note that infix operators (i.e., `+`, `*`, `=`, and many more) place the dote *before the operator (i.e., `.+`, `.*`, `.=`)
 
 ## Sequences
 
@@ -143,11 +137,6 @@ Create a range with a specific step size:
 even_sequence = 2:2:10
 ```
 
-To convert a sequence to a vector, you can use the `collect` function:
-
-```@example variables
-integer_vector = collect(integer_sequence)
-```
 
 ## Matrices
 
@@ -155,6 +144,7 @@ Create a square matrix of integers:
 
 ```@example variables
 my_matrix = [1 2 3; 4 5 6]
+# or alternatively:
 my_matrix = 
     [1 2 3
     4 5 6]
@@ -225,7 +215,7 @@ end
 # Exercises
 
 !!! compat "Exercise"
-    1. Write a function called divide that takes two arguments and returns the result of dividing the first argument by the second.
+    Write a function that takes two arguments and divides them.
 
 ```@raw html
 <details>
@@ -253,7 +243,7 @@ divide(a, b) = a/b
 \
 
 !!! compat "Exercises"
-    1. Create a vector of numbers and perform an element-wise square.
+    Create a vector of numbers and perform an element-wise square.
     *Hint*: In julia, a variable `x` can be squared with `x^2`.
 
 ```@raw html
