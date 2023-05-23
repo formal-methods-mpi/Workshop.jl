@@ -103,7 +103,7 @@ Because we will need to restart Julia during the workshop, and this will delete 
 
 ## The Tab key
 
-The Tab key is a useful tool in the REPL, which you can use for autocompletion and to see what is available in the current scope. For example, if you type `pr` and then press Tab, the REPL will show you all the available commands, beginning with `pr`. You can also see the namespace of a package by typing e.g., Base.<tab><tab>. If there is only a single possibility, the REPL will automatically complete the command for you. Try it out!
+The Tab key is a useful tool in the REPL, which you can use for autocompletion and to see what is available in the current scope. For example, if you type `pr` and then press Tab, the REPL will show you all the available commands beginning with `pr`. You can also see the namespace of a package by typing e.g., Base.<tab><tab>. If there is only a single possibility, the REPL will automatically complete the command for you. Try it out!
 
 ## Summary
 
