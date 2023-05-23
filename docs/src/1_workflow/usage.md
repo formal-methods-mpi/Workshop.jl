@@ -94,7 +94,8 @@ Now that we have learned about the REPL and the various modes, let's restart the
 
 The necessity to restart the REPL comes from how Julia handles certain changes in your code. When you define functions, variables or types, they are stored in the current Julia session. However, if you make changes to a type definition, the REPL won't recognize these changes until you restart the session. Although VSCode includes a package called Revise.jl, which alleviates this problem somewhat, it wont help us for all cases we will encounter in this course.
 
-To restart the Julia REPL in VSCode, you can use the keyboard shortcut Alt + J Alt + R. When using this shortcut, it's important to press the keys quickly one after the other. If you wait too long between key presses, VSCode might not recognize it as a single command. Restarting the REPL in this way allows us to ensure that any changes we've made to type definitions are recognized and that our Julia session is up to date with our latest code.
+To restart the Julia REPL in VSCode, you can use the keyboard shortcut Alt + J Alt + R. (Note that, if you wait too long between key presses, VSCode might not recognize it as a single command.)
+This starts a fresh Julia session, without all variables you previously defined or packages you loaded.
 
 Tip: If you want to look up the shortcut for restarting the REPL, you can do so by opening the Command Palette and searching for "restart".
 
