@@ -22,7 +22,8 @@ nothing #hide
 
 Unicode variables allow you to use a wider range of characters, including mathematical symbols, Greek letters, and other special characters.
 To create a Unicode variable, type a backslash followed by the Unicode character name, and then press the Tab key to convert it into the corresponding Unicode symbol.
-For example, type \alpha and then press Tab to create the α variable. If you are interested you can find a [table of all available unicode characters](https://docs.julialang.org/en/v1/manual/unicode-input/) and how to type them in the Julia documentation.
+For example, type \alpha and then press Tab to create the α variable.
+If you are interested you can find a [table of all available unicode characters](https://docs.julialang.org/en/v1/manual/unicode-input/) and how to type them in the Julia documentation.
 
 ```@example variables
 α = 0.05
