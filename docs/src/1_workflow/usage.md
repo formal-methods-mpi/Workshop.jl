@@ -106,4 +106,6 @@ The Tab key is a useful tool in the REPL, which you can use for autocompletion a
 
 ## Summary
 
-In this chapter, we created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, and Package mode. We also learned how to restart the REPL and why this is necessary. Lastly, we learned about the Tab key and how it can be used for autocompletion and to see what is available in the current scope.
+In this chapter, we created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, and Package mode.
+We also learned how to restart the REPL and why this is necessary.
+Lastly, we learned about the Tab key and how it can be used for autocompletion and to see what is available in the current scope.
