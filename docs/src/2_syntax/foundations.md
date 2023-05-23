@@ -251,7 +251,7 @@ a .^ 2
 
 However, maybe you want to perform the dot product, that is related to matrix multiplication.
 It is also known as the scalar product, because it always returns a single number, i.e., a scalar.
-We can do this with the `dot` function or the `⋅` operator – \cdot <Tab> – from the `LinearAlgebra` package:
+We can do this with the `dot` function or the `⋅` operator – `\cdot <Tab>` – from the `LinearAlgebra` package:
 
 ```@example variables
 using LinearAlgebra
