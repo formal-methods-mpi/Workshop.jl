@@ -181,7 +181,7 @@ Now we have implemented a library for automatic differentiation! Let's come up w
 f(x) = (x^2*sin(x))/cos(x)^2
 ```
 
-To compute the derivative at point `x`, simple call the function with `Dual(x, 1.0)`:
+To compute the derivative at point `x`, simply call the function with `Dual(x, 1.0)`:
 ```@example dual
 f(Dual(5.0, 1.0))
 ```
