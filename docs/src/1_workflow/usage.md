@@ -83,7 +83,7 @@ In Package mode, you can add, update, remove, and list installed packages, among
 
 !!! compat "Exercise"
     Enter Package mode by pressing `]`.
-    1. Add the Example package: `add Example`.
+    1. Install the Example package: `add Example`.
     2. List the installed packages: `status`.
     3. Remove the Example package: `rm Example`.
     4. Discover what else you can type in Package mode by entering `help` or `?`.
