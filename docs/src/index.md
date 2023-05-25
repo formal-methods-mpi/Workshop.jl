@@ -23,4 +23,4 @@ Chapter 0 is about installing Julia and VScode. If you are an in-person particip
 The first Chapter "Workflow" explains how to use julia (how to setup your environment, write scripts, load packages, etc.).
 Chapters 2-4 introduce you to different aspects of the julia language.
 Each of those chapters has a "Theory" part and an "Exercise" part.
-Should you be finished with all chapters and still have time left, you can take a look at the [Advanced Materials](@ref) section.
+Should you be finished with all chapters and still have time left, you can take a look at the [Additional Materials](@ref) section.
