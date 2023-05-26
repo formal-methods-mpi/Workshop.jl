@@ -92,25 +92,36 @@ In Package mode, you can add, update, remove, and list installed packages, among
 
 We've already talked about the REPL and its various modes. Now, let's learn how to restart it.
 
-Restarting the REPL in Julia is a step you'll need to take occasionally, especially when you've made changes to your code. When you create or alter code elements, they're stored in the current Julia session. But sometimes, you'll need to restart the session so that the REPL can properly understand these changes.
+Restarting the REPL in Julia is a step you'll need to take occasionally, especially when you've made changes to your code.
+When you create or alter code elements, they're stored in the current Julia session.
+But sometimes, you'll need to restart the session so that the REPL can properly understand these changes.
 
 Don't worry about the specifics yet. For now, just remember that restarting the REPL is part of the process and is something we'll be doing throughout this course.
 
-Restarting the REPL in VSCode is easy. Just press Alt + J and then Alt + R. If you wait too long between pressing these keys, VSCode may not recognize it as a single command, so try to do it quickly.
+Restarting the REPL in VSCode is easy.
+Just press Alt + J and then Alt + R. If you wait too long between pressing these keys, VSCode may not recognize it as a single command, so try to do it quickly.
 
 Restarting the REPL gives you a clean slate. It removes all variables you previously defined or packages you loaded.
 
 If you forget how to restart the REPL, or want to find other shortcuts, you can always open the Command Palette and search for "restart".
 
-Remember, each time you restart the REPL, any variables or functions you've defined will be erased. So it's important to keep your code in a script file. This way, after a restart, you can just run your script again to get back where you were. It's good practice to keep this file tidy so it runs smoothly from start to finish. By the end of the workshop, we aim to have one script file that can be run in a single go.
+Remember, each time you restart the REPL, any variables or functions you've defined will be erased.
+So it's important to keep your code in a script file.
+This way, after a restart, you can just run your script again to get back where you were.
+It's good practice to keep this file tidy so it runs smoothly from start to finish.
+By the end of the workshop, we aim to have one script file that can be run in a single go.
 
 ## Making Use of the Tab Key for Autocompletion in REPL
 
-In the REPL (Read-Eval-Print-Loop) environment, the Tab key has a helpful role beyond its usual function. This key assists in your programming tasks by providing autocompletion, suggesting commands based on what you've started to type and what's applicable in your current scope.
+In the REPL (Read-Eval-Print-Loop) environment, the Tab key has a helpful role beyond its usual function.
+This key assists in your programming tasks by providing autocompletion, suggesting commands based on what you've started to type and what's applicable in your current scope.
 
-Let's say you've started typing 'pr' – hitting the Tab key after this triggers REPL to present all commands that start with 'pr'. Want to peek into the contents of a package? Simply type its name followed by two presses of the Tab key – for instance, 'Base.<tab><tab>'.
+Let's say you've started typing 'pr' – hitting the Tab key after this triggers REPL to present all commands that start with 'pr'.
+Want to peek into the contents of a package?
+Simply type its name followed by two presses of the Tab key – for instance, 'Base.<tab><tab>'.
 
-If there's only one command that matches your partial input, REPL will conveniently complete it for you. Get hands-on with this feature and see the leap in your coding efficiency!
+If there's only one command that matches your partial input, REPL will conveniently complete it for you.
+Get hands-on with this feature and see the leap in your coding efficiency!
 
 
 ## Summary
