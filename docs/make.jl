@@ -40,10 +40,10 @@ makedocs(;
             "Theory" => "4_dispatch/dispatch.md",
             "Exercise" => "4_dispatch/exercise.md"
         ],
-        "Advanced Materials" => [
+        "Additional Materials" => [
             "Introduction" => "5_advanced/intro.md",
             "Automatic Differentiation" => "5_advanced/dual.md",
-            "Workflow" => "5_advanced/workflow.md"
+            "Useful Links" => "5_advanced/links.md"
         ]
     ],
     doctest = false, # use :fix to auto fix.

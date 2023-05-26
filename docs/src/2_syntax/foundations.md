@@ -212,6 +212,21 @@ else
 end
 ```
 
+## Packages
+The section [Package mode](@ref) explained how to install packages.
+To use an installed package called `Example` in the current session:
+
+```@example variables
+using Example
+```
+This makes all functions from the `Example` package available, for example the function `hello`:
+
+```@example variables
+hello("world")
+```
+
+(As you can see, this is very similar to `library(Example)` in R or `import Example` in Python)
+
 # Exercises
 
 !!! compat "Exercise"
