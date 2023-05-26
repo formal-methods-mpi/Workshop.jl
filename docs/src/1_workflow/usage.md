@@ -83,23 +83,26 @@ In Package mode, you can add, update, remove, and list installed packages, among
 
 !!! compat "Exercise"
     Enter Package mode by pressing `]`.
-    1. Add the Example package: `add Example`.
+    1. Install the Example package: `add Example`.
     2. List the installed packages: `status`.
     3. Remove the Example package: `rm Example`.
     4. Discover what else you can type in Package mode by entering `help` or `?`.
 
 ## Restarting the REPL
 
-Now that we have learned about the REPL and the various modes, let's restart the REPL.
+We've already talked about the REPL and its various modes. Now, let's learn how to restart it.
 
-The necessity to restart the REPL comes from how Julia handles certain changes in your code. When you define functions, variables or types, they are stored in the current Julia session. However, if you make changes to a type definition, the REPL won't recognize these changes until you restart the session. Although VSCode includes a package called Revise.jl, which alleviates this problem somewhat, it wont help us for all cases we will encounter in this course.
+Restarting the REPL in Julia is a step you'll need to take occasionally, especially when you've made changes to your code. When you create or alter code elements, they're stored in the current Julia session. But sometimes, you'll need to restart the session so that the REPL can properly understand these changes.
 
-To restart the Julia REPL in VSCode, you can use the keyboard shortcut Alt + J Alt + R. (Note that, if you wait too long between key presses, VSCode might not recognize it as a single command.)
-This starts a fresh Julia session, without all variables you previously defined or packages you loaded.
+Don't worry about the specifics yet. For now, just remember that restarting the REPL is part of the process and is something we'll be doing throughout this course.
 
-Tip: If you want to look up the shortcut for restarting the REPL, or any other shortcut, you can do so by opening the Command Palette and searching for "restart".
+Restarting the REPL in VSCode is easy. Just press Alt + J and then Alt + R. If you wait too long between pressing these keys, VSCode may not recognize it as a single command, so try to do it quickly.
 
-Because we will need to restart Julia during the workshop, and this will delete all variables, functions, etc. you defined, it is important that you keep your code in a script file. You should keep this file clean, so it runs from top to bottom without errors. This way, you can easily execute it again after restarting Julia. The goal is to have a single file which solves the entire workshop in a single run at the end.
+Restarting the REPL gives you a clean slate. It removes all variables you previously defined or packages you loaded.
+
+If you forget how to restart the REPL, or want to find other shortcuts, you can always open the Command Palette and search for "restart".
+
+Remember, each time you restart the REPL, any variables or functions you've defined will be erased. So it's important to keep your code in a script file. This way, after a restart, you can just run your script again to get back where you were. It's good practice to keep this file tidy so it runs smoothly from start to finish. By the end of the workshop, we aim to have one script file that can be run in a single go.
 
 ## The Tab key
 
