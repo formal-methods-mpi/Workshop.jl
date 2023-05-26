@@ -92,7 +92,7 @@ In Package mode, you can add, update, remove, and list installed packages, among
 
 We've already talked about the REPL and its various modes. Now, let's learn how to restart it.
 
-Restarting the REPL in Julia is a step you'll need to take occasionally, especially when you've made changes to your code.
+Restarting the REPL in Julia is a step you'll need to take occasionally, especially when you've made certain changes to your code (you will learn when this is required later).
 When you create or alter code elements, they're stored in the current Julia session.
 But sometimes, you'll need to restart the session so that the REPL can properly understand these changes.
 
