@@ -13,7 +13,7 @@ Everything that exists in Julia has a type.
 Without understanding types, you can not understand Julia.
 What better why to understand than to create your own type?
 
-**Chapter 4** is about things that happen in Juila.
+**Chapter 4** is about things that happen in Julia.
 Everything that happens in Julia is because of functions.
 What functions do is deeply integrated with Julia's type system trough a prosses called mutliple dispatch.
 This chapter shows you how to leverage this system to do amazing things, hardly possible somewhere else.

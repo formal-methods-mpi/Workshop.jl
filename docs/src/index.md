@@ -33,10 +33,6 @@ Through hands-on activities, you'll gain practical experience to reinforce your 
 The core of this workshop consists of 5 chapters (Chapter 0 - Chapter 4) that you can see in the sidebar on the left.
 They are meant to be completed in your own pace but in this order (0-4).
 
-!!! warning "Todo before the workshop"
-    We expect that you have Julia and Visual Studio Code installed before the workshop.
-    Just follow the steps outlined in [Chapter 0](0_preparation/preparation.html).
-
 ```@eval
 import Markdown; Markdown.parse_file("../src/reuse/chapter-overview.md")
 ```
