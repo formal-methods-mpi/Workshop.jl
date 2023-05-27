@@ -45,6 +45,7 @@ makedocs(;
         ],
         "Advanced Materials" => [
             "Introduction" => "5_advanced/intro.md",
+            "Extensive Foundations" => "5_advanced/extensive_foundations.md",
             "Automatic Differentiation" => "5_advanced/dual.md",
             "Workflow" => "5_advanced/workflow.md"
         ]

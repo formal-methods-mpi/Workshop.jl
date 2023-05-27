@@ -1,4 +1,4 @@
-# Foundations
+# Extensive Foundations
 
 Welcome back to the workshop! We hope that you had fun following along and that we sparked your interest for this fascinating programming language.
 Please don't hesitate to ask us any questions or provide feedback on what you liked and didn't like or thought was too easy or too hard.
@@ -35,6 +35,39 @@ For example, type \alpha and then press Tab to create the α variable.
 1. Assign the integer value 42 to a variable named the_answer_to_life.
 2. Assign the string "Julia is fun!" to a variable named yay.
 3. Assign the value of 1 + √2 divided by 2 to the variable φ (phi). Remember to use the Unicode character: type \phi or \sqrt and press Tab to convert it.
+
+```@raw html
+<details>
+<summary>Show solution</summary>
+<br>
+```
+!!! tip "Solution"
+    ```julia
+        the_answer_to_life = 42
+
+        yay = "Julia is fun!"
+
+        φ = (1 + sqrt(2)) / 2
+
+        println("The answer to life: ", the_answer_to_life)
+        println("Yay: ", yay)
+        println("Phi: ", φ)
+    ```
+```@setup variables
+# 1. Assign the integer value 42 to a variable named the_answer_to_life.
+the_answer_to_life = 42
+
+yay = "Julia is fun!"
+
+φ = (1 + sqrt(2)) / 2
+
+println("The answer to life: ", the_answer_to_life)
+println("Yay: ", yay)
+println("Phi: ", φ)
+```
+```@raw html
+</details>
+```
 
 ## Functions
 
@@ -82,8 +115,6 @@ square(x) = x * x
 2. Write a function called cube that takes one argument and returns the cube of the input number.
 3. Write a function that checks if a number is even. The function should take one argument and return a `Bool`.
 
-TODO: Solutions.
-
 ```@raw html
 <details>
 <summary>Show solution</summary>
@@ -91,12 +122,26 @@ TODO: Solutions.
 ```
 !!! tip "Solution"
     ```julia
-    x = 123
-    y = "another solutions I have to do"
+    function divide(a, b)
+        return a / b
+    end
+
+    cube(x) = x ^ 3
+
+    function is_even(n)
+        return n % 2 == 0
+    end
     ```
 ```@setup variables
-# some solutions
+function divide(a, b)
+    return a / b
+end
 
+cube(x) = x ^ 3
+
+function is_even(n)
+    return n % 2 == 0
+end
 ```
 ```@raw html
 </details>
@@ -174,8 +219,12 @@ concatenated_vector = [vector1; vector2]
 
 However, when we want to multiply two vectors like this:
 
-```@example variables
+```julia
 multiplied_vectors = vector1 * vector2
+```
+
+```
+MethodError: no method matching *(::Vector{Int64}, ::Vector{Int64})
 ```
 
 We get a `MethodError` because the `*` operator is not defined for `Vector`s.
@@ -190,9 +239,10 @@ squared_vector = vector .* 2
 
 However, maybe you want to perform the dot product, that is related to matrix multiplication.
 It is also known as the scalar product, because it always returns a single number, i.e., a scalar.
-We can do this with the `dot` function or the `⋅` operator:
+We can do this with the `dot` function or the `⋅` operator from the LinearAlgebra package:
 
 ```@example variables
+using LinearAlgebra
 dot_product = dot(vector1, vector2)
 dot_product = vector1 ⋅ vector2
 ```
@@ -248,10 +298,8 @@ The concept of arrays generalizes vectors and matrices by extending their proper
 
 1. Create a vector of strings and concatenate it with another vector of strings.
 2. Create a vector and perform an element-wise square of it.
-3. Create another vector and calculate the scalar product with the first vector in the way you like.
+3. Calculate the scalar product of the vector in the way you like.
 4. Read out an index, set an index, append an element, and pop an element from a vector.
-
-TODO: Solutions.
 
 ```@raw html
 <details>
@@ -260,12 +308,40 @@ TODO: Solutions.
 ```
 !!! tip "Solution"
     ```julia
-    x = 456
-    y = "another solutions I have to do"
+        somestrings = ["this", "is", "a", "vector"]
+        somemore = ["this", "is", "another", "vector"]
+        vcat(somestrings, somemore)
+
+        avec = [1, 2, 3]
+        avec .^2
+
+        42 * avec
+
+        avec[1]
+
+        avec[2] = 4
+        avec
+
+        push!(avec, 5)
+        pop!(avec)
     ```
 ```@setup variables
-# some solutions
+somestrings = ["this", "is", "a", "vector"]
+somemore = ["this", "is", "another", "vector"]
+vcat(somestrings, somemore)
 
+avec = [1, 2, 3]
+avec .^2
+
+42 * avec
+
+avec[1]
+
+avec[2] = 4
+avec
+
+push!(avec, 5)
+pop!(avec)
 ```
 ```@raw html
 </details>
@@ -285,8 +361,8 @@ square_matrix = [1 2 3; 4 5 6; 7 8 9]
 You can access elements of a matrix by specifying the row and column indices in square brackets, separated by a comma. Note that Julia uses 1-based indexing, which means the first row and column have an index of 1:
 
 ```@example variables
-upper_left_element = integer_matrix[1, 1]
-lower_right_element = integer_matrix[3, 3]
+upper_left_element = square_matrix[1, 1]
+lower_right_element = square_matrix[3, 3]
 ```
 
 As you can see, many things are the same as with vectors, which is not surprising, since vectors are just 1-dimensional matrices.
@@ -333,6 +409,75 @@ concatenated_matrix = [matrix1 matrix2]
 4. Find out what else you can do with matrices by writing `methodswith(Matrix)` in the REPL.
 5. Look into the documentation of `?something` you are interested in, then try it out in the REPL.
 
+```@raw html
+<details>
+<summary>Show solution</summary>
+<br>
+```
+!!! tip "Solution"
+    ```julia
+        # 1. Define two square matrices and add and subtract them with each other.
+        matrixA = [1 2; 3 4]
+        matrixB = [5 6; 7 8]
+        matrixAddition = matrixA + matrixB
+        matrixSubtraction = matrixA - matrixB
+        println("Matrix Addition: ")
+        println(matrixAddition)
+        println("Matrix Subtraction: ")
+        println(matrixSubtraction)
+
+        # 2. Perform an element-wise multiplication of two matrices and then a matrix multiplication.
+        elementWiseMultiplication = matrixA .* matrixB
+        matrixMultiplication = matrixA * matrixB
+        println("Element-wise multiplication: ")
+        println(elementWiseMultiplication)
+        println("Matrix multiplication: ")
+        println(matrixMultiplication)
+
+        # 3. Write a vector with spaces, e.g.,: [1 2 3]. Is that really a vector?
+        vec = [1 2 3]
+        println("1D Matrix: ")
+        println(vec)
+        vec = [1, 2, 3]
+        println("Vector: ")
+        println(vec)
+
+        # Note: For the 4th and 5th task, you'll have to use Julia's REPL (Read-Eval-Print Loop).
+        # It's not possible to run these commands here.
+
+        # 4. methodswith(Matrix) # Uncomment this line in the Julia REPL to get the methods for Matrix.
+
+        # 5. ?rand # Uncomment this line in the Julia REPL to get the documentation for the rand function.
+
+    ```
+```@setup variables
+matrixA = [1 2; 3 4]
+matrixB = [5 6; 7 8]
+matrixAddition = matrixA + matrixB
+matrixSubtraction = matrixA - matrixB
+println("Matrix Addition: ")
+println(matrixAddition)
+println("Matrix Subtraction: ")
+println(matrixSubtraction)
+
+elementWiseMultiplication = matrixA .* matrixB
+matrixMultiplication = matrixA * matrixB
+println("Element-wise multiplication: ")
+println(elementWiseMultiplication)
+println("Matrix multiplication: ")
+println(matrixMultiplication)
+
+vec = [1 2 3]
+println("1D Matrix: ")
+println(vec)
+vec = [1, 2, 3]
+println("Vector: ")
+println(vec)
+```
+```@raw html
+</details>
+```
+
 # Control Flow
 
 Control flow refers to the order in which statements or instructions are executed in a program. It is an essential concept in programming, as it allows you to create more dynamic and flexible code. Two fundamental control flow structures are loops and conditional statements. Loops allow you to repeat a block of code multiple times, while conditional statements enable you to execute a block of code only if certain conditions are met.
@@ -341,7 +486,7 @@ Control flow refers to the order in which statements or instructions are execute
 
 For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an array or a tuple. The syntax for a for loop is as follows:
 
-```@example variables
+```julia
 for variable in collection
     # Code to be executed for each value in the collection
 end
@@ -357,7 +502,7 @@ end
 
 If statements in Julia are used to execute a block of code only if a specific condition is met. The syntax for an `if` statement is as follows:
 
-```@example variables
+```julia
 if condition
     # Code to be executed if the condition is true
 end
@@ -365,7 +510,7 @@ end
 
 You can also use `elseif` and `else` to test multiple conditions:
 
-```@example variables
+```julia
 if condition1
     # Code to be executed if condition1 is true
 elseif condition2
@@ -418,8 +563,6 @@ classify_sign(0)
 3. Write a nested loop with `i` and `j` and add each index if both are equal and prints the result.
 4. Create a 3-dimension and 4-dimensional array and call `size` and `length` on them.
 
-TODO: Solutions.
-
 ```@raw html
 <details>
 <summary>Show solution</summary>
@@ -427,12 +570,68 @@ TODO: Solutions.
 ```
 !!! tip "Solution"
     ```julia
-    x = 123
-    y = "another solutions I have to do"
+        # 1. Write a for loop that prints the first 10 even numbers.
+        println("First 10 even numbers: ")
+        for i in 1:10
+            println(2 * i)
+        end
+
+        # 2. Create a 2x2 Matrix and print out the value of each index. Tip: use the `length` function.
+        matrix = [1 2; 3 4]
+        println("Values in the 2x2 matrix: ")
+        for i in 1:length(matrix)
+            println(matrix[i])
+        end
+
+        # 3. Write a nested loop with `i` and `j` and add each index if both are equal and prints the result.
+        println("Results from nested loop: ")
+        for i in 1:5
+            for j in 1:5
+                if i == j
+                    println(i + j)
+                end
+            end
+        end
+
+        # 4. Create a 3-dimension and 4-dimensional array and call `size` and `length` on them.
+        threeDArray = rand(3, 3, 3)
+        fourDArray = rand(3, 3, 3, 3)
+        println("Size and length of the 3D array: ")
+        println(size(threeDArray))
+        println(length(threeDArray))
+        println("Size and length of the 4D array: ")
+        println(size(fourDArray))
+        println(length(fourDArray))
     ```
 ```@setup variables
-# some solutions
+println("First 10 even numbers: ")
+for i in 1:10
+    println(2 * i)
+end
 
+matrix = [1 2; 3 4]
+println("Values in the 2x2 matrix: ")
+for i in eachindex(matrix)
+    println(matrix[i])
+end
+
+println("Results from nested loop: ")
+for i in 1:5
+    for j in 1:5
+        if i == j
+            println(i + j)
+        end
+    end
+end
+
+threeDArray = rand(3, 3, 3)
+fourDArray = rand(3, 3, 3, 3)
+println("Size and length of the 3D array: ")
+println(size(threeDArray))
+println(length(threeDArray))
+println("Size and length of the 4D array: ")
+println(size(fourDArray))
+println(length(fourDArray))
 ```
 ```@raw html
 </details>
