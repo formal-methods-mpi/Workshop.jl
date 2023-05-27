@@ -85,100 +85,75 @@
 	\setcounter{showProgressBar}{0}
 	\setcounter{showSlideNumbers}{0}
 
-	\section{Welcome!}
+	\section{Recap}
 
     \begin{frame}
-    \frametitle{Research Software}
-    The benefits of R/Python/Matlab \ldots
-    \vspace{1cm}
+    \frametitle{Recap}
         \begin{wideitemize}
-            \item easy to use
-            \item packages for everything
-            \item large community
+            \item Workflow
+            \item Syntax
+            \item Types
+            \item Multiple dispatch
         \end{wideitemize}
     \end{frame}
 
     \begin{frame}
-    \frametitle{Research Software}
-    The drawbacks of R/Python/Matlab \ldots
+    \frametitle{Types + Multiple Dispatch}
+    You have \ldots
     \vspace{1cm}
         \begin{wideitemize}
-            \item slow
-            \item difficult to extend
+            \item implemented linear regression
+            \item implemented the Measurement type
+            \item implemented methods for the Measurement type
+        \end{wideitemize}
+    \vspace{1cm}
+    %while implementing linear regression, you did not know anything about Julia's type system
+    %while define your measurement type, you did not have to know how linear regression works
+    $\rightarrow$ Used it \textbf{together}\\
+    \end{frame}
+
+    \begin{frame}
+    \frametitle{Types + Multiple Dispatch}
+    \vspace{1cm}
+        \begin{wideitemize}
+            \item functions are composed of other functions
+            \item if I can provide the relevant methods for my type, existing code also works for me
+        \end{wideitemize}
+        \vspace{1cm}
+    \end{frame}
+
+    \begin{frame}
+    \frametitle{Types + Multiple Dispatch}
+    \vspace{1cm}
+        \begin{wideitemize}
+            \item writing generic code gives you \textbf{extensibility for free} (and is \textbf{fast})
+            \item altering the behaviour of \textbf{existing code} gives extensibility (without understanding it in detail)
         \end{wideitemize}
     \end{frame}
 
+%     \begin{frame}
+%     \frametitle{Why Julia? - the bottom line}
+%     Because functions can implement everything you need, this mode of extensibility is widely applicable:
+%     \vspace{1cm}
+%         \begin{wideitemize}
+%             \item there can be packages that work with flowers, spaceships or loss functions
+%             \item that depends on the scent, speed or gradient
+%             \item If I can add a new type and write the appropriate methods, it will work for me!
+%         \end{wideitemize}
+%     \end{frame}
+
+    \section{Second Half}
+
     \begin{frame}
-    \frametitle{Speed}
-    Traditional divide:
+    \frametitle{Second Half}
     \vspace{1cm}
         \begin{wideitemize}
-            \item compiled languages (C, Fortran, etc \ldots)
-            \begin{itemize}
-             \item fast, but difficult to work with
-            \end{itemize}
-            \item scripting languages (R, Python, etc \ldots)
-            \begin{itemize}
-             \item easy to work with, but slow
-            \end{itemize}
+            \item break
+            \item work on a topic that is interesting to you (in groups)
+            \item brainstorm to find topics
+            \item feedback
         \end{wideitemize}
     \end{frame}
 
-    \begin{frame}
-    \frametitle{Speed}
-    $\rightarrow$ Two language problem:
-        \begin{itemize}
-            \item frontend: scripting language
-            \item backend: compiled language
-        \end{itemize}
-    \vspace{1cm}
-    For example Numpy (Python) or Dplyr (R)
-    \end{frame}
-    \begin{frame}
-    \frametitle{Speed}
-    $\rightarrow$ Julia solves this problem!
-    \vspace{1cm}
-        \begin{wideitemize}
-            \item easy to use syntax
-            \item compiled for efficiency
-        \end{wideitemize}
-    \vspace{1cm}
-    ``Walks like Python, runs like C''
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Extensibility}
-    R/Python packages are typically open source \ldots\\[1cm]
-    \only<2->{But the harsh reality is \ldots \\[1cm]}
-
-    \begin{wideitemize}
-        \item<3-> \textbf{understand} 1000s of lines of code
-        \item<4-> make \textbf{changes}, possibly breaking stuff
-    \end{wideitemize}
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Extensibility}
-        $\rightarrow$ Julia solves this problem too!\\[1cm]
-        You are able to add new features...
-        \vspace{0.8cm}
-        \begin{wideitemize}
-            \item<1-> without \textbf{understanding} existing code
-            \item<2-> without \textbf{changing} existing code
-        \end{wideitemize}
-    \end{frame}
-
-	\section{This Workshop}
-
-    \begin{frame}
-        \frametitle{This Workshop}
-        \begin{wideitemize}
-            \item focuse on extensibility (performance comes almost for free)
-            \item design principles of the julia language
-            \item self-paced
-        \end{wideitemize}
-    \end{frame}
-
-    \section{Questions?}
-
+	\section{Questions?}
 \end{document}
