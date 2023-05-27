@@ -75,7 +75,7 @@ println("Phi: ", φ)
 
 ## Functions
 
-Excellent! Now that you have a good understanding of variables and the expressive nature of Julia, let's dive into the topic of functions.
+Excellent! Now that you have an understanding of  variables, let's dive into the topic of functions.
 
 In programming, functions are reusable blocks of code that serve a specific purpose.
 They play a crucial role in organizing and modularizing code, which in turn enhances its readability and maintainability.
