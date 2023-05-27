@@ -24,8 +24,7 @@ If your code is slow and you don't know why, profiling can help you find the pro
 We like the [ProfileView.jl](https://github.com/timholy/ProfileView.jl) package.
 
 ## Books
-- [Julia Data Science - Free Online Book](https://juliadatascience.io)
-- [Hands on Design Patterns and Best Practices with Julia](https://github.com/PacktPublishing/Hands-on-Design-Patterns-and-Best-Practices-with-Julia) - Great but not free
+- [Julia Data Science - Free Online Book](https://juliadatascience.io) -  a "dplyr-like" introduction to data science in Julia
 
 ## Cheat sheets
 - [Julia Overview](https://cheatsheet.juliadocs.org/)
