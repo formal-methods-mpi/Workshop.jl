@@ -300,16 +300,6 @@ To convert a sequence to a vector, you can use the collect function:
 integer_vector = collect(integer_sequence)
 ```
 
-## Arrays
-
-Without going too much into the details, it is important to know about the concept of arrays in Julia.
-
-Arrays are a fundamental data structure in Julia that can be used to represent and manipulate multi-dimensional collections of values.
-Vectors and matrices are special cases of arrays, where vectors are one-dimensional arrays and matrices are two-dimensional arrays.
-Arrays can have more than two dimensions, allowing you to work with higher-dimensional data structures in a consistent and efficient way.
-
-The concept of arrays generalizes vectors and matrices by extending their properties and operations to multiple dimensions. This means that most of the functions and operations you have learned for vectors and matrices can be applied to arrays with higher dimensions as well.
-
 ### Exercises
 
 1. Create a vector of strings and concatenate it with another vector of strings.
@@ -501,7 +491,17 @@ println(vec)
 </details>
 ```
 
-# Control Flow
+### Arrays
+
+Without going too much into the details, it is important to know about the concept of arrays in Julia.
+
+Arrays are a fundamental data structure in Julia that can be used to represent and manipulate multi-dimensional collections of values.
+Vectors and matrices are special cases of arrays, where vectors are one-dimensional arrays and matrices are two-dimensional arrays.
+Arrays can have more than two dimensions, allowing you to work with higher-dimensional data structures in a consistent and efficient way.
+
+The concept of arrays generalizes vectors and matrices by extending their properties and operations to multiple dimensions. This means that most of the functions and operations you have learned for vectors and matrices can be applied to arrays with higher dimensions as well.
+
+## Control Flow
 
 Control flow refers to the order in which statements or instructions are executed in a program.
 It is an essential concept in programming, as it allows you to create more dynamic and flexible code.
