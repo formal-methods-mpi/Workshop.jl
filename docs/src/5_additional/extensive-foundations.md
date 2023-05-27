@@ -424,7 +424,7 @@ concatenated_matrix = hcat(matrix1, matrix2)
 concatenated_matrix = [matrix1 matrix2]
 ```
 
-## Exercises
+### Exercises
 
 1. Define two square matrices and add and subtract them with each other.
 2. Perform an element-wise multiplication of two matrices and then a matrix multiplication.
@@ -584,7 +584,7 @@ classify_sign(-3)
 classify_sign(0)
 ```
 
-## Exercises
+### Exercises
 
 1. Write a for loop that prints the first 10 even numbers.
 2. Create a 2x2 Matrix and print out the value of each index. Tip: use the `length` function.
