@@ -1,10 +1,10 @@
-# Extensive Foundations
+# Foundations Revisited
 
 Welcome back to the workshop! We hope that you had fun following along and that we sparked your interest for this fascinating programming language.
 Please don't hesitate to ask us any questions or provide feedback on what you liked and didn't like or thought was too easy or too hard.
 Your input is always welcome and appreciated!
 
-Next, we will dive into the necessary foundations of the language.
+In this chapter, we revisit the foundations of the Julia language. While our [Syntax cheat sheet](@ref) quickly went over everything you needed to know to complete the workshop, this chapter will provide a more extensive introduction to Julia's Syntax.
 
 ## Variable assignment
 
