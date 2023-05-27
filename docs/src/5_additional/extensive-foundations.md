@@ -642,12 +642,10 @@ end
 
 threeDArray = rand(3, 3, 3)
 fourDArray = rand(3, 3, 3, 3)
-println("Size and length of the 3D array: ")
-println(size(threeDArray))
-println(length(threeDArray))
-println("Size and length of the 4D array: ")
-println(size(fourDArray))
-println(length(fourDArray))
+size(threeDArray)
+length(threeDArray)
+size(fourDArray)
+length(fourDArray)
 ```
 ```@raw html
 </details>
