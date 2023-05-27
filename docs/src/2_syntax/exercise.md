@@ -124,16 +124,6 @@ So we go through all of our `n` data points (`i = 1, ..., n`) and for each of th
 !!! tip "Solution"
     ```julia
     function squared_error(y, ŷ)
-        error = 0.0
-        for i in eachindex(y)
-            error += (y[i] - ŷ[i])^2
-        end
-        return error
-    end
-    ```
-    or, a bit shorter using broadcasting:
-    ```julia
-    function squared_error(y, ŷ)
         return sum((y - ŷ).^2)
     end
     ```
