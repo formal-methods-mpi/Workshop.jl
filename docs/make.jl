@@ -42,6 +42,7 @@ makedocs(;
         ],
         "Additional Materials" => [
             "Introduction" => "5_additional/intro.md",
+            "Foundations Revisited" => "5_additional/extensive-foundations.md",
             "Automatic Differentiation" => "5_additional/dual.md",
             "Useful Links" => "5_additional/links.md"
         ]
