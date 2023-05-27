@@ -432,26 +432,16 @@ concatenated_matrix = [matrix1 matrix2]
         matrixB = [5 6; 7 8]
         matrixAddition = matrixA + matrixB
         matrixSubtraction = matrixA - matrixB
-        println("Matrix Addition: ")
-        println(matrixAddition)
-        println("Matrix Subtraction: ")
-        println(matrixSubtraction)
 
         # 2. Perform an element-wise multiplication of two matrices and then a matrix multiplication.
         elementWiseMultiplication = matrixA .* matrixB
         matrixMultiplication = matrixA * matrixB
-        println("Element-wise multiplication: ")
-        println(elementWiseMultiplication)
-        println("Matrix multiplication: ")
-        println(matrixMultiplication)
 
         # 3. Write a vector with spaces, e.g.,: [1 2 3]. Is that really a vector?
         vec = [1 2 3]
         println("1D Matrix: ")
         println(vec)
         vec = [1, 2, 3]
-        println("Vector: ")
-        println(vec)
 
         # Note: For the 4th and 5th task, you'll have to use Julia's REPL (Read-Eval-Print Loop).
         # It's not possible to run these commands here.
