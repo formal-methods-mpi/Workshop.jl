@@ -248,6 +248,7 @@ If we want to perform an element-wise multiplication, we need to use the broadca
 
 ```@example variables
 vector1 .* vector2
+```
 
 However, maybe you want to perform the dot product, that is related to matrix multiplication.
 It is also known as the scalar product, because it always returns a single number, i.e., a scalar.
@@ -262,8 +263,8 @@ dot_product = vector1 ⋅ vector2
 Now, at last we can transpose a vector with the `transpose` function or the `'` operator:
 
 ```@example variables
-transposed_vector = transpose(vector)
-transposed_vector = vector'
+transposed_vector = transpose(vector1)
+transposed_vector = vector1'
 ```
 
 Equipped with the transpose operator `'`, we can now multiply two vectors:
