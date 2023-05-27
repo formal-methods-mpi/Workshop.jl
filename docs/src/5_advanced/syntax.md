@@ -1,4 +1,4 @@
-# First step
+# Syntax Review
 
 Ah, excellent! You're all set up and ready to explore. Let's get started!
 

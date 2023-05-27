@@ -1,4 +1,9 @@
-# Setup
+# Preparation
+
+In this chapter, you will learn how to use julia (installation, setup, loading packages, creating scripts, etc.)
+If you are an in-person participant in this workshop, you should have received a mail prior to the workshop to complete the [Preparation](@ref) instructions.
+If you did, you can skip this part and continue with [Working with Julia in VSCode](@ref).
+If you are doing the workshop online or were too lazy to follow the mailed instructions, you should proceed with [Preparation](@ref).
 
 ## Installing Julia
 
@@ -13,6 +18,12 @@ Follow the steps below to install Julia:
     3. If a new prompt appears, you have successfully installed Julia on your system. Try, e.g., `1 + 1`
 
 Now that you have Julia installed, we can proceed to set up your development environment.
+
+The workshop, as it currenty is, was tested with the following Julia version:
+
+```@example version
+VERSION #hide
+```
 
 ## Installing Visual Studio Code (VSCode)
 
