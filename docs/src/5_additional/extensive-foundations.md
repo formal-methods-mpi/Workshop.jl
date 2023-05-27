@@ -43,12 +43,16 @@ For example, type \alpha and then press Tab to create the α variable.
 ```
 !!! tip "Solution"
     ```julia
+        # 1. Assign the integer value 42 to a variable named the_answer_to_life.
         the_answer_to_life = 42
 
+        # 2. Assign the string "Julia is fun!" to a variable named yay.
         yay = "Julia is fun!"
 
+        # 3. Assign the value of 1 + √2 divided by 2 to the variable φ (phi).
         φ = (1 + sqrt(2)) / 2
 
+        # Print out the variables.
         println("The answer to life: ", the_answer_to_life)
         println("Yay: ", yay)
         println("Phi: ", φ)
@@ -73,18 +77,23 @@ println("Phi: ", φ)
 
 Excellent! Now that you have a good understanding of variables and the expressive nature of Julia, let's dive into the topic of functions.
 
-In programming, functions are reusable blocks of code that serve a specific purpose. They play a crucial role in organizing and modularizing code, which in turn enhances its readability and maintainability. For instance, if you've written a chunk of code that performs a specific task or multiple tasks, it would be beneficial to break down the code into individual functions and give each a descriptive name. This approach makes your code more comprehensible and easier to work with. Functions also enable code reuse, minimizing redundancy and simplifying updates, which can save time and effort in the long run.
+In programming, functions are reusable blocks of code that serve a specific purpose.
+They play a crucial role in organizing and modularizing code, which in turn enhances its readability and maintainability.
+For instance, if you've written a chunk of code that performs a specific task or multiple tasks, it would be beneficial to break down the code into individual functions and give each a descriptive name.
+This approach makes your code more comprehensible and easier to work with.
+Functions also enable code reuse, minimizing redundancy and simplifying updates, which can save time and effort in the long run.
 
 The basic syntax for defining a function in Julia is as follows:
 
-```@example variables
+```julia
 function function_name(arguments)
     # function body
     return output
 end
 ```
 
-The `return` keyword plays a vital role in specifying the value that a `function` should output. When no return statement is explicitly provided, the function will return the value of the last expression evaluated in the function body.
+The `return` keyword plays a vital role in specifying the value that a `function` should output.
+When no return statement is explicitly provided, the function will return the value of the last expression evaluated in the function body.
 
 However, it is generally good practice to include a `return` statement when defining functions using the `function` keyword, even if the function returns `nothing`.
 This approach helps to eliminate ambiguity and ensures that the function's expected output is clear to anyone who reads it.
@@ -99,7 +108,7 @@ end
 
 You can also write:
 
-```@example variables
+```julia
 my_function(arguments) = "function body"
 ```
 
@@ -122,12 +131,15 @@ square(x) = x * x
 ```
 !!! tip "Solution"
     ```julia
+    # 1. Write a function called divide that takes two arguments and returns the result of dividing the first argument by the second.
     function divide(a, b)
         return a / b
     end
 
+    # 2. Write a function called cube that takes one argument and returns the cube of the input number.
     cube(x) = x ^ 3
 
+    # 3. Write a function that checks if a number is even. The function should take one argument and return a `Bool`.
     function is_even(n)
         return n % 2 == 0
     end
@@ -150,9 +162,9 @@ end
 
 ## Vectors
 
-In Julia, vectors are a fundamental data structure used to store and manipulate collections of values. A vector is a one-dimensional array that can store elements of the same type (e.g., integers, floating-point numbers, or strings). Vectors are useful for representing and processing sequences of data, such as time series, feature vectors, or lists of names.
-
-Show How to Create, Access, and Manipulate Vectors in Julia
+In Julia, vectors are a fundamental data structure used to store and manipulate collections of values.
+A vector is a one-dimensional array that can store elements of the same type (e.g., integers, floating-point numbers, or strings).
+Vectors are useful for representing and processing sequences of data, such as time series, feature vectors, or lists of names.
 
 To create a vector in Julia, you can use square brackets [] and separate the elements by commas. For example, to create a vector of integers, you would write:
 
@@ -160,7 +172,8 @@ To create a vector in Julia, you can use square brackets [] and separate the ele
 integer_vector = [1, 2, 3, 4, 5]
 ```
 
-You can access elements of a vector by specifying the index in square brackets. Note that Julia uses 1-based indexing, which means the first element has an index of 1:
+You can access elements of a vector by specifying the index in square brackets.
+Note that Julia uses 1-based indexing, which means the first element has an index of 1:
 
 ```@example variables
 first_element = integer_vector[1]
@@ -180,7 +193,8 @@ To add a new element to a vector, you can use the `push!` function:
 push!(integer_vector, 6)
 ```
 
-Notice the exclamation mark at the end of the function name. This is a convention in Julia that indicates that the function mutates its arguments.
+Notice the exclamation mark at the end of the function name.
+This is a convention in Julia that indicates that the function mutates its arguments.
 This means that the function modifies the original data passed as an argument instead of creating a new copy of the data.
 
 This will already help you to predict the behavior of the `pop!` function:
@@ -210,7 +224,7 @@ multiplied_vector = 2 * vector1
 divided_vector = vector1 / 2
 ```
 
-Vectors can be concetenated with the `vcat` function or the `;` operator:
+Vectors can be concatenated with the `vcat` function or the `;` operator:
 
 ```@example variables
 concatenated_vector = vcat(vector1, vector2)
@@ -260,7 +274,7 @@ Equipped with the transpose operator `'`, we can now multiply two vectors:
 dot_product = vector1' * vector2
 ```
 
-Mathematically, this is the same as the dot product!
+Arithmetically, this is the same as the dot product!
 
 Another important concept before we move on is the concept of sequences in Julia.
 
@@ -290,7 +304,9 @@ integer_vector = collect(integer_sequence)
 
 Without going too much into the details, it is important to know about the concept of arrays in Julia.
 
-Arrays are a fundamental data structure in Julia that can be used to represent and manipulate multi-dimensional collections of values. Vectors and matrices are special cases of arrays, where vectors are one-dimensional arrays and matrices are two-dimensional arrays. Arrays can have more than two dimensions, allowing you to work with higher-dimensional data structures in a consistent and efficient way.
+Arrays are a fundamental data structure in Julia that can be used to represent and manipulate multi-dimensional collections of values.
+Vectors and matrices are special cases of arrays, where vectors are one-dimensional arrays and matrices are two-dimensional arrays.
+Arrays can have more than two dimensions, allowing you to work with higher-dimensional data structures in a consistent and efficient way.
 
 The concept of arrays generalizes vectors and matrices by extending their properties and operations to multiple dimensions. This means that most of the functions and operations you have learned for vectors and matrices can be applied to arrays with higher dimensions as well.
 
@@ -308,15 +324,19 @@ The concept of arrays generalizes vectors and matrices by extending their proper
 ```
 !!! tip "Solution"
     ```julia
+        # 1. Create a vector of strings and concatenate it with another vector of strings.
         somestrings = ["this", "is", "a", "vector"]
         somemore = ["this", "is", "another", "vector"]
         vcat(somestrings, somemore)
 
+        # 2. Create a vector and perform an element-wise square of it.
         avec = [1, 2, 3]
         avec .^2
 
+        # 3. Calculate the scalar product of the vector in the way you like.
         42 * avec
 
+        # 4. Read out an index, set an index, append an element, and pop an element from a vector.
         avec[1]
 
         avec[2] = 4
@@ -349,7 +369,9 @@ pop!(avec)
 
 # Matrices
 
-In Julia, matrices are a fundamental data structure used to store and manipulate two-dimensional arrays of values. A matrix is a rectangular grid of elements, organized into rows and columns, where each element can be accessed by its row and column indices. Matrices are useful for representing and processing structured data, such as images, tables, or linear systems of equations.
+In Julia, matrices are a fundamental data structure used to store and manipulate two-dimensional arrays of values.
+A matrix is a rectangular grid of elements, organized into rows and columns, where each element can be accessed by its row and column indices.
+Matrices are useful for representing and processing structured data, such as images, tables, or linear systems of equations.
 
 To create a `Matrix` in Julia, you can use square brackets `[]` and separate the elements within each row by spaces or commas, and separate the rows by semicolons `;`.
 For example, to create a square matrix of integers, you would write:
@@ -358,7 +380,8 @@ For example, to create a square matrix of integers, you would write:
 square_matrix = [1 2 3; 4 5 6; 7 8 9]
 ```
 
-You can access elements of a matrix by specifying the row and column indices in square brackets, separated by a comma. Note that Julia uses 1-based indexing, which means the first row and column have an index of 1:
+You can access elements of a matrix by specifying the row and column indices in square brackets, separated by a comma.
+Note that Julia uses 1-based indexing, which means the first row and column have an index of 1:
 
 ```@example variables
 upper_left_element = square_matrix[1, 1]
@@ -373,7 +396,7 @@ Lets define a 2x3 `Matrix` ...
 non_square_matrix = [1 2 3; 4 5 6]
 ```
 
-... and transpose it with the `transpose` function or the `'` operator:
+... and transpose it with the `transpose` function or the quote `'` operator:
 
 ```@example variables
 transposed_matrix = transpose(non_square_matrix)
@@ -480,11 +503,15 @@ println(vec)
 
 # Control Flow
 
-Control flow refers to the order in which statements or instructions are executed in a program. It is an essential concept in programming, as it allows you to create more dynamic and flexible code. Two fundamental control flow structures are loops and conditional statements. Loops allow you to repeat a block of code multiple times, while conditional statements enable you to execute a block of code only if certain conditions are met.
+Control flow refers to the order in which statements or instructions are executed in a program.
+It is an essential concept in programming, as it allows you to create more dynamic and flexible code.
+Two fundamental control flow structures are loops and conditional statements.
+Loops allow you to repeat a block of code multiple times, while conditional statements enable you to execute a block of code only if certain conditions are met.
 
 ## For Loops
 
-For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an array or a tuple. The syntax for a for loop is as follows:
+For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an array or a tuple.
+The syntax for a for loop is as follows:
 
 ```julia
 for variable in collection
@@ -500,7 +527,8 @@ for i in 1:5
 end
 ```
 
-If statements in Julia are used to execute a block of code only if a specific condition is met. The syntax for an `if` statement is as follows:
+If statements in Julia are used to execute a block of code only if a specific condition is met.
+The syntax for an `if` statement is as follows:
 
 ```julia
 if condition
