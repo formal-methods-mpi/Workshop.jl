@@ -247,9 +247,7 @@ Now, it depends on what we mean when we want to multiply two vectors.
 If we want to perform an element-wise multiplication, we need to use the broadcast `.` operator:
 
 ```@example variables
-vector = [1, 2, 3]
-squared_vector = vector .* 2
-```
+vector1 .* vector2
 
 However, maybe you want to perform the dot product, that is related to matrix multiplication.
 It is also known as the scalar product, because it always returns a single number, i.e., a scalar.
