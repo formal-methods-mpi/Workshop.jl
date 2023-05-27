@@ -40,5 +40,5 @@ import Markdown; Markdown.parse_file("../src/reuse/chapter-overview.md")
 ## Post workshop exploration
 
 After the workshop, we encourage you to continue experimenting with Julia, apply the skills you've learned to real-world projects, and leverage the resources and community support available to further your knowledge.
-To start you on this journey we have prepared the [Advanced Materials](@ref) section.
+To start you on this journey we have prepared the [Additional Materials](@ref) section.
 By thoughtfully engaging with the workshop content and activities, you'll be well-prepared to harness the full potential of Julia and excel in your projects.
