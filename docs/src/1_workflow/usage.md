@@ -83,30 +83,54 @@ In Package mode, you can add, update, remove, and list installed packages, among
 
 !!! compat "Exercise"
     Enter Package mode by pressing `]`.
-    1. Add the Example package: `add Example`.
+    1. Install the Example package: `add Example`.
     2. List the installed packages: `status`.
     3. Remove the Example package: `rm Example`.
     4. Discover what else you can type in Package mode by entering `help` or `?`.
 
 ## Restarting the REPL
 
-Now that we have learned about the REPL and the various modes, let's restart the REPL.
+We've already talked about the REPL and its various modes. Now, let's learn how to restart it.
 
-The necessity to restart the REPL comes from how Julia handles certain changes in your code. When you define functions, variables or types, they are stored in the current Julia session. However, if you make changes to a type definition, the REPL won't recognize these changes until you restart the session. Although VSCode includes a package called Revise.jl, which alleviates this problem somewhat, it wont help us for all cases we will encounter in this course.
+Restarting the REPL in Julia is a step you'll need to take occasionally, especially when you've made certain changes to your code (you will learn when this is required later).
+When you create or alter code elements, they're stored in the current Julia session.
+But sometimes, you'll need to restart the session so that the REPL can properly understand these changes.
 
-To restart the Julia REPL in VSCode, you can use the keyboard shortcut Alt + J Alt + R. (Note that, if you wait too long between key presses, VSCode might not recognize it as a single command.)
-This starts a fresh Julia session, without all variables you previously defined or packages you loaded.
+Don't worry about the specifics yet. For now, just remember that restarting the REPL is part of the process and is something we'll be doing throughout this course.
 
-Tip: If you want to look up the shortcut for restarting the REPL, or any other shortcut, you can do so by opening the Command Palette and searching for "restart".
+Restarting the REPL in VSCode is easy.
+Just press Alt + J and then Alt + R. If you wait too long between pressing these keys, VSCode may not recognize it as a single command, so try to do it quickly.
 
-Because we will need to restart Julia during the workshop, and this will delete all variables, functions, etc. you defined, it is important that you keep your code in a script file. You should keep this file clean, so it runs from top to bottom without errors. This way, you can easily execute it again after restarting Julia. The goal is to have a single file which solves the entire workshop in a single run at the end.
+Restarting the REPL gives you a clean slate. It removes all variables you previously defined or packages you loaded.
 
-## The Tab key
+If you forget how to restart the REPL, or want to find other shortcuts, you can always open the Command Palette and search for "restart".
 
-The Tab key is a useful tool in the REPL, which you can use for autocompletion and to see what is available in the current scope. For example, if you type `pr` and then press Tab, the REPL will show you all the available commands beginning with `pr`. You can also see the namespace of a package by typing e.g., Base.<tab><tab>. If there is only a single possibility, the REPL will automatically complete the command for you. Try it out!
+Remember, each time you restart the REPL, any variables or functions you've defined will be erased.
+So it's important to keep your code in a script file.
+This way, after a restart, you can just run your script again to get back where you were.
+It's good practice to keep this file tidy so it runs smoothly from start to finish.
+By the end of the workshop, we aim to have one script file that can be run in a single go.
+
+## Making Use of the Tab Key for Autocompletion in REPL
+
+In the REPL (Read-Eval-Print-Loop) environment, the Tab key has a helpful role beyond its usual function.
+This key assists in your programming tasks by providing autocompletion, suggesting commands based on what you've started to type and what's applicable in your current scope.
+
+Let's say you've started typing 'pr' – hitting the Tab key after this triggers REPL to present all commands that start with 'pr'.
+Want to peek into the contents of a package?
+Simply type its name followed by two presses of the Tab key – for instance, 'Base.<tab><tab>'.
+
+If there's only one command that matches your partial input, REPL will conveniently complete it for you.
+Get hands-on with this feature and see the leap in your coding efficiency!
+
 
 ## Summary
 
-In this chapter, we created a folder for the workshop, executed our first Julia code, and explored the various modes of the Julia REPL, including Julia mode, Help mode, and Package mode.
-We also learned how to restart the REPL and why this is necessary.
-Lastly, we learned about the Tab key and how it can be used for autocompletion and to see what is available in the current scope.
+In this session, we have explored how to effectively utilize Julia in Visual Studio Code (VSCode). Here's what we've accomplished:
+
+- We began by setting up our working environment in VSCode. We created a new folder for the workshop and a new file within that folder named `introduction.jl`. We then wrote and executed our first line of Julia code in this file, outputting "Hello, Julia!".
+- We dove deep into the Julia REPL (Read-Eval-Print Loop), an interactive command-line interface for the Julia programming language. We learned about the different modes in the REPL: Julia mode (the default), Help mode (for accessing documentation), and Package mode (for managing Julia packages). We practiced executing simple Julia expressions in the REPL, using Help mode to retrieve documentation, and using Package mode to add, update, and remove packages.
+- We covered how to restart the REPL, which is crucial when making changes to our code. We learned the key commands to perform a restart and understood that it effectively wipes the slate clean, removing any previously defined variables or loaded packages.
+- Finally, we discovered the utility of the Tab key in the REPL for autocompletion and to see what's available in the current scope.
+
+Through these steps, we have set up our workspace, started working with Julia code, navigated different modes in the REPL, managed packages, and learned key functions of the VSCode environment. The practices we've established will lay a strong foundation for our upcoming work with Julia in VSCode.

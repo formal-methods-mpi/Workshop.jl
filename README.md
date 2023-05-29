@@ -1,6 +1,6 @@
 ## Self-paced Julia Workshop
 
-<!--Remember to synch docs/src/abstract.md and this abstract!!!-->
+<!--Remember to synch docs/src/reuse/abstract.md and this abstract!!!-->
 
 Julia is a high-level dynamic programming language designed for numerical and scientific computing, data analysis, machine learning, and more.
 Julia's user-friendly interface, resembling popular languages like R, Python, and Matlab, makes it easily accessible for learners.

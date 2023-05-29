@@ -2,7 +2,7 @@
 CurrentModule = Workshop
 ```
 
-# What is this Workshop about?
+# What this workshop is about
 
 Hello and welcome to our Julia workshop!
 
@@ -17,10 +17,28 @@ Julia is not only known for its ease of use, but also its incredible speed and f
 
 # How to get started
 
+As this is an asynchronous workshop, you might be reading this before, during, or after the workshop. Regardless of when you're engaging with the material, we hope you'll find this workshop useful and informative.
+
+To ensure a smooth learning experience, we have divided the workshop into three main stages: pre-workshop preparation, hands-on activities during the workshop, and post-workshop exploration.
+
+## Pre-workshop preparation
+
+It is important that you install Julia and Visual Studio Code following the steps outlined in [Chapter 0](0_preparation/preparation.html).
+
+## During the workshop
+
+We will focus on what sets Julia apart from other programming languages working hands-on with Julia in Visual Studio Code (VSCode).
+Through hands-on activities, you'll gain practical experience to reinforce your understanding of the concepts.
+
 The core of this workshop consists of 5 chapters (Chapter 0 - Chapter 4) that you can see in the sidebar on the left.
-You should do them in this order.
-Chapter 0 is about installing Julia and VScode. If you are an in-person participant of this workshop, you should have received a mail prior to the workshop to complete this chapter beforehand, and if you did so, you can skip this chapter.
-The first Chapter "Workflow" explains how to use julia (how to setup your environment, write scripts, load packages, etc.).
-Chapters 2-4 introduce you to different aspects of the julia language.
-Each of those chapters has a "Theory" part and an "Exercise" part.
-Should you be finished with all chapters and still have time left, you can take a look at the [Advanced Materials](@ref) section.
+They are meant to be completed in your own pace but in this order (0-4).
+
+```@eval
+import Markdown; Markdown.parse_file("../src/reuse/chapter-overview.md")
+```
+
+## Post workshop exploration
+
+After the workshop, we encourage you to continue experimenting with Julia, apply the skills you've learned to real-world projects, and leverage the resources and community support available to further your knowledge.
+To start you on this journey we have prepared the [Additional Materials](@ref) section.
+By thoughtfully engaging with the workshop content and activities, you'll be well-prepared to harness the full potential of Julia and excel in your projects.

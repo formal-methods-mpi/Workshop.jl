@@ -8,7 +8,7 @@ In the following, you will find a quick cheat sheet covering the basic Julia syn
 You will see that Julia's syntax is similar to `Matlab`, `Python`, and `R` (in this order).
 We recommend that you quickly **skim** this cheat sheet and do the exercises at the and of this chapter.
 You might want to keep this page open in another tab to have it as a reference at your disposal.
-There is a collection of side-by-side comparisons of Julia and R, Python or Matlab in the Additional Resources section of the Advanced Materials chapter.
+There is a collection of side-by-side comparisons of Julia and R, Python or Matlab in the Additional Resources section of the Additional Materials chapter.
 Because these are more comprehensive, you should not need them during the workshop.
 
 ## Variable assignment
@@ -211,6 +211,21 @@ else
     println("The number is zero")
 end
 ```
+
+## Packages
+The section [Package mode](@ref) explained how to install packages.
+To use an installed package called `Example` in the current session:
+
+```@example variables
+using Example
+```
+This makes all functions from the `Example` package available, for example the function `hello`:
+
+```@example variables
+hello("world")
+```
+
+(As you can see, this is very similar to `library(Example)` in R or `import Example` in Python)
 
 # Exercises
 
