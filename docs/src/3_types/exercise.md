@@ -5,8 +5,8 @@ Suppose you collected your data on education, but with some measurement error (p
 Of course this is not limited to the example of education, but observing data with measurement error is a central concept in most empirical sciences.
 
 !!! compat "Exercise"
-    Define the composite type `Measurement`, that is able to store a measurement and the magnitude of error of that measurement.
-    It should be a subtype of `AbstractFloat` and have an inner constructor that converts the magnitude of measurement to a positive number.
+    Define the composite type `Measurement`, that is able to store a measurement (in a field called `value`) and the magnitude of error of that measurement (in a field called `error`).
+    It should be a subtype of `AbstractFloat` and have an inner constructor that converts the magnitude of error to a positive number.
     Hint: you can use the function `abs(...)` to take the absolute value of a number.
 
 ```@raw html
@@ -19,7 +19,7 @@ Of course this is not limited to the example of education, but observing data wi
     struct Measurement <: AbstractFloat
         value
         error
-        Measurement(val, err) = new(val, abs(err))
+        Measurement(value, error) = new(value, abs(error))
     end
     ```
 ```@setup measurement

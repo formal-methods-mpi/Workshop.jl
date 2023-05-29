@@ -82,7 +82,7 @@ nothing #hide
 ```
 and are even able to strg+click on the link to directly take us to the method definition.
 
-The crucial part is that methods don't have to be defined together with the function, but that instead we can add methods to existing functions.
+The crucial part is that methods don't have to be defined together with the function, but instead we can add methods to existing functions.
 To add a method to a function from another module, we first import the function:
 ```@example dispatch
 import Base: *
@@ -95,7 +95,7 @@ end
 
 *(a::SomeType, b::AnotherType) = ...
 ```
-but we specify on which input-type combination the method should be called (in the above pseudo-code, the method would be called every time we multipy two variables `a` and `b`, where `a` is of type `SomeType` and `b` of type `AnotherType`).
+but we specify on which input-type combination the method should be called (in the above pseudo-code, the method would be called every time we multiply two variables `a` and `b`, where `a` is of type `SomeType` and `b` of type `AnotherType`).
 
 Let's practise this a bit. We return to our Pokemon example: suppose we would like to let pokemon fight against each other.
 As you maybe know, depending on the type of Pokemon (e.g., `Normal`, `Fire`, `Flight`, etc.), the attacks vary in their effectiveness.

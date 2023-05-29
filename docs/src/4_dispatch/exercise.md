@@ -169,7 +169,7 @@ a prediction of income with the respective measurement error.
 Hopefully, this serves a a nice illustration of what multiple dispatch together with julias type system is able to achieve.
 When you wrote the `predict` function at the beginning of this workshop, you probably had no idea what multiple dispatch even is.
 But because we are able to define methods for important operations (like `*`, `+`), we can use any function or algorithmn that is composed of these operations.
-This is a very powerful idea that allows for great extensibility and interaperability of different packages.
+This is a very powerful idea that allows for great extensibility and interoperability of different packages.
 If you don't believe me, imagine somebody has written an `R` package for linear regression.
 Now you are in the situation that you have to deal with measurement error.
 I believe it would be impossible to get the published `R` package to work with measurement error without rewriting the whole package.
