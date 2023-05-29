@@ -33,7 +33,7 @@ savefig("lr.png")
 
 ![lr](lr.png)
 
-As you may recal from university, school, or learn just now, a straight line is mathematically described by ``y = \alpha + \beta x``, where in our case, ``y`` corresponds to income and ``x`` to years of education.
+As you may recall from university, school, or learn just now, a straight line is mathematically described by ``y = \alpha + \beta x``, where in our case, ``y`` corresponds to income and ``x`` to years of education.
 
 !!! compat "Exercise"
     Write a function `predict` that takes `x, α` and `β` as inputs and returns the predicted value for `y`.
@@ -127,6 +127,7 @@ So we go through all of our `n` data points (`i = 1, ..., n`) and for each of th
         return sum((y - ŷ).^2)
     end
     ```
+    (In case you are wondering, `ŷ` can by typed as `y\hat<tab>`)
 ```@setup linreg
 function squared_error(y, ŷ)
     return sum((y - ŷ).^2)
