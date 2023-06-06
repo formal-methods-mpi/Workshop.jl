@@ -227,7 +227,7 @@ hello("world")
 
 (As you can see, this is very similar to `library(Example)` in R or `import Example` in Python)
 
-# Exercises
+# Tasks
 
 !!! compat "Exercise"
     Write a function that takes two arguments and divides them.
