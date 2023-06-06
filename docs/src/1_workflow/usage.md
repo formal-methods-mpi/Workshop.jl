@@ -116,13 +116,9 @@ By the end of the workshop, we aim to have one script file that can be run in a 
 In the REPL (Read-Eval-Print-Loop) environment, the Tab key has a helpful role beyond its usual function.
 This key assists in your programming tasks by providing autocompletion, suggesting commands based on what you've started to type and what's applicable in your current scope.
 
-Let's say you've started typing 'pr' – hitting the Tab key after this triggers REPL to present all commands that start with 'pr'.
-Want to peek into the contents of a package?
-Simply type its name followed by two presses of the Tab key – for instance, 'Base.<tab><tab>'.
+Let's say you've started typing 'pr' – if there's only one command that matches your partial input, hitting the Tab key will lead the REPL to complete it for you. If there are multiple potential matches, hitting the Tab key **twice** triggers the REPL to present all commands that start with 'pr'.
 
-If there's only one command that matches your partial input, REPL will conveniently complete it for you.
 Get hands-on with this feature and see the leap in your coding efficiency!
-
 
 ## Summary
 
