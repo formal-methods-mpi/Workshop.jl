@@ -44,7 +44,7 @@ end
 ```
 !!! tip "Solution"
     ```julia
-    ±(val, err) = Measurement(val, err)
+    ±(value, error) = Measurement(value, error)
 
     m1 = 2.98 ± 0.43
     m2 = 0.34 ± 1.34
