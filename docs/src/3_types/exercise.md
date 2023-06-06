@@ -36,6 +36,7 @@ end
 
 !!! compat "Exercise"
     Define the function `±(value, error)` to create a new instance of the `Measurement` type, and create some measurements.
+    The `±` symbol can we written as `\pm<tab>`.
 
 ```@raw html
 <details>
