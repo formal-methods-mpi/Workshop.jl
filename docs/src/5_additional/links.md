@@ -4,6 +4,9 @@
 
 Arguably the most important and useful link is the one to the official [Julia Documentation](https://docs.julialang.org/en/v1/). It might be quite technical from time to time, but is a great and extensive documentation of many aspects of the Julia language. Once you are more familiar with julia, the sections [Performance Tips](https://docs.julialang.org/en/v1/manual/performance-tips/) and the [Style Guide](https://docs.julialang.org/en/v1/manual/style-guide/) might be especially helpful.
 
+## Julia Forum
+The best place to ask for help is the [Julia forum](https://discourse.julialang.org/) (and for Julia-related questions, you will typically get better answers than e.g. on stack overflow). Everybody can ask/answer questions there, especially beginners.
+
 ## Use Juliaup for Julia Version Management
 
 If you're comfortable using the shell and already have some experience with the terminal, you may want to install Juliaup.
