@@ -118,7 +118,7 @@ import Base: +, -, *, /, inv, log, sin, cos, ^
 ^(a::Dual, k::Int) = Dual(a.x^k, k*a.x^(k-1)*a.∂x)
 /(a::Dual, b::Dual) = Dual(a.x/b.x, (a.∂x*b.x - a.x*b.∂x)/b.x^2)
 inv(a::Dual) = Dual(inv(a.x), -a.∂x/(a.x^2))
-log(a::Dual) = Dual(log(a.x), -a.∂x/(a.x^2))
+log(a::Dual) = Dual(log(a.x), a.∂x/a.x)
 sin(a::Dual) = Dual(sin(a.x), cos(a.x)*a.∂x)
 cos(a::Dual) = Dual(cos(a.x), -sin(a.x)*a.∂x)
 ```
