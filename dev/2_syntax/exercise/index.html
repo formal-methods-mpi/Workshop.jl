@@ -5,69 +5,69 @@
     y = α .+ β*x
     return y
 end</code></pre></div></div></details><p><br/></p><p>Let&#39;s simulate some data for the task at hand. First, we load the <code>Random</code> package (a julia package for random number generation) and set a seed (to make our experiments reproducible):</p><pre><code class="language-julia hljs">using Random
-Random.seed!(1243)</code></pre><p>Next, we generate some random values for years of education:</p><pre><code class="language-julia hljs">x = 10 .+ 3*randn(20)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">20-element Vector{Float64}:
- 13.116025283577589
- 11.356663727732775
-  4.018952341087944
-  9.600251658629814
- 10.489482131157526
-  7.710265590017107
- 14.16002104641104
- 14.726544271979687
- 14.376561114088712
-  8.682658902543643
-  7.530847432691564
- 15.371078835509365
-  8.004682258907811
- 10.170847239195059
-  5.355107648309216
- 13.336655909843952
- 13.59946687466142
-  6.576957736788565
-  9.171015497579846
-  7.302119739123987</code></pre><p>This produces a vector of 20 values with 10 years of education as the average, and some normally distributed random variation.</p><div class="admonition is-compat"><header class="admonition-header">Exercise</header><div class="admonition-body"><p>Use your previously defined function <code>predict</code> to generate some values for income (<code>y</code>) with <code>α = 1000, β = 300</code></p></div></div><details>
+Random.seed!(1234)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Random.TaskLocalRNG()</code></pre><p>Next, we generate some random values for years of education:</p><pre><code class="language-julia hljs">x = 10 .+ 3*randn(20)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">20-element Vector{Float64}:
+ 12.911968986565643
+  7.062344765394401
+ 12.705582650782281
+  9.901590612266082
+  8.197623329933316
+  5.664468654141301
+ 18.12227182514734
+ 14.573343590306788
+ 12.279412060022398
+  7.355689281410555
+ 12.117979401347831
+ 13.274665846160229
+ 12.614493558642724
+ 10.257073327019132
+ 12.880237454462616
+ 12.723510996809502
+  9.383108871915919
+ 12.312109525273629
+  6.358179486488937
+ 13.274495746205444</code></pre><p>This produces a vector of 20 values with 10 years of education as the average, and some normally distributed random variation.</p><div class="admonition is-compat"><header class="admonition-header">Exercise</header><div class="admonition-body"><p>Use your previously defined function <code>predict</code> to generate some values for income (<code>y</code>) with <code>α = 1000, β = 300</code></p></div></div><details>
 <summary>show solution</summary>
 <br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">y = predict(x, 1000, 300)</code></pre></div></div><pre class="documenter-example-output"><code class="nohighlight hljs ansi">20-element Vector{Float64}:
- 4934.807585073277
- 4406.999118319833
- 2205.6857023263833
- 3880.075497588944
- 4146.844639347258
- 3313.079677005132
- 5248.0063139233125
- 5417.963281593906
- 5312.9683342266135
- 3604.797670763093
- 3259.254229807469
- 5611.32365065281
- 3401.4046776723435
- 4051.2541717585177
- 2606.532294492765
- 5000.996772953185
- 5079.840062398426
- 2973.08732103657
- 3751.304649273954
- 3190.635921737196</code></pre></details><p><br/> Since in reality, income does not perfectly depend on education, but there is some random variation, we add this random variation to <code>y</code>:</p><pre><code class="language-julia hljs">y += 500*randn(20)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">20-element Vector{Float64}:
- 4569.5324380034235
- 4401.7368192919075
- 2085.41216907894
- 3917.9803976680655
- 4064.3947162468003
- 4284.11999001945
- 5254.407220966737
- 4449.137251201013
- 5484.618009616066
- 3913.251941788397
- 2609.1868715110995
- 6132.671218234935
- 3945.6688376628163
- 3936.615889927559
- 1531.192762423906
- 5864.837739023354
- 4939.341325639505
- 2618.521185197386
- 2864.5747773736684
- 3298.8749837404703</code></pre><p>And viola! We have some data to work with.</p><p>In reality of course, we don&#39;t know the values for <span>$\alpha$</span> and <span>$\beta$</span>, but we have to estimate them from the data. To do so, we first need some indication of how good a certain combination of values works for our data. Usually, we use the sum of squared errors for this task:</p><p class="math-container">\[\sum_{i=1}^n (\hat{y}_i - y_i)^2\]</p><p>So we go through all of our <code>n</code> data points (<code>i = 1, ..., n</code>) and for each of those data points we compute the squared distance between the prediction, <span>$\hat{y}_i$</span>, and the value we observed in reality, <span>$y_i$</span>.</p><div class="admonition is-compat"><header class="admonition-header">Exercise</header><div class="admonition-body"><p>Define a function <code>squared_error</code> that takes a vector of predicted values and a vector of observed values as input and computes the sum of squared errors between them.</p></div></div><details>
+ 4873.590695969693
+ 3118.70342961832
+ 4811.674795234685
+ 3970.4771836798245
+ 3459.2869989799947
+ 2699.3405962423903
+ 6436.681547544202
+ 5372.003077092037
+ 4683.82361800672
+ 3206.7067844231665
+ 4635.39382040435
+ 4982.399753848069
+ 4784.348067592817
+ 4077.1219981057397
+ 4864.071236338785
+ 4817.053299042851
+ 3814.932661574776
+ 4693.632857582088
+ 2907.453845946681
+ 4982.348723861633</code></pre></details><p><br/> Since in reality, income does not perfectly depend on education, but there is some random variation, we add this random variation to <code>y</code>:</p><pre><code class="language-julia hljs">y += 500*randn(20)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">20-element Vector{Float64}:
+ 4823.645221195984
+ 2755.6322668011885
+ 4870.718613298108
+ 4441.843603957124
+ 3454.3306407860846
+ 2580.7422256856644
+ 6319.658088985575
+ 5976.1103158123615
+ 5659.967831314555
+ 3368.559310292467
+ 4256.475254144916
+ 5567.071070065267
+ 5523.281634582452
+ 4050.7583412019408
+ 4981.319314300481
+ 4810.9504254983985
+ 3963.103061086381
+ 5096.559166818264
+ 2859.8794629077993
+ 5348.951251046224</code></pre><p>And viola! We have some data to work with.</p><p>In reality of course, we don&#39;t know the values for <span>$\alpha$</span> and <span>$\beta$</span>, but we have to estimate them from the data. To do so, we first need some indication of how good a certain combination of values works for our data. Usually, we use the sum of squared errors for this task:</p><p class="math-container">\[\sum_{i=1}^n (\hat{y}_i - y_i)^2\]</p><p>So we go through all of our <code>n</code> data points (<code>i = 1, ..., n</code>) and for each of those data points we compute the squared distance between the prediction, <span>$\hat{y}_i$</span>, and the value we observed in reality, <span>$y_i$</span>.</p><div class="admonition is-compat"><header class="admonition-header">Exercise</header><div class="admonition-body"><p>Define a function <code>squared_error</code> that takes a vector of predicted values and a vector of observed values as input and computes the sum of squared errors between them.</p></div></div><details>
 <summary>show solution</summary>
 <br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">function squared_error(y, ŷ)
     return sum((y - ŷ).^2)
@@ -78,4 +78,4 @@ end</code></pre><p>(In case you are wondering, <code>ŷ</code> can by typed as 
 end
 
 squared_error_regression(200, 100, y, x)
-squared_error_regression(1000, 300, y, x)</code></pre></div></div><pre class="documenter-example-output"><code class="nohighlight hljs ansi">1.7201301120694494e8</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">6.012141097505945e6</code></pre></details><p><br/> You should see that the error corresponding to the true parameters we used to simulate the data is much lower.</p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../foundations/">« Theory</a><a class="docs-footer-nextpage" href="../../3_types/types/">Theory »</a><div class="flexbox-break"></div><p class="footer-message">Got a question? Something confuses you? <a href="https://github.com/formal-methods-mpi/Workshop.jl/issues/new">Don&#39;t hesitate to open an issue to ask for help!</a></p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.24 on <span class="colophon-date" title="Monday 29 May 2023 22:47">Monday 29 May 2023</span>. Using Julia version 1.9.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+squared_error_regression(1000, 300, y, x)</code></pre></div></div><pre class="documenter-example-output"><code class="nohighlight hljs ansi">2.1926837150818703e8</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">3.098658500723127e6</code></pre></details><p><br/> You should see that the error corresponding to the true parameters we used to simulate the data is much lower.</p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../foundations/">« Theory</a><a class="docs-footer-nextpage" href="../../3_types/types/">Theory »</a><div class="flexbox-break"></div><p class="footer-message">Got a question? Something confuses you? <a href="https://github.com/formal-methods-mpi/Workshop.jl/issues/new">Don&#39;t hesitate to open an issue to ask for help!</a></p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.24 on <span class="colophon-date" title="Wednesday 7 June 2023 09:00">Wednesday 7 June 2023</span>. Using Julia version 1.9.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
