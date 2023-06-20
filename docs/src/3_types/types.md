@@ -47,7 +47,7 @@ for example single precision floating point numbers (`Float32`).
 If we would explore this type hierarchy further, we could see something like:
 
 ![Type hiearchy](https://upload.wikimedia.org/wikipedia/commons/d/d9/Julia-number-type-hierarchy.svg)
-*By Cormullion - Own work, CC BY-SA 4.0, [https://commons.wikimedia.org/w/index.php?curid=83858572](https://commons.wikimedia.org/w/index.php?curid=83858572)*
+*Created by Cormullion, available under the terms of [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), reproduced from [https://commons.wikimedia.org/w/index.php?curid=83858572](https://commons.wikimedia.org/w/index.php?curid=83858572)*
 
 In julia, we can easily define new abstract types:
 
