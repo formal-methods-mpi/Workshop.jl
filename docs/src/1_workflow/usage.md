@@ -25,7 +25,7 @@ Now, we'll execute this code using the Command Palette.
 To open the Command Palette, press Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac).
 In the Command Palette search bar, type "execute," and then look for the option "Julia: Execute Code in REPL and Move"
 Take note what the displayed shortcut for executing code in the REPL is - you can use this shortcut in the the future to execute a line of code from your script.
-Leave the command palette by clicking on the background, click on the line of code you just worte, and hit the shortcut to execute it. The code you've written should be executed, displaying "Hello, Julia!" in the REPL window that opens up at the bottom of VSCode.
+Leave the command palette by clicking on the background, click on the line of code you just wrote, and hit the shortcut to execute it. The code you've written should be executed, displaying "Hello, Julia!" in the REPL window that opens up at the bottom of VSCode.
 
 Great! You've just executed your first line of Julia in VSCode!
 
@@ -49,7 +49,7 @@ Here, you can enter and execute Julia expressions.
 To return to Julia mode from any other mode, press Backspace.
 
 !!! compat "Exercise"
-    Add two numbers in the REPL.
+    write an addition of two numbers in the REPL.
 
 ```@raw html
 <details>
@@ -72,7 +72,7 @@ To return to Julia mode from any other mode, press Backspace.
 To access Help mode, press ?. In this mode, you can search for documentation and information about various Julia functions, types, and keywords.
 
 !!! compat "Exercise"
-    1. To find information on the println function, enter Help mode by pressing ?. Once in Help mode, simply type println and press Enter to retrieve the relevant documentation.
+    1. To find information on the println function, enter Help mode by pressing ?. Once in Help mode, type println and press Enter to retrieve the relevant documentation.
     2. Look for an alternative print function by entering "print" (with quotation marks) in the search field. Julia will subsequently provide a list of definitions where the string "print" appears in the associated documentation.
 
 ### Package mode
@@ -98,16 +98,15 @@ But sometimes, you'll need to restart the session so that the REPL can properly 
 
 Don't worry about the specifics yet. For now, just remember that restarting the REPL is part of the process and is something we'll be doing throughout this course.
 
-Restarting the REPL in VSCode is easy.
-Just press Alt + J and then Alt + R. If you wait too long between pressing these keys, VSCode may not recognize it as a single command, so try to do it quickly.
+Restarting the REPL in VSCode is easy. Press Alt + J and then Alt + R. If you wait too long between pressing these keys, VSCode may not recognize it as a single command, so try to do it quickly.
 
 Restarting the REPL gives you a clean slate. It removes all variables you previously defined or packages you loaded.
 
-If you forget how to restart the REPL, or want to find other shortcuts, you can always open the Command Palette and search for "restart".
+If you forget how to restart the REPL, or want to find other shortcuts, you can always open the Command Palette (with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac)) and search for "restart".
 
 Remember, each time you restart the REPL, any variables or functions you've defined will be erased.
 So it's important to keep your code in a script file.
-This way, after a restart, you can just run your script again to get back where you were.
+This way, after a restart, you can run your script again to get back where you were.
 It's good practice to keep this file tidy so it runs smoothly from start to finish.
 By the end of the workshop, we aim to have one script file that can be run in a single go.
 
@@ -118,7 +117,7 @@ This key assists in your programming tasks by providing autocompletion, suggesti
 
 Let's say you've started typing 'pr' – hitting the Tab key after this triggers REPL to present all commands that start with 'pr'.
 Want to peek into the contents of a package?
-Simply type its name followed by two presses of the Tab key – for instance, 'Base.<tab><tab>'.
+Type its name followed by two presses of the Tab key – for instance, 'Base.<tab><tab>'.
 
 If there's only one command that matches your partial input, REPL will conveniently complete it for you.
 Get hands-on with this feature and see the leap in your coding efficiency!
