@@ -162,7 +162,7 @@ end
 
 ## Vectors
 
-In Julia, vectors are a fundamental data structure used to store and manipulate collections of values.
+In julia, vectors are a fundamental data structure used to store and manipulate collections of values.
 A vector is a one-dimensional array that can store elements of the same type (e.g., integers, floating-point numbers, or strings).
 Vectors are useful for representing and processing sequences of data, such as time series, feature vectors, or lists of names.
 
