@@ -99,7 +99,7 @@ but we specify on which input-type combination the method should be called (in t
 
 Let's practise this a bit. We return to our Pokemon example: suppose we would like to let Pokemon fight against each other.
 As you maybe know, depending on the type of Pokemon (e.g., `Normal`, `Fire`, `Flight`, etc.), the attacks vary in their effectiveness.
-So let's define a function `effectiveness` that computes this for us. I will first define the generic fallback defintion, that is used every time there is no special interaction between the types of Pokemon fighting:
+So let's define a function `effectiveness` that computes this for us. We will first define the generic fallback definition that is used every time there is no special interaction between the types of Pokemon fighting:
 
 ```@example dispatch
 effectiveness(attacker::Pokemon, defender::Pokemon) = 1.0
