@@ -53,7 +53,7 @@ m1 + m2
 ```
 
 Work's like a charm!
-Subtraction works similarly, so I will define this method for you:
+Subtraction works similarly, so we will define this method for you:
 ```@example exercise_dispatch
 import Base: -
 -(x::Measurement, y::Measurement) = Measurement(x.value - y.value, x.error + y.error)
@@ -103,7 +103,7 @@ m1 + 3.53 #hide
 </details>
 ```
 \
-Okay, to spare you some time, I will define some last methods we need: subtraction and multiplication of real numbers and measurements. 
+Okay, to spare you some time, we will define some last methods we need: subtraction and multiplication of real numbers and measurements. 
 Subtraction works just like addition, and for multiplication we see that
 
 ```math
@@ -129,7 +129,7 @@ m2 * 3.5
 ```
 
 Now for the fun part: 
-In the exercise to the first chapter, we tried to predict income from years of education with the help of linear regression.
+In the exercise of Chapter 2, we tried to predict income from years of education with the help of linear regression.
 Let's simulate some data again:
 
 ```@example exercise_dispatch
@@ -148,7 +148,7 @@ This time, let's asume we observed education with some measurement error:
 x = Measurement.(x, 2*randn(20))
 ```
 
-But what happens when we us the education data with measurement error to predict income?
+But what happens when we use the education data with measurement error to predict income?
 Let's find out! We defined our prediction function as
 
 ```@example exercise_dispatch
@@ -166,14 +166,11 @@ predict(x, 1000, 300)
 a prediction of income with the respective measurement error.
 
 
-Hopefully, this serves a a nice illustration of what multiple dispatch together with julias type system is able to achieve.
-When you wrote the `predict` function at the beginning of this workshop, you probably had no idea what multiple dispatch even is.
-But because we are able to define methods for important operations (like `*`, `+`), we can use any function or algorithmn that is composed of these operations.
+Hopefully, this serves as a useful illustration of what multiple dispatch with julias type system is able to achieve.
+Because we are able to define methods for important operations (like `*`, `+`), we can use any function or algorithmn that is composed of these operations.
 This is a very powerful idea that allows for great extensibility and interoperability of different packages.
-If you don't believe me, imagine somebody has written an `R` package for linear regression.
-Now you are in the situation that you have to deal with measurement error.
-I believe it would be impossible to get the published `R` package to work with measurement error without rewriting the whole package.
+For instance, imagine somebody has written an `R` package for linear regression that doesn't include measurement errors; it would likely be impossible to get it to work with measurement error without rewriting the whole package, while this could be relatively easily added to it in julia.
 
 
 Similarly, if you think about our pokemon example from the beginning:
-If we would like to add more types of pokemon, we just have to define the types (`Water`, `Fire`, etc.) and the relevant methods for our functions (`effectiveness`). Of course, the code we wrote in the pokemon example is rather limited, but this translates seamlessly to complicated packages with more functionality.
+If we would like to add more types of pokemons, we just have to define the types (`Water`, `Fire`, etc.) and the relevant methods for our functions (`effectiveness`). Of course, the code we wrote in the pokemon example is rather limited, but this translates seamlessly to complicated packages with more functionality.
