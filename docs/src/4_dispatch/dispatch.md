@@ -146,4 +146,4 @@ However, the rules of Pokemon tell us that we should have the following interact
 ```
 \
 We only have to define 3 methods, because for all other cases, our generic fallback works correctly.
-We also see, that our function now correctly works for our Pikachu and Crobat, so we successfully altered the functions behaviour to correctly work on our types.
+We also see that our function now correctly works for our Pikachu and Crobat, so we successfully altered the functions behaviour to work on our types correctly.
