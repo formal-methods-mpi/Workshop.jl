@@ -75,7 +75,7 @@ Next, we generate some random values for years of education:
 x = 10 .+ 3*randn(20)
 ```
 
-This produces a vector of 20 values with 10 years of education as the average, and some normally distributed random variation (with mean 0 and standard deviation 1).
+This produces a vector of 20 values with 10 years of education as the average, and some normally distributed random variation (with mean 0 and standard deviation 3).
 
 !!! compat "Exercise"
     Use your previously defined function `predict` to generate some values for income (`y`) with `α = 1000, β = 300`
