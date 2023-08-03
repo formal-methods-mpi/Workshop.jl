@@ -49,7 +49,7 @@ Here, you can enter and execute Julia expressions.
 To return to Julia mode from any other mode, press Backspace.
 
 !!! compat "Exercise"
-    write an addition of two numbers in the REPL.
+    Write an addition of two numbers in the REPL.
 
 ```@raw html
 <details>
