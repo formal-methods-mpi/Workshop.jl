@@ -75,7 +75,7 @@ Next, we generate some random values for years of education:
 x = 10 .+ 3*randn(20)
 ```
 
-This produces a vector of 20 values with 10 years of education as the average, and some normally distributed random variation.
+This produces a vector of 20 values with 10 years of education as the average, and some normally distributed random variation (with mean 0 and standard deviation 3).
 
 !!! compat "Exercise"
     Use your previously defined function `predict` to generate some values for income (`y`) with `α = 1000, β = 300`
@@ -103,7 +103,7 @@ Since in reality, income does not perfectly depend on education, but there is so
 y += 500*randn(20)
 ```
 
-And viola! We have some data to work with.
+And voilà! We have some data to work with.
 
 In reality of course, we don't know the values for ``\alpha`` and ``\beta``, but we have to estimate them from the data. To do so, we first need some indication of how good a certain combination of values works for our data. Usually, we use the sum of squared errors for this task:
 
