@@ -29,7 +29,7 @@ my_crobat = Crobat("Xwing", 105, 100, 210, 112)
 # Multiple Dispatch
 
 We will now approach the central topic of this workshop: multiple dispatch.
-In julia, functions can behave quite differently, depending on the type of their arguments.
+In Julia, functions can behave quite differently, depending on the type of their arguments.
 For example, let's take a look at the multiplication function `*`:
 
 ```@example dispatch
@@ -80,7 +80,7 @@ nothing #hide
 ```
 *(A::Union{LinearAlgebra.Adjoint{var"#s886", <:StridedMatrix{T} where T}, LinearAlgebra.Transpose{var"#s886", <:StridedMatrix{T} where T}, StridedMatrix{var"#s886"}} where var"#s886"<:Union{Float32, Float64}, B::Union{LinearAlgebra.Adjoint{var"#s885", <:StridedMatrix{T} where T}, LinearAlgebra.Transpose{var"#s885", <:StridedMatrix{T} where T}, StridedMatrix{var"#s885"}} where var"#s885"<:Union{Float32, Float64}) in LinearAlgebra at /usr/share/julia/stdlib/v1.8/LinearAlgebra/src/matmul.jl:146
 ```
-and are even able to strg+click on the link to directly take us to the method definition.
+and are even able to Strg/Cmd + Left-Click on the link to directly take us to the method definition.
 
 The crucial part is that methods don't have to be defined together with the function, but instead we can add methods to existing functions.
 To add a method to a function from another module, we first import the function:
@@ -97,9 +97,9 @@ end
 ```
 but we specify on which input-type combination the method should be called (in the above pseudo-code, the method would be called every time we multiply two variables `a` and `b`, where `a` is of type `SomeType` and `b` of type `AnotherType`).
 
-Let's practise this a bit. We return to our Pokemon example: suppose we would like to let pokemon fight against each other.
+Let's practise this a bit. We return to our Pokemon example: suppose we would like to let Pokemon fight against each other.
 As you maybe know, depending on the type of Pokemon (e.g., `Normal`, `Fire`, `Flight`, etc.), the attacks vary in their effectiveness.
-So let's define a function `effectiveness` that computes this for us. I will first define the generic fallback defintion, that is used every time there is no special interaction between the types of pokemon fighting:
+So let's define a function `effectiveness` that computes this for us. We will first define the generic fallback definition that is used every time there is no special interaction between the types of Pokemon fighting:
 
 ```@example dispatch
 effectiveness(attacker::Pokemon, defender::Pokemon) = 1.0
@@ -146,4 +146,4 @@ However, the rules of Pokemon tell us that we should have the following interact
 ```
 \
 We only have to define 3 methods, because for all other cases, our generic fallback works correctly.
-We also see, that our function now correctly works for our Pikachu and Crobat, so we succesfully altered the functions behaviour to correctly work on our types.
+We also see that our function now correctly works for our Pikachu and Crobat, so we successfully altered the functions behaviour to work on our types correctly.

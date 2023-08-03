@@ -121,7 +121,7 @@ Or we mutliply two vectors element-wise:
 ```@example variables
 first_vector .* second_vector
 ```
-Note that infix operators (i.e., `+`, `*`, `=`, and many more) place the dote *before the operator (i.e., `.+`, `.*`, `.=`)
+Note that infix operators (i.e., `+`, `*`, `=`, and many more) place the dot *before* the operator (i.e., `.+`, `.*`, `.=`)
 
 ## Sequences
 

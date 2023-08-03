@@ -11,7 +11,7 @@ This is meant to help you translate concepts that you already know from other pr
 **Chapter 3** is about things that exist in Julia.
 Everything that exists in Julia has a type.
 Without understanding types, you can not understand Julia.
-What better why to understand than to create your own type?
+What better way to understand than to create your own type?
 
 **Chapter 4** is about things that happen in Julia.
 Everything that happens in Julia is because of functions.

@@ -41,13 +41,13 @@ subtypes(AbstractFloat)
 ```
 
 The function `supertype` allows us to inspect the next higher abstract type in the type hierarchy.
-In this case, this type is called `AbstractFloat`
-Caling `subtypes` on `AbstractFloat`, we see that `Float64` is "bundled" together with some other types,
+In this case, this type is called `AbstractFloat`.
+Calling `subtypes` on `AbstractFloat`, we see that `Float64` is "bundled" together with some other types,
 for example single precision floating point numbers (`Float32`).
 If we would explore this type hierarchy further, we could see something like:
 
 ![Type hiearchy](https://upload.wikimedia.org/wikipedia/commons/d/d9/Julia-number-type-hierarchy.svg)
-*By Cormullion - Own work, CC BY-SA 4.0, [https://commons.wikimedia.org/w/index.php?curid=83858572](https://commons.wikimedia.org/w/index.php?curid=83858572)*
+*Created by Cormullion, available under the terms of [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), reproduced from [https://commons.wikimedia.org/w/index.php?curid=83858572](https://commons.wikimedia.org/w/index.php?curid=83858572)*
 
 In julia, we can easily define new abstract types:
 
@@ -158,7 +158,7 @@ However, we may like to have more convenience or safety.
 For this purpose, we have Constructors: functions that create new objects.
 
 ### Outer Constructors
-Outer constructors are mainly for conveniece reasons, and we define them just like functions.
+Outer constructors are mainly for convenience reasons, and we define them just like functions.
 For example, we may want to have the option of not giving a new Pokemon a nickname:
 
 ```@example types
@@ -166,7 +166,7 @@ import Random: randstring
 Pikachu(attack, defense, speed, hp) = Pikachu(randstring(10), attack, defense, speed, hp)
 ```
 
-So if I want to be lazy and not come up with a nickname, i just sample a random one:
+So if we want to be lazy and not come up with a nickname, we can sample a random one:
 
 ```@example types
 my_lazy_pikachu = Pikachu(132, 34, 23, 343)
