@@ -36,6 +36,7 @@ end
 
 !!! compat "Exercise"
     Define the function `±(value, error)` to create a new instance of the `Measurement` type, and create some measurements.
+    The `±` symbol can we written as `\pm<tab>`.
 
 ```@raw html
 <details>
@@ -44,7 +45,7 @@ end
 ```
 !!! tip "Solution"
     ```julia
-    ±(val, err) = Measurement(val, err)
+    ±(value, error) = Measurement(value, error)
 
     m1 = 2.98 ± 0.43
     m2 = 0.34 ± 1.34
