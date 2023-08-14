@@ -499,8 +499,8 @@ Loops allow you to repeat a block of code multiple times, while conditional stat
 
 ## For Loops
 
-For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an array or a tuple.
-The syntax for a for loop is as follows:
+For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an `Array`.
+The syntax for a `for` loop is as follows:
 
 ```julia
 for variable in collection
