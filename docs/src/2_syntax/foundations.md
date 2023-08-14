@@ -259,7 +259,7 @@ divide(a, b) = a/b
 
 !!! compat "Exercises"
     Create a vector of numbers and perform an element-wise square.
-    *Hint*: In julia, a variable `x` can be squared with `x^2`.
+    *Hint*: In Julia, a variable `x` can be squared with `x^2`.
 
 ```@raw html
 <details>
