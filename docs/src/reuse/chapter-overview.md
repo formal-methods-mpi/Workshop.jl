@@ -1,5 +1,5 @@
 **Chapter 0** should aready be completed **before** the workshop begins, unless you are doing it on your own.
-There we guide you through the installation of the Julia and Visual Studio Code.
+There we guide you through the installation of Julia and Visual Studio Code.
 
 **Chapter 1** is the first chapter that we tackle together (unless you are on your own).
 Before diving into the intricacies of Julia, we will first discuss the workflow and tools you'll need to get started with the language.
