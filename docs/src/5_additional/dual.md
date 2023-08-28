@@ -139,7 +139,7 @@ nothing #hide
 ```
 
 We did not cover conversion and promotion in this workshop, so you won't understand this in detail, but the short explanation is this:
-We write a method for the `convert` function to tell julia how to "convert" an object of type `Real` to an object of type `Dual`, so we can now do something like this:
+We write a method for the `convert` function to tell Julia how to "convert" an object of type `Real` to an object of type `Dual`, so we can now do something like this:
 
 ```@example dual
 a = 3.23
@@ -171,7 +171,7 @@ a+b
 ```@example dual
 a/b
 ```
-This is because julia will now "check" the defined promotion rules for us, and promote the real number to a dual number, and then use the methods we defined before.
+This is because Julia will now "check" the defined promotion rules for us, and promote the real number to a dual number, and then use the methods we defined before.
 If you are interested in details, check the documentation on this topic, but for now it suffices to see that we avoided defining a bunch of methods with this neat trick.
 
 
