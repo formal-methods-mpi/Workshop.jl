@@ -30,6 +30,7 @@ We see that, for example, the type of double-precision floating point numers is 
 However, in addition to the types a variable can have, there are so-called "abstract types".
 Abstract types "bundle" concrete types together, and form a "type hierarchy".
 Let's have a look:
+
 ```@example types
 typeof(a)
 ```
@@ -89,6 +90,7 @@ my_pikachu = Pikachu("Pika", 135, 80, 110, 132)
 ```
 
 which creates a variable `my_pikachu` of type `Pikachu`.
+Note, that you may or may not see the prefix `Main.` this is nothing to worry about and merely an artifact of how this website is generated.
 
 We can retrieve the values stored in the fields as
 ```@example types
