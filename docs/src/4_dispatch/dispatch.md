@@ -49,7 +49,7 @@ a * b
 ```
 If we multiply two numbers together, we will get their product, if we multiply two strings together, they are concatenated, and if we multiply two arrays, we get a matrix product.
 So functions are able to specialise on the type of the input arguments.
-Every such specialisation we call a method of that function.
+Every such specialisation is called a method of that function.
 We can for example take a look at all the methods for `*`:
 
 ```@example dispatch
@@ -81,6 +81,8 @@ nothing #hide
 *(A::Union{LinearAlgebra.Adjoint{var"#s886", <:StridedMatrix{T} where T}, LinearAlgebra.Transpose{var"#s886", <:StridedMatrix{T} where T}, StridedMatrix{var"#s886"}} where var"#s886"<:Union{Float32, Float64}, B::Union{LinearAlgebra.Adjoint{var"#s885", <:StridedMatrix{T} where T}, LinearAlgebra.Transpose{var"#s885", <:StridedMatrix{T} where T}, StridedMatrix{var"#s885"}} where var"#s885"<:Union{Float32, Float64}) in LinearAlgebra at /usr/share/julia/stdlib/v1.8/LinearAlgebra/src/matmul.jl:146
 ```
 and for some methods, we are even able to Strg/Cmd + Left-Click on the link to directly take us to the method definition.
+So every time a function is called, Julia is able to automatically "look up" and use the correct method for the given types of arguments.
+This is called *multiple dispatch*.
 
 The crucial part is that methods don't have to be defined together with the function, but instead we can add methods to existing functions.
 To add a method to a function from another module, we first import the function:
