@@ -80,7 +80,7 @@ nothing #hide
 ```
 *(A::Union{LinearAlgebra.Adjoint{var"#s886", <:StridedMatrix{T} where T}, LinearAlgebra.Transpose{var"#s886", <:StridedMatrix{T} where T}, StridedMatrix{var"#s886"}} where var"#s886"<:Union{Float32, Float64}, B::Union{LinearAlgebra.Adjoint{var"#s885", <:StridedMatrix{T} where T}, LinearAlgebra.Transpose{var"#s885", <:StridedMatrix{T} where T}, StridedMatrix{var"#s885"}} where var"#s885"<:Union{Float32, Float64}) in LinearAlgebra at /usr/share/julia/stdlib/v1.8/LinearAlgebra/src/matmul.jl:146
 ```
-and are even able to Strg/Cmd + Left-Click on the link to directly take us to the method definition.
+and for some methods, we are even able to Strg/Cmd + Left-Click on the link to directly take us to the method definition.
 
 The crucial part is that methods don't have to be defined together with the function, but instead we can add methods to existing functions.
 To add a method to a function from another module, we first import the function:
