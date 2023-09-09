@@ -7,7 +7,6 @@ Before diving into this chapter, we want to encourage you to ...
 - Connect with our moderators if certain areas prove tough.
 - If you already finished the rest of the Workshop, explore the Julia universe with some suggestions in our Resources section, instead of spending too much time here.
 
-Your feedback holds immense value. Share your thoughts, either face-to-face or via GitHub, about what resonates, what doesn’t, or any challenges you face. We're here to help and improve!
 
 ## Variable assignment
 
