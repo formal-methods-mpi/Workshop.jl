@@ -291,5 +291,4 @@ This resource is especially helpful if you're getting stuck, feeling demotivated
 
 And if you have any question, always remember, we're here to support your learning journey!
 
-We want to encourage you to embark on the standard workshop route and connect with our moderators if certain areas prove tough.
 Always remember, we're here to support your learning journey!
