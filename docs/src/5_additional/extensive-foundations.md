@@ -32,9 +32,9 @@ For example, type \alpha and then press Tab to create the α variable.
 
 ### Exercises
 
-1. Assign the integer value 42 to a variable named the_answer_to_life.
-2. Assign the string "Julia is fun!" to a variable named yay.
-3. Assign the value of 1 + √2 divided by 2 to the variable φ (phi). Remember to use the Unicode character: type \phi or \sqrt and press Tab to convert it.
+1. Assign the `Integer` value `42` to a variable named `the_answer_to_life`.
+2. Assign the `String` `"Julia is fun!"` to a variable named `yay`.
+3. Assign the value of `1 + √2` divided by `2` to the variable `φ` (phi). Remember to use the Unicode character: type `\phi` or `\sqrt` and press `Tab` to convert it.
 
 ```@raw html
 <details>
