@@ -281,3 +281,12 @@ a .* a
 ```@raw html
 </details>
 ```
+
+## Notice
+
+If you're finding the pace overwhelming and feel like you need more training, don't worry!
+We've got you covered with our "Foundations Revisited" section, an extended version of this chapter.
+This resource is especially helpful if you're getting stuck, feeling demotivated and feel inadequately addressed by our cheatsheet or the language comparison cheatsheets.
+
+We want to encourage you to embark on the standard workshop route and connect with our moderators if certain areas prove tough.
+Always remember, we're here to support your learning journey!
