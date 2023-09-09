@@ -291,4 +291,3 @@ This resource is especially helpful if you're getting stuck, feeling demotivated
 
 And if you have any question, always remember, we're here to support your learning journey!
 
-Always remember, we're here to support your learning journey!
