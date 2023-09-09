@@ -290,7 +290,6 @@ However, if you have trouble solving the coming exercises because you find the s
 This resource is especially helpful if you're getting stuck, feeling demotivated and feel inadequately addressed by our cheat sheet.
 
 And if you have any question, always remember, we're here to support your learning journey!
-We've got you covered with our "Foundations Revisited" section, an extended version of this chapter.
 This resource is especially helpful if you're getting stuck, feeling demotivated and feel inadequately addressed by our cheatsheet or the language comparison cheatsheets.
 
 We want to encourage you to embark on the standard workshop route and connect with our moderators if certain areas prove tough.
