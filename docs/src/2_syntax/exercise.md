@@ -62,7 +62,7 @@ function predict(x, α, β)
 end
 ```
 
-Let's simulate some data for the task at hand. First, we load the `Random` package (a julia package for random number generation) and set a seed (to make our experiments reproducible):
+Let's simulate some data for the task at hand. First, we load the `Random` package (a Julia package for random number generation) and set a seed (to make our experiments reproducible):
 
 ```@example linreg
 using Random
@@ -101,6 +101,8 @@ Since in reality, income does not perfectly depend on education, but there is so
 
 ```@example linreg
 y += 500*randn(20)
+# In case you don't know the "+="-sign:
+# This is the same as writing y = y + 500*randn(20)
 ```
 
 And voilà! We have some data to work with.

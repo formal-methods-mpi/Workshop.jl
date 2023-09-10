@@ -2,6 +2,9 @@
 
 <!--Remember to synch docs/src/reuse/abstract.md and this abstract!!!-->
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8059529.svg)](https://doi.org/10.5281/zenodo.8059529)
+[![Code Style: Blue](https://img.shields.io/badge/code%20style-blue-4495d1.svg)](https://github.com/invenia/BlueStyle)
+
 Julia is a high-level dynamic programming language designed for numerical and scientific computing, data analysis, machine learning, and more.
 Julia's user-friendly interface, resembling popular languages like R, Python, and Matlab, makes it easily accessible for learners.
 Its focus on performance, however, enables computational speeds that often rival, or even surpass, those of low-level languages such as C or Fortran.

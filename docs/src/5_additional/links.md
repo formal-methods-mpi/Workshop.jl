@@ -8,6 +8,9 @@ Arguably the most important and useful link is the one to the official [Julia Do
 
 The best place to ask for help is the [Julia forum](https://discourse.julialang.org/) (and for Julia-related questions, you will typically get better answers than e.g. on stack overflow). Everybody can ask/answer questions there, especially beginners.
 
+## Courses
+- [Julia programming for ML](https://adrhill.github.io/julia-ml-course/)
+
 ## Use Juliaup for Julia Version Management
 
 If you're comfortable using the shell and already have some experience with the terminal, you may want to install Juliaup.

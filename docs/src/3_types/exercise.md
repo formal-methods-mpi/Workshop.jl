@@ -33,6 +33,22 @@ end
 </details>
 ```
 \
+For conveniece, we may want to have a more compact and readable way of defining new Measurements.
+For this purpose, we use a so-called "infix operator", which is just a function that can also be written between its arguments.
+You may have never thought about it, but you have been using infix operators all the time (in R or Python): 
+For example, `+` is a function that can be called like any other function, `+(5,6)`, but also in infix notation as `5 + 6`.
+Julia has a whole list of infix operators available, for example `&`, `+`, `-`, `⊗`, `≤`, `∈`, `±`:
+
+```@example measurement
+5 ≤ 5
+```
+
+We can define infix operators just as functions:
+```@example measurement
+⊗(a, b) = string(a, b)
+
+"Hello" ⊗ " World"
+```
 
 !!! compat "Exercise"
     Define the function `±(value, error)` to create a new instance of the `Measurement` type, and create some measurements.
@@ -47,12 +63,14 @@ end
     ```julia
     ±(value, error) = Measurement(value, error)
 
+    # Using infix notation, we may now write:
     m1 = 2.98 ± 0.43
     m2 = 0.34 ± 1.34
     ```
 ```@setup measurement
 ±(value, error) = Measurement(value, error)
 
+# Using infix notation, we may now write:
 m1 = 2.98 ± 0.43
 m2 = 0.34 ± 1.34
 ```

@@ -1,18 +1,18 @@
 # Foundations Revisited
 
-Welcome back to the workshop! We hope that you had fun following along and that we sparked your interest for this fascinating programming language.
-Please don't hesitate to ask us any questions or provide feedback on what you liked and didn't like or thought was too easy or too hard.
-Your input is always welcome and appreciated!
+Welcome back! If you're reading this, it may be because you encountered some difficulties in the previous sections and got stuck, or simply desire additional instruction because you found our [Syntax cheat sheet](@ref) to be too brief for your needs. Or maybe you're just curious and want to learn more about the Julia language. Please notice that this chapter is just an extended version of the Syntax cheat sheet, and therefore the content might feel redundant if you carefully read the cheatsheet. However, if you are new to programming or got overwhelmed, some repetition might be helpful to you.
 
-In this chapter, we revisit the foundations of the Julia language. While our [Syntax cheat sheet](@ref) quickly went over everything you needed to know to complete the workshop, this chapter will provide a more extensive introduction to Julia's Syntax.
+Before diving into this chapter, we want to encourage you to ...
+- Initially embark on the standard workshop route.
+- Connect with our moderators if certain areas prove tough.
+- If you already finished the rest of the Workshop, explore the Julia universe with some suggestions in our Resources section, instead of spending too much time here.
+
 
 ## Variable assignment
 
 In Julia, variables are used to store data and represent values in your program.
-Variables have a name and are assigned a value using the assignment operator =.
-Julia supports both regular (ASCII) variable names and Unicode variable names.
-
-Regular variables are named using alphanumeric characters and underscores, starting with a letter or underscore.
+Variables have a name and are assigned a value using the assignment operator `=`.
+Julia supports both regular variable names and Unicode variable names.
 
 ```@example variables
 x = 1
@@ -20,9 +20,11 @@ my_variable = "awesome"
 φ = 1.618
 ```
 
+## Unicode variable names
+
 Unicode variables allow you to use a wider range of characters, including mathematical symbols, Greek letters, and other special characters.
-To create a Unicode variable, type a backslash followed by the Unicode character name, and then press the Tab key to convert it into the corresponding Unicode symbol.
-For example, type \alpha and then press Tab to create the α variable.
+To create a Unicode variable, type a backslash `\` followed by the Unicode character name, and then press the `Tab` key to convert it into the corresponding Unicode symbol.
+For example, type `\alpha` and then press `Tab` to create the `α` variable. If you are interested you can find a [table of all available unicode characters](https://docs.julialang.org/en/v1/manual/unicode-input/) and how to type them out in the Julia documentation.
 
 ```@example variables
 α = 0.05
@@ -32,9 +34,9 @@ For example, type \alpha and then press Tab to create the α variable.
 
 ### Exercises
 
-1. Assign the integer value 42 to a variable named the_answer_to_life.
-2. Assign the string "Julia is fun!" to a variable named yay.
-3. Assign the value of 1 + √2 divided by 2 to the variable φ (phi). Remember to use the Unicode character: type \phi or \sqrt and press Tab to convert it.
+1. Assign the `Integer` value `42` to a variable named `the_answer_to_life`.
+2. Assign the `String` `"Julia is fun!"` to a variable named `yay`.
+3. Assign the value of `1 + √2` divided by `2` to the variable `φ` (phi). Remember to use the Unicode character: type `\phi` or `\sqrt` and press `Tab` to convert it.
 
 ```@raw html
 <details>
@@ -279,31 +281,36 @@ Another important concept before we move on is the concept of sequences in Julia
 
 In programming, sequences are ordered collections of elements, typically used to represent a series of values or data points. Sequences are essential in various applications, such as iterating through data, generating series of numbers, and organizing data in specific orders.
 
-In Julia, sequences can be created using ranges and comprehensions. Ranges represent a series of evenly spaced values and can be created using the colon operator `:` or the `range` function.
+In Julia, sequences can be created using ranges. Ranges represent a series of evenly spaced values and can be created using the colon operator `:` or the `range` function.
 
-For example, you can create a range of integers from 1 to 10:
+For example, you can create a `range` (Start:End) of `Integer`s from 1 to 10:
 
 ```@example variables
 integer_sequence = 1:10
 ```
 
-To create a range with a specific step size, you can use the following syntax:
+To create a `range` with a specific step size (Start:Step:End), you can use the following syntax:
 
 ```@example variables
 even_sequence = 2:2:10
 ```
 
-To convert a sequence to a vector, you can use the collect function:
+To convert a sequence to a `Vector`, you can use the `collect` function:
 
 ```@example variables
 integer_vector = collect(integer_sequence)
 ```
 
+```@example variables
+integer_vector = collect(even_sequence)
+```
+
+
 ### Exercises
 
-1. Create a vector of strings and concatenate it with another vector of strings.
-2. Create a vector and perform an element-wise square of it.
-3. Calculate the scalar product of the vector in the way you like.
+1. Create a `Vector` of strings and concatenate it with another `Vector` of `String`s.
+2. Create a `Vector` and perform an element-wise square of it.
+3. Calculate the scalar product of the `Vector` in the way you like.
 4. Read out an index, set an index, append an element, and pop an element from a vector.
 
 ```@raw html
@@ -499,8 +506,8 @@ Loops allow you to repeat a block of code multiple times, while conditional stat
 
 ## For Loops
 
-For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an array or a tuple.
-The syntax for a for loop is as follows:
+For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an `Array`.
+The syntax for a `for` loop is as follows:
 
 ```julia
 for variable in collection

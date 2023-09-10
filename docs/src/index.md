@@ -23,7 +23,7 @@ To ensure a smooth learning experience, we have divided the workshop into three 
 
 ## Pre-workshop preparation
 
-It is important that you install Julia and Visual Studio Code following the steps outlined in [Chapter 0](0_preparation/preparation.html).
+It is important that you install Julia and Visual Studio Code following the steps outlined in [Chapter 0](0_preparation/preparation).
 
 ## During the workshop
 
@@ -42,3 +42,8 @@ import Markdown; Markdown.parse_file("../src/reuse/chapter-overview.md")
 After the workshop, we encourage you to continue experimenting with Julia, apply the skills you've learned to real-world projects, and leverage the resources and community support available to further your knowledge.
 To start you on this journey we have prepared the [Additional Materials](@ref) section.
 By thoughtfully engaging with the workshop content and activities, you'll be well-prepared to harness the full potential of Julia and excel in your projects.
+
+## Who we are
+- [Maximilian Ernst](https://github.com/Maximilian-Stefan-Ernst) is a PhD Student at the Max Planck School of Cognition.
+- [Moritz Ketzer](https://www.mps-ucl-centre.mpg.de/people/126423) is a PhD student at the International Max Planck Research School on Computational Methods in Psychiatry and Ageing Research.
+- [Aaron Peikert](https://www.mpib-berlin.mpg.de/person/103737/2549) is principle investigator of the Formal Methods group at the Max Planck Institute for Human Development.

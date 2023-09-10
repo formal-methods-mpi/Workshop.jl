@@ -72,11 +72,11 @@ end
 
 m1
 ```
-But let's get back to more serious business: The next thing we need is to be able to add measurements and real numbers together.
+(This function definition contains some concepts that you are not familiar with yet, e.g. `IO`, so don't worry if it looks incomprehensible to you at this point.) But let's get back to more serious business: The next thing we need is to be able to add measurements and real numbers together.
 We can think of real numbers as measurements without error, so adding a measurement ``(a \pm b)`` and a real number ``c`` should yield
 
 ```math
-(a \pm b) + c = (a + c) \pm b 
+(a \pm b) + c = (a + c) \pm b
 ```
 
 !!! compat "Exercise"
@@ -103,7 +103,7 @@ m1 + 3.53 #hide
 </details>
 ```
 \
-Okay, to spare you some time, I will define some last methods we need: subtraction and multiplication of real numbers and measurements. 
+Okay, to spare you some time, I will define some last methods we need: subtraction and multiplication of real numbers and measurements.
 Subtraction works just like addition, and for multiplication we see that
 
 ```math
@@ -128,7 +128,7 @@ m2 + 4.52
 m2 * 3.5
 ```
 
-Now for the fun part: 
+Now for the fun part:
 In the exercise to the first chapter, we tried to predict income from years of education with the help of linear regression.
 Let's simulate some data again:
 
@@ -166,7 +166,7 @@ predict(x, 1000, 300)
 a prediction of income with the respective measurement error.
 
 
-Hopefully, this serves a a nice illustration of what multiple dispatch together with julias type system is able to achieve.
+Hopefully, this serves a a nice illustration of what multiple dispatch together with Julias type system is able to achieve.
 When you wrote the `predict` function at the beginning of this workshop, you probably had no idea what multiple dispatch even is.
 But because we are able to define methods for important operations (like `*`, `+`), we can use any function or algorithmn that is composed of these operations.
 This is a very powerful idea that allows for great extensibility and interoperability of different packages.

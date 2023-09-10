@@ -42,6 +42,8 @@ The REPL has several differend modes:
 
 We will cover each of these modes, except the shell mode, in the following sections.
 
+Note that you can exit any mode by pressing the Backspace key.
+
 ### Julia mode
 
 This is the default mode when you start the REPL.
