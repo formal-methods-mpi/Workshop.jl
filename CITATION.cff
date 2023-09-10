@@ -16,6 +16,9 @@ authors:
     orcid: 'https://orcid.org/0000-0003-2237-6255'
   - family-names: Ketzer
     given-names: Moritz
+    email: moritz.ketzer@hu-berlin.de
+    affiliation: Max Planck Institute for Human Development; Humboldt Universität zu Berlin
+    orcid: 'https://orcid.org/0000-0002-2403-5297'
 repository-code: >-
   https://github.com/formal-methods-mpi/Workshop.jl/
 license: CC0
