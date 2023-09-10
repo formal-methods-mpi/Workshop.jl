@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Chapter 4: Exercise · A fresh approach to scientific computing</title><script data-outdated-warner src="../../assets/warner.js"></script><link rel="canonical" href="https://formal-methods-mpi.github.io/Workshop.jl/4_dispatch/exercise/"/><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.045/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.24/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="A fresh approach to scientific computing logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="A fresh approach to scientific computing logo"/></a><div class="docs-package-name"><span class="docs-autofit"><a href="../../">A fresh approach to scientific computing</a></span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../0_preparation/preparation/">Chapter 0: Preparation</a></li><li><input class="collapse-toggle" id="menuitem-3" type="checkbox"/><label class="tocitem" for="menuitem-3"><span class="docs-label">Chapter 1: Workflow</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../1_workflow/usage/">Working with Julia in VSCode</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-4" type="checkbox"/><label class="tocitem" for="menuitem-4"><span class="docs-label">Chapter 2: Syntax</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../2_syntax/foundations/">Chapter 2: Theory</a></li><li><a class="tocitem" href="../../2_syntax/exercise/">Chapter 2: Exercise</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-5" type="checkbox"/><label class="tocitem" for="menuitem-5"><span class="docs-label">Chapter 3: Types</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../3_types/types/">Chapter 3: Theory</a></li><li><a class="tocitem" href="../../3_types/exercise/">Chapter 3: Exercise</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-6" type="checkbox" checked/><label class="tocitem" for="menuitem-6"><span class="docs-label">Chapter 4: Multiple Dispatch</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../dispatch/">Chapter 4: Theory</a></li><li class="is-active"><a class="tocitem" href>Chapter 4: Exercise</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-7" type="checkbox"/><label class="tocitem" for="menuitem-7"><span class="docs-label">Additional Materials</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../5_additional/intro/">Introduction</a></li><li><a class="tocitem" href="../../5_additional/extensive-foundations/">Foundations Revisited</a></li><li><a class="tocitem" href="../../5_additional/dual/">Automatic Differentiation</a></li><li><a class="tocitem" href="../../5_additional/links/">Useful Links</a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Chapter 4: Multiple Dispatch</a></li><li class="is-active"><a href>Chapter 4: Exercise</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Chapter 4: Exercise</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/formal-methods-mpi/Workshop.jl/blob/main/docs/src/4_dispatch/exercise.md#" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Exercise:-Combining-Linear-Regression-and-Measurements"><a class="docs-heading-anchor" href="#Exercise:-Combining-Linear-Regression-and-Measurements">Exercise: Combining Linear Regression and Measurements</a><a id="Exercise:-Combining-Linear-Regression-and-Measurements-1"></a><a class="docs-heading-anchor-permalink" href="#Exercise:-Combining-Linear-Regression-and-Measurements" title="Permalink"></a></h1><p>Let&#39;s return to our example from the previous chapter, where we defined a new type called <code>Measurement</code> to store a measurement and it&#39;s measurement error. We will now define appropriate methods for this type.</p><p>Let&#39;s first take a look at addition: if we add two measurements, <span>$a \pm b$</span> and <span>$c \pm d$</span>, we will get a new measurement</p><p class="math-container">\[(a \pm b) + (c \pm d) = (a + c) \pm (b + d)\]</p><p>That is, we add the measured values and the error terms separately.</p><div class="admonition is-compat"><header class="admonition-header">Exercise</header><div class="admonition-body"><p>Define a method for the addition of two measurements. Hint: recall that functions from other modules (like <code>+</code> from <code>Base</code>) have to be imported before you can define a new method for them.</p></div></div><details>
+<summary>show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">import Base: +
++(x::Measurement, y::Measurement) = Measurement(x.value + y.value, x.error + y.error)</code></pre></div></div><pre class="documenter-example-output"><code class="nohighlight hljs ansi">+ (generic function with 229 methods)</code></pre></details><p><br/>We can now add measurements together:</p><pre><code class="language-julia hljs">m1 = 2.98 ± 0.43
+m2 = 0.34 ± 1.34
+
+m1 + m2</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Main.Measurement(3.32, 1.77)</code></pre><p>Work&#39;s like a charm! Subtraction works similarly, so I will define this method for you:</p><pre><code class="language-julia hljs">import Base: -
+-(x::Measurement, y::Measurement) = Measurement(x.value - y.value, x.error + y.error)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">- (generic function with 237 methods)</code></pre><p>To make working with our <code>Measurement</code> type a bit more aesthetic, we can even define a new method for <code>Base.show</code> that defines how our type is printed to the REPL:</p><pre><code class="language-julia hljs">import Base: show
+
+function show(io::IO, m::Measurement)
+    value_as_string = string(round(m.value, digits = 2))
+    error_as_string = string(round(m.error, digits = 2))
+    print(io, value_as_string*&quot; ± &quot;*error_as_string)
+end
+
+m1</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">2.98 ± 0.43</code></pre><p>(This function definition contains some concepts that you are not familiar with yet, e.g. <code>IO</code>, so don&#39;t worry if it looks incomprehensible to you at this point.) But let&#39;s get back to more serious business: The next thing we need is to be able to add measurements and real numbers together. We can think of real numbers as measurements without error, so adding a measurement <span>$(a \pm b)$</span> and a real number <span>$c$</span> should yield</p><p class="math-container">\[(a \pm b) + c = (a + c) \pm b\]</p><div class="admonition is-compat"><header class="admonition-header">Exercise</header><div class="admonition-body"><p>Add methods for the addition of measurements and real numbers. Hint: real numbers are denoted by the type <code>Real</code>.</p></div></div><details>
+<summary>show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">+(a::Real, b::Measurement) = Measurement(a + b.value, b.error)
++(a::Measurement, b::Real) = b + a
+m1 + 3.53</code></pre></div></div><pre class="documenter-example-output"><code class="nohighlight hljs ansi">6.51 ± 0.43</code></pre></details><p><br/>Okay, to spare you some time, I will define some last methods we need: subtraction and multiplication of real numbers and measurements. Subtraction works just like addition, and for multiplication we see that</p><p class="math-container">\[c \cdot (a \pm b) = ca \pm cb\]</p><pre><code class="language-julia hljs">-(x::Measurement, y::Real) = Measurement(x.value - y, x.error)
+-(x::Real, y::Measurement) = Measurement(x - y.value, y.error)
+
+import Base: *
+*(x::Measurement, y::Real) = Measurement(x.value*y, abs(x.error*y))
+*(x::Real, y::Measurement) = y*x</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">* (generic function with 328 methods)</code></pre><p>Let&#39;s see if it all works as planned:</p><pre><code class="language-julia hljs">m1 + m2
+9.34 + m1
+m2 + 4.52
+3.5 * m2
+m2 * 3.5</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">1.19 ± 4.69</code></pre><p>Now for the fun part: In the exercise to the first chapter, we tried to predict income from years of education with the help of linear regression. Let&#39;s simulate some data again:</p><pre><code class="language-julia hljs">using Random
+Random.seed!(1243)
+
+x = 10 .+ 3*randn(20)
+β = 300
+α = 1000
+y = α .+ β*x + 500*randn(20)</code></pre><p>This time, let&#39;s asume we observed education with some measurement error:</p><pre><code class="language-julia hljs">x = Measurement.(x, 2*randn(20))</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">20-element Vector{Main.Measurement}:
+  9.93 ± 2.08
+ 14.01 ± 0.9
+ 12.94 ± 3.99
+  9.38 ± 0.27
+  9.52 ± 0.33
+  3.87 ± 1.53
+  7.33 ± 2.77
+ 11.65 ± 3.15
+  8.56 ± 2.92
+  9.61 ± 0.88
+ 14.36 ± 1.65
+ 12.81 ± 3.58
+ 12.52 ± 1.33
+  4.87 ± 0.11
+  9.36 ± 3.1
+ 11.49 ± 2.22
+  5.74 ± 2.4
+ 14.41 ± 2.28
+ 10.65 ± 0.55
+  8.31 ± 1.8</code></pre><p>But what happens when we us the education data with measurement error to predict income? Let&#39;s find out! We defined our prediction function as</p><pre><code class="language-julia hljs">function predict(x, α, β)
+    y = α .+ β*x
+    return y
+end</code></pre><p>and if we plug in the values for education with measurement error, we achieve</p><pre><code class="language-julia hljs">predict(x, 1000, 300)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">20-element Vector{Main.Measurement}:
+ 3979.81 ± 623.21
+ 5203.53 ± 271.33
+ 4883.21 ± 1196.21
+ 3814.21 ± 79.95
+ 3854.61 ± 97.9
+ 2161.85 ± 457.95
+ 3198.92 ± 832.0
+ 4494.55 ± 945.31
+ 3567.1 ± 875.31
+ 3883.65 ± 263.47
+ 5306.83 ± 493.83
+ 4843.26 ± 1074.22
+ 4757.03 ± 399.06
+ 2459.52 ± 34.17
+ 3808.14 ± 928.98
+ 4447.9 ± 667.33
+ 2721.06 ± 719.89
+ 5321.68 ± 684.61
+ 4196.09 ± 165.8
+ 3492.08 ± 539.58</code></pre><p>a prediction of income with the respective measurement error.</p><p>Hopefully, this serves a a nice illustration of what multiple dispatch together with Julias type system is able to achieve. When you wrote the <code>predict</code> function at the beginning of this workshop, you probably had no idea what multiple dispatch even is. But because we are able to define methods for important operations (like <code>*</code>, <code>+</code>), we can use any function or algorithmn that is composed of these operations. This is a very powerful idea that allows for great extensibility and interoperability of different packages. If you don&#39;t believe me, imagine somebody has written an <code>R</code> package for linear regression. Now you are in the situation that you have to deal with measurement error. I believe it would be impossible to get the published <code>R</code> package to work with measurement error without rewriting the whole package.</p><p>Similarly, if you think about our pokemon example from the beginning: If we would like to add more types of pokemon, we just have to define the types (<code>Water</code>, <code>Fire</code>, etc.) and the relevant methods for our functions (<code>effectiveness</code>). Of course, the code we wrote in the pokemon example is rather limited, but this translates seamlessly to complicated packages with more functionality.</p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../dispatch/">« Chapter 4: Theory</a><a class="docs-footer-nextpage" href="../../5_additional/intro/">Introduction »</a><div class="flexbox-break"></div><p class="footer-message">Got a question? Something confuses you? <a href="https://github.com/formal-methods-mpi/Workshop.jl/issues/new">Don&#39;t hesitate to open an issue to ask for help!</a></p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.25 on <span class="colophon-date" title="Sunday 10 September 2023 19:29">Sunday 10 September 2023</span>. Using Julia version 1.9.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
