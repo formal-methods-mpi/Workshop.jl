@@ -1,18 +1,18 @@
 # Foundations Revisited
 
-Welcome back to the workshop! We hope that you had fun following along and that we sparked your interest for this fascinating programming language.
-Please don't hesitate to ask us any questions or provide feedback on what you liked and didn't like or thought was too easy or too hard.
-Your input is always welcome and appreciated!
+Welcome back! If you're reading this, it may be because you encountered some difficulties in the previous sections and got stuck, or simply desire additional instruction because you found our [Syntax cheat sheet](@ref) to be too brief for your needs. Or maybe you're just curious and want to learn more about the Julia language. Please notice that this chapter is just an extended version of the Syntax cheat sheet, and therefore the content might feel redundant if you carefully read the cheatsheet. However, if you are new to programming or got overwhelmed, some repetition might be helpful to you.
 
-In this chapter, we revisit the foundations of the Julia language. While our [Syntax cheat sheet](@ref) quickly went over everything you needed to know to complete the workshop, this chapter will provide a more extensive introduction to Julia's Syntax.
+Before diving into this chapter, we want to encourage you to ...
+- Initially embark on the standard workshop route.
+- Connect with our moderators if certain areas prove tough.
+- If you already finished the rest of the Workshop, explore the Julia universe with some suggestions in our Resources section, instead of spending too much time here.
+
 
 ## Variable assignment
 
 In Julia, variables are used to store data and represent values in your program.
-Variables have a name and are assigned a value using the assignment operator =.
-Julia supports both regular (ASCII) variable names and Unicode variable names.
-
-Regular variables are named using alphanumeric characters and underscores, starting with a letter or underscore.
+Variables have a name and are assigned a value using the assignment operator `=`.
+Julia supports both regular variable names and Unicode variable names.
 
 ```@example variables
 x = 1
@@ -20,9 +20,11 @@ my_variable = "awesome"
 φ = 1.618
 ```
 
+## Unicode variable names
+
 Unicode variables allow you to use a wider range of characters, including mathematical symbols, Greek letters, and other special characters.
-To create a Unicode variable, type a backslash followed by the Unicode character name, and then press the Tab key to convert it into the corresponding Unicode symbol.
-For example, type \alpha and then press Tab to create the α variable.
+To create a Unicode variable, type a backslash `\` followed by the Unicode character name, and then press the `Tab` key to convert it into the corresponding Unicode symbol.
+For example, type `\alpha` and then press `Tab` to create the `α` variable. If you are interested you can find a [table of all available unicode characters](https://docs.julialang.org/en/v1/manual/unicode-input/) and how to type them out in the Julia documentation.
 
 ```@example variables
 α = 0.05
