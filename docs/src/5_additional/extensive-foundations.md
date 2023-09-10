@@ -1,6 +1,6 @@
 # Foundations Revisited
 
-Welcome back! If you're reading this, it may be because you encountered some difficulties in the previous sections and got stuck, or simply desire additional instruction because you found our [Syntax cheat sheet](@ref) to be too brief for your needs. Or maybe you're just curious and want to learn more about the Julia language. Please know that this chapter is just an extended version of the Syntax cheat sheet, and therefore the content might feel redundant if you carefully read the cheatsheet. However, if you are new to programming or got overwhelmed, some repetition might be helpful to you.
+Welcome back! If you're reading this, it may be because you encountered some difficulties in the previous sections and got stuck, or simply desire additional instruction because you found our [Syntax cheat sheet](@ref) to be too brief for your needs. Or maybe you're just curious and want to learn more about the Julia language. Please notice that this chapter is just an extended version of the Syntax cheat sheet, and therefore the content might feel redundant if you carefully read the cheatsheet. However, if you are new to programming or got overwhelmed, some repetition might be helpful to you.
 
 Before diving into this chapter, we want to encourage you to ...
 - Initially embark on the standard workshop route.

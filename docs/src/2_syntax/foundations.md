@@ -290,9 +290,3 @@ However, if you have trouble solving the coming exercises because you find the s
 This resource is especially helpful if you're getting stuck, feeling demotivated and feel inadequately addressed by our cheat sheet.
 
 And if you have any question, always remember, we're here to support your learning journey!
-This cheat sheet is just meant to be a reference that you can use for the exercises in the next chapters.
-However, if you have trouble solving the coming exercises because you find the syntax too hard, we have the [Foundations Revisited](@ref) section, an extended version of this chapter.
-This resource is especially helpful if you're getting stuck, feeling demotivated and feel inadequately addressed by our cheat sheet.
-
-And if you have any question, always remember, we're here to support your learning journey!
-
