@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: Introduction to Julia | A fresh approach to scientific computing
+message: >-
+  Please cite this material if you happen to find it useful.
+type: software
+authors:
+  - given-names: Aaron
+    family-names: Peikert
+    email: peikert@mpib-berlin.mpg.de
+    affiliation: Max Planck Institute for Human Development
+    orcid: 'https://orcid.org/0000-0001-7813-818X'
+  - family-names: Ernst
+    given-names: Maximilian Stefan
+    email: ernst@mpib-berlin.mpg.de
+    affiliation: "Max Planck Institute for Human Development & Max Planck School of Cognition"
+    orcid: 'https://orcid.org/0000-0003-2237-6255'
+  - family-names: Ketzer
+    given-names: Moritz
+    email: moritz.ketzer@hu-berlin.de
+    affiliation: Max Planck Institute for Human Development; Humboldt Universität zu Berlin
+    orcid: 'https://orcid.org/0000-0002-2403-5297'
+repository-code: >-
+  https://github.com/formal-methods-mpi/Workshop.jl/
+license: CC0
+doi: 10.5281/zenodo.8059528
