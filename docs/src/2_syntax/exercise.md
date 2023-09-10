@@ -18,20 +18,20 @@ x = 10 .+ 3*randn(20)
 α = 1000
 y = α .+ β*x + 500*randn(20)
 
-plot(x, y; seriestype=:scatter, xlabel = "Education", ylabel = "Income", margin=(10, :mm), size=(800,600))
-savefig("data.svg")
+# plot(x, y; seriestype=:scatter, xlabel = "Education", ylabel = "Income")
+# savefig("data.svg")
 ```
 
-![data](data.svg)
+![data](../assets/data.svg)
 
 On the x-axis, you see the years of education, and on the y-axis you see the monthly income. The task of linear regression is to find a straight line that best describes this relationship:
 
 ```@setup linreg
-Plots.abline!(β, α)
-savefig("lr.svg")
+# Plots.abline!(β, α)
+# savefig("lr.svg")
 ```
 
-![lr](lr.svg)
+![lr](../assets/lr.svg)
 
 As you may recall from university, school, or learn just now, a straight line is mathematically described by ``y = \alpha + \beta x``, where in our case, ``y`` corresponds to income and ``x`` to years of education.
 
