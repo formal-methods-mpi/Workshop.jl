@@ -22,7 +22,7 @@
 
 \title{\Huge A fresh approach to \\ scientific computing}
 %\subtitle{Interview}
-\date{Maximilian Ernst, Aaron Peikert, Moritz Ketzer}
+\date{Maximilian Ernst, Moritz Ketzer, Aaron Peikert}
 %\author{Max Planck Institute for Human Development}
 \author{\includegraphics[width=.49\textwidth]{figures/mpib_logo/MPIB_Logo_EN_horizontal_RGB_White.png}}
 
@@ -145,6 +145,53 @@
     \vspace{1cm}
     ``Walks like Python, runs like C''
     \end{frame}
+
+    \begin{frame}[fragile]
+    \frametitle{Speed}
+    R: \\[2em]
+            \begin{verbatim}
+fib <- function(n) {
+    if (n < 2) {
+        return(n)
+    } else {
+        return(fib(n-1) + fib(n-2))
+    }
+}
+            \end{verbatim}
+    \end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Speed}
+    Julia: \\[2em]
+            \begin{verbatim}
+function fib(n)
+    if n < 2
+        return n
+    else
+        return fib(n-1) + fib(n-2)
+    end
+end
+            \end{verbatim}
+    \end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Speed}
+    R:
+            \begin{verbatim}
+fib(20)
+            \end{verbatim}
+    Julia:
+            \begin{verbatim}
+fib(20)
+            \end{verbatim}
+    R takes $\sim$ 200 times longer
+    \end{frame}
+
+% fib(n) = n < 2 ? n : fib(n-1) + fib(n-2)
+
+% fib(20) 0.030162
+% fib(20) 6.0
+% -> about 200 times longer
 
     \begin{frame}
     \frametitle{Extensibility}
