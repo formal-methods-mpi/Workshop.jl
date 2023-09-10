@@ -72,7 +72,7 @@ end
 
 m1
 ```
-But let's get back to more serious business: The next thing we need is to be able to add measurements and real numbers together.
+(This function definition contains some concepts that you are not familiar with yet, e.g. `IO`, so don't worry if it looks incomprehensible to you at this point.) But let's get back to more serious business: The next thing we need is to be able to add measurements and real numbers together.
 We can think of real numbers as measurements without error, so adding a measurement ``(a \pm b)`` and a real number ``c`` should yield
 
 ```math

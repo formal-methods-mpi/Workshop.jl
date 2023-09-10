@@ -45,10 +45,7 @@ The function `supertype` allows us to inspect the next higher abstract type in t
 In this case, this type is called `AbstractFloat`.
 Calling `subtypes` on `AbstractFloat`, we see that `Float64` is "bundled" together with some other types,
 for example single precision floating point numbers (`Float32`).
-If we would explore this type hierarchy further, we could see something like:
-
-![Type hiearchy](https://upload.wikimedia.org/wikipedia/commons/d/d9/Julia-number-type-hierarchy.svg)
-*Created by Cormullion, available under the terms of [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), reproduced from [https://commons.wikimedia.org/w/index.php?curid=83858572](https://commons.wikimedia.org/w/index.php?curid=83858572)*
+If we would explore this type hierarchy further, we could see something like [this](https://upload.wikimedia.org/wikipedia/commons/d/d9/Julia-number-type-hierarchy.svg).
 
 In Julia, we can easily define new abstract types:
 

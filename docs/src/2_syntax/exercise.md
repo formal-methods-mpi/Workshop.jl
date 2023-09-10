@@ -101,6 +101,8 @@ Since in reality, income does not perfectly depend on education, but there is so
 
 ```@example linreg
 y += 500*randn(20)
+# In case you don't know the "+="-sign:
+# This is the same as writing y = y + 500*randn(20)
 ```
 
 And voilà! We have some data to work with.

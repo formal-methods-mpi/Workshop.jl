@@ -29,16 +29,16 @@ makedocs(;
         "Chapter 0: Preparation" => "0_preparation/preparation.md",
         "Chapter 1: Workflow" => ["Working with Julia in VSCode" => "1_workflow/usage.md"],
         "Chapter 2: Syntax" => [
-            "Theory" => "2_syntax/foundations.md",
-            "Exercise" => "2_syntax/exercise.md"
+            "Chapter 2: Theory" => "2_syntax/foundations.md",
+            "Chapter 2: Exercise" => "2_syntax/exercise.md"
         ],
         "Chapter 3: Types" => [
-            "Theory" => "3_types/types.md",
-            "Exercise" => "3_types/exercise.md"
+            "Chapter 3: Theory" => "3_types/types.md",
+            "Chapter 3: Exercise" => "3_types/exercise.md"
         ],
         "Chapter 4: Multiple Dispatch" => [
-            "Theory" => "4_dispatch/dispatch.md",
-            "Exercise" => "4_dispatch/exercise.md"
+            "Chapter 4: Theory" => "4_dispatch/dispatch.md",
+            "Chapter 4: Exercise" => "4_dispatch/exercise.md"
         ],
         "Additional Materials" => [
             "Introduction" => "5_additional/intro.md",
