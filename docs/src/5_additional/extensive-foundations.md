@@ -32,9 +32,9 @@ For example, type \alpha and then press Tab to create the α variable.
 
 ### Exercises
 
-1. Assign the integer value 42 to a variable named the_answer_to_life.
-2. Assign the string "Julia is fun!" to a variable named yay.
-3. Assign the value of 1 + √2 divided by 2 to the variable φ (phi). Remember to use the Unicode character: type \phi or \sqrt and press Tab to convert it.
+1. Assign the `Integer` value `42` to a variable named `the_answer_to_life`.
+2. Assign the `String` `"Julia is fun!"` to a variable named `yay`.
+3. Assign the value of `1 + √2` divided by `2` to the variable `φ` (phi). Remember to use the Unicode character: type `\phi` or `\sqrt` and press `Tab` to convert it.
 
 ```@raw html
 <details>
@@ -279,31 +279,36 @@ Another important concept before we move on is the concept of sequences in Julia
 
 In programming, sequences are ordered collections of elements, typically used to represent a series of values or data points. Sequences are essential in various applications, such as iterating through data, generating series of numbers, and organizing data in specific orders.
 
-In Julia, sequences can be created using ranges and comprehensions. Ranges represent a series of evenly spaced values and can be created using the colon operator `:` or the `range` function.
+In Julia, sequences can be created using ranges. Ranges represent a series of evenly spaced values and can be created using the colon operator `:` or the `range` function.
 
-For example, you can create a range of integers from 1 to 10:
+For example, you can create a `range` (Start:End) of `Integer`s from 1 to 10:
 
 ```@example variables
 integer_sequence = 1:10
 ```
 
-To create a range with a specific step size, you can use the following syntax:
+To create a `range` with a specific step size (Start:Step:End), you can use the following syntax:
 
 ```@example variables
 even_sequence = 2:2:10
 ```
 
-To convert a sequence to a vector, you can use the collect function:
+To convert a sequence to a `Vector`, you can use the `collect` function:
 
 ```@example variables
 integer_vector = collect(integer_sequence)
 ```
 
+```@example variables
+integer_vector = collect(even_sequence)
+```
+
+
 ### Exercises
 
-1. Create a vector of strings and concatenate it with another vector of strings.
-2. Create a vector and perform an element-wise square of it.
-3. Calculate the scalar product of the vector in the way you like.
+1. Create a `Vector` of strings and concatenate it with another `Vector` of `String`s.
+2. Create a `Vector` and perform an element-wise square of it.
+3. Calculate the scalar product of the `Vector` in the way you like.
 4. Read out an index, set an index, append an element, and pop an element from a vector.
 
 ```@raw html
@@ -499,8 +504,8 @@ Loops allow you to repeat a block of code multiple times, while conditional stat
 
 ## For Loops
 
-For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an array or a tuple.
-The syntax for a for loop is as follows:
+For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an `Array`.
+The syntax for a `for` loop is as follows:
 
 ```julia
 for variable in collection

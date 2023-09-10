@@ -6,7 +6,7 @@ using InteractiveUtils
 
 ## Introduction
 
-In julia, every variable has a type. 
+In Julia, every variable has a type.
 We can use the function `typeof` (just like in R) to tell us the type of a variable.
 For example:
 
@@ -30,6 +30,7 @@ We see that, for example, the type of double-precision floating point numers is 
 However, in addition to the types a variable can have, there are so-called "abstract types".
 Abstract types "bundle" concrete types together, and form a "type hierarchy".
 Let's have a look:
+
 ```@example types
 typeof(a)
 ```
@@ -49,7 +50,7 @@ If we would explore this type hierarchy further, we could see something like:
 ![Type hiearchy](https://upload.wikimedia.org/wikipedia/commons/d/d9/Julia-number-type-hierarchy.svg)
 *Created by Cormullion, available under the terms of [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), reproduced from [https://commons.wikimedia.org/w/index.php?curid=83858572](https://commons.wikimedia.org/w/index.php?curid=83858572)*
 
-In julia, we can easily define new abstract types:
+In Julia, we can easily define new abstract types:
 
 ```@example types
 abstract type MySpecialNumber <: Number end
@@ -59,8 +60,8 @@ defines a new abstract type `MySpecialNumber` that is a subtype of `Number`.
 
 ## Composite types
 The most import kind of type we will encounter during this workshop is called a "composite type".
-Composite types are also called "structs" and they allow us to create very useful objects. 
-For example, suppose we are writing a video game for the well-known Pokemon series [^1], 
+Composite types are also called "structs" and they allow us to create very useful objects.
+For example, suppose we are writing a video game for the well-known Pokemon series [^1],
 we could define some abstract types
 ```@example types
 abstract type Pokemon end
@@ -81,7 +82,7 @@ end
 We now have an abstract type `Pokemon` with subtypes `Normal`, `Flying` and `Electric`,
 and a composite type `Pikachu` which is a subtype of `Electric`.
 The composite type `Pikachu` has the "fields" `nickname`, `attack`, `defense`, `speed` and `hp`, where we can store the respective values.
-    
+
 We are now able to create our very own `Pikachu` to fight in our team:
 
 ```@example types
@@ -89,6 +90,7 @@ my_pikachu = Pikachu("Pika", 135, 80, 110, 132)
 ```
 
 which creates a variable `my_pikachu` of type `Pikachu`.
+Note, that you may or may not see the prefix `Main.`, this is nothing to worry about and merely an artifact of how this website is generated.
 
 We can retrieve the values stored in the fields as
 ```@example types
@@ -174,7 +176,7 @@ my_lazy_pikachu = Pikachu(132, 34, 23, 343)
 
 ### Inner Constructors
 Inner constructors can be used for enforcing that newly created objects obey certain rules.
-For example, the way we defined our `Pikachu` type, there was nothing to tell julia which kind of objects we actually can store in the fields.
+For example, the way we defined our `Pikachu` type, there was nothing to tell Julia which kind of objects we actually can store in the fields.
 This allows us to do something like this:
 
 ```@example types

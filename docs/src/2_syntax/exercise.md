@@ -62,7 +62,7 @@ function predict(x, α, β)
 end
 ```
 
-Let's simulate some data for the task at hand. First, we load the `Random` package (a julia package for random number generation) and set a seed (to make our experiments reproducible):
+Let's simulate some data for the task at hand. First, we load the `Random` package (a Julia package for random number generation) and set a seed (to make our experiments reproducible):
 
 ```@example linreg
 using Random
