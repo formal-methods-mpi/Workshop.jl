@@ -46,4 +46,4 @@ By thoughtfully engaging with the workshop content and activities, you'll be wel
 ## Who we are
 - [Maximilian Ernst](https://github.com/Maximilian-Stefan-Ernst) is a PhD Student at the Max Planck School of Cognition.
 - [Moritz Ketzer](https://www.mps-ucl-centre.mpg.de/people/126423) is a PhD student at the International Max Planck Research School on Computational Methods in Psychiatry and Ageing Research.
-- [Aaron Peikert](https://www.mpib-berlin.mpg.de/person/103737/2549) is leading a research group at the Max Planck Institute for Human Development.
+- [Aaron Peikert](https://www.mpib-berlin.mpg.de/person/103737/2549) is principle investigator of the Formal Methods group at the Max Planck Institute for Human Development.
