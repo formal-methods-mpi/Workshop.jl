@@ -18,7 +18,7 @@ x = 10 .+ 3*randn(20)
 α = 1000
 y = α .+ β*x + 500*randn(20)
 
-plot(x, y; seriestype=:scatter, xlabel = "Education", ylabel = "Income", margin=(10, :mm))
+plot(x, y; seriestype=:scatter, xlabel = "Education", ylabel = "Income", margin=(10, :mm), size=(800,600))
 savefig("data.svg")
 ```
 
