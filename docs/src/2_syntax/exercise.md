@@ -19,7 +19,7 @@ x = 10 .+ 3*randn(20)
 y = α .+ β*x + 500*randn(20)
 
 plot(x, y; seriestype=:scatter, xlabel = "Education", ylabel = "Income")
-savefig("data.png")
+savefig("data.jpg")
 ```
 
 ![data](data.png)
