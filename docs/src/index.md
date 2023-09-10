@@ -23,7 +23,7 @@ To ensure a smooth learning experience, we have divided the workshop into three 
 
 ## Pre-workshop preparation
 
-It is important that you install Julia and Visual Studio Code following the steps outlined in [Chapter 0](https://formal-methods-mpi.github.io/Workshop.jl/stable/0_preparation/preparation/).
+It is important that you install Julia and Visual Studio Code following the steps outlined in [Chapter 0](0_preparation/preparation).
 
 ## During the workshop
 
