@@ -3,7 +3,7 @@
 This chapter contains some additional materials and useful links to explore.
 You should do it only after you finished the rest of the workshop.
 
-- [Automatic Differentiation](@ref) contains an advanced exercise of building an automatic differentiation system from scratch.
+If you like a challenge, we have prepared a more advanced exercise, [Automatic Differentiation](@ref).
 
 # Useful Links
 
