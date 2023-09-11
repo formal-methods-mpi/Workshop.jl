@@ -4,7 +4,7 @@ This chapter contains some additional materials and useful links to explore.
 You should do it only after you finished the rest of the workshop.
 
 If you like a challenge, we have prepared a more advanced exercise, [Automatic Differentiation](@ref).
-
+But you can also just check out the following links and see if you find something of interest.
 # Useful Links
 
 ## Official Documentation
