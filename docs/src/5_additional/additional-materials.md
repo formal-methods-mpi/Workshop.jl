@@ -1,3 +1,11 @@
+# Additional Materials
+
+This chapter contains some additional materials and exercises.
+You should do it only after you finished the rest of the workshop.
+You can do them in any order, just pick something you are interested in.
+
+- [Automatic Differentiation](@ref) contains an advanced exercise of building an automatic differentiation system from scratch.
+
 # Useful Links
 
 ## Official Documentation
@@ -40,6 +48,3 @@ We like the [ProfileView.jl](https://github.com/timholy/ProfileView.jl) package.
 - [Julia-Python-R comparison](https://github.com/sswatson/cheatsheets/blob/master/jpr-cheatsheet.pdf)
 - [Noteworthy differences to other Languages](https://docs.julialang.org/en/v1/manual/noteworthy-differences/)
 - [Data Wrangling with DataFrames.jl](https://ahsmart.com/assets/pages/data-wrangling-with-data-frames-jl-cheat-sheet/DataFramesCheatSheet_v1.x_rev1.pdf)
-
-
-
