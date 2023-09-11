@@ -41,10 +41,8 @@ makedocs(;
             "Chapter 4: Exercise" => "4_dispatch/exercise.md"
         ],
         "Additional Materials" => [
-            "Introduction" => "5_additional/intro.md",
-            "Foundations Revisited" => "5_additional/extensive-foundations.md",
-            "Automatic Differentiation" => "5_additional/dual.md",
-            "Useful Links" => "5_additional/links.md"
+            "Additional Materials" => "5_additional/additional-materials.md",
+            "Automatic Differentiation" => "5_additional/dual.md"
         ]
     ],
     doctest = false, # use :fix to auto fix.
