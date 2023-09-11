@@ -42,7 +42,6 @@ makedocs(;
         ],
         "Additional Materials" => [
             "Additional Materials" => "5_additional/additional-materials.md",
-            "Foundations Revisited" => "5_additional/extensive-foundations.md",
             "Automatic Differentiation" => "5_additional/dual.md"
         ]
     ],
