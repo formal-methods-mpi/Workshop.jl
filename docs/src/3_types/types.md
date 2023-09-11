@@ -58,8 +58,19 @@ defines a new abstract type `MySpecialNumber` that is a subtype of `Number`.
 ## Composite types
 The most import kind of type we will encounter during this workshop is called a "composite type".
 Composite types are also called "structs" and they allow us to create very useful objects.
-For example, suppose we are writing a video game for the well-known Pokemon series [^1],
-we could define some abstract types
+As an example, suppose we are writing a video game for the well-known Pokemon series. [^1]
+
+!!! compat "Help, I don't know what pokemon are?!"
+    If you are not familiar with pokemon, don't worry.
+    Pokemon are animal-like creatures from a video game series that fight against each other - every Pokemon has a certain type (Electric, Flying, Normal), and those types define how they interact.
+    Here are pictures of some Pokemon we are using as examples:
+    - [Pikachu](https://archives.bulbagarden.net/wiki/File:0025Pikachu.png)
+    - [Crobat](https://archives.bulbagarden.net/wiki/File:0169Crobat.png)
+    - [Pichu](https://archives.bulbagarden.net/wiki/File:Spiky-eared_Pichu_DP_1.png)
+    That's all you need to know to complete the exercises.
+
+
+We could define some abstract types
 ```@example types
 abstract type Pokemon end
 abstract type Normal <: Pokemon end
