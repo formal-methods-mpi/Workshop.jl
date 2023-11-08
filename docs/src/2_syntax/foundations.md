@@ -6,7 +6,7 @@ Your input is always welcome and appreciated!
 
 In the following, you will find a quick cheat sheet covering the basic Julia syntax.
 You will see that Julia's syntax is similar to `Matlab`, `Python`, and `R` (in this order).
-We recommend that you quickly **skim** this cheat sheet and do the exercises at the and of this chapter.
+We recommend that you quickly **skim** this cheat sheet and do the exercises at the end of this chapter.
 You might want to keep this page open in another tab to have it as a reference at your disposal.
 There is a collection of side-by-side comparisons of Julia and R, Python or Matlab in the Additional Resources section of the Additional Materials chapter.
 Because these are more comprehensive, you should not need them during the workshop.
@@ -100,7 +100,7 @@ subtracted_vectors = first_vector - second_vector
 ```
 
 
-Vectors can be concetenated with the `vcat` function or the `;` operator:
+Vectors can be concatenated with the `vcat` function or the `;` operator:
 
 ```@example variables
 concatenated_vector = vcat(first_vector, second_vector)
