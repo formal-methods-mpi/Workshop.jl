@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Foundations Revisited · A fresh approach to scientific computing</title><meta name="title" content="Foundations Revisited · A fresh approach to scientific computing"/><meta property="og:title" content="Foundations Revisited · A fresh approach to scientific computing"/><meta property="twitter:title" content="Foundations Revisited · A fresh approach to scientific computing"/><meta name="description" content="Documentation for A fresh approach to scientific computing."/><meta property="og:description" content="Documentation for A fresh approach to scientific computing."/><meta property="twitter:description" content="Documentation for A fresh approach to scientific computing."/><meta property="og:url" content="https://formal-methods-mpi.github.io/Workshop.jl/5_additional/extensive-foundations/"/><meta property="twitter:url" content="https://formal-methods-mpi.github.io/Workshop.jl/5_additional/extensive-foundations/"/><link rel="canonical" href="https://formal-methods-mpi.github.io/Workshop.jl/5_additional/extensive-foundations/"/><script data-outdated-warner src="../../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.050/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../search_index.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="A fresh approach to scientific computing logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="A fresh approach to scientific computing logo"/></a><div class="docs-package-name"><span class="docs-autofit"><a href="../../">A fresh approach to scientific computing</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../0_preparation/preparation/">Chapter 0: Preparation</a></li><li><input class="collapse-toggle" id="menuitem-3" type="checkbox"/><label class="tocitem" for="menuitem-3"><span class="docs-label">Chapter 1: Workflow</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../1_workflow/usage/">Working with Julia in VSCode</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-4" type="checkbox"/><label class="tocitem" for="menuitem-4"><span class="docs-label">Chapter 2: Syntax</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../2_syntax/foundations/">Chapter 2: Theory</a></li><li><a class="tocitem" href="../../2_syntax/exercise/">Chapter 2: Exercise</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-5" type="checkbox"/><label class="tocitem" for="menuitem-5"><span class="docs-label">Chapter 3: Types</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../3_types/types/">Chapter 3: Theory</a></li><li><a class="tocitem" href="../../3_types/exercise/">Chapter 3: Exercise</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-6" type="checkbox"/><label class="tocitem" for="menuitem-6"><span class="docs-label">Chapter 4: Multiple Dispatch</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../../4_dispatch/dispatch/">Chapter 4: Theory</a></li><li><a class="tocitem" href="../../4_dispatch/exercise/">Chapter 4: Exercise</a></li></ul></li><li><input class="collapse-toggle" id="menuitem-7" type="checkbox"/><label class="tocitem" for="menuitem-7"><span class="docs-label">Additional Materials</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="../additional-materials/">Additional Materials</a></li><li><a class="tocitem" href="../dual/">Automatic Differentiation</a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Foundations Revisited</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Foundations Revisited</a></li></ul></nav><div class="docs-right"><a class="docs-navbar-link" href="https://github.com/formal-methods-mpi/Workshop.jl/blob/main/docs/src/5_additional/extensive-foundations.md#" title="Edit source on GitHub"><span class="docs-icon fa-solid"></span></a><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="Foundations-Revisited"><a class="docs-heading-anchor" href="#Foundations-Revisited">Foundations Revisited</a><a id="Foundations-Revisited-1"></a><a class="docs-heading-anchor-permalink" href="#Foundations-Revisited" title="Permalink"></a></h1><p>Welcome back! If you&#39;re reading this, it may be because you encountered some difficulties in the previous sections and got stuck, or simply desire additional instruction because you found our <a href="../../2_syntax/foundations/#Syntax-cheat-sheet">Syntax cheat sheet</a> to be too brief for your needs. Or maybe you&#39;re just curious and want to learn more about the Julia language. Please notice that this chapter is just an extended version of the Syntax cheat sheet, and therefore the content might feel redundant if you carefully read the cheatsheet. However, if you are new to programming or got overwhelmed, some repetition might be helpful to you.</p><p>Before diving into this chapter, we want to encourage you to ...</p><ul><li>Initially embark on the standard workshop route.</li><li>Connect with our moderators if certain areas prove tough.</li><li>If you already finished the rest of the Workshop, explore the Julia universe with some suggestions in our Resources section, instead of spending too much time here.</li></ul><h2 id="Variable-assignment"><a class="docs-heading-anchor" href="#Variable-assignment">Variable assignment</a><a id="Variable-assignment-1"></a><a class="docs-heading-anchor-permalink" href="#Variable-assignment" title="Permalink"></a></h2><p>In Julia, variables are used to store data and represent values in your program. Variables have a name and are assigned a value using the assignment operator <code>=</code>. Julia supports both regular variable names and Unicode variable names.</p><pre><code class="language-julia hljs">x = 1
+my_variable = &quot;awesome&quot;
+φ = 1.618</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">1.618</code></pre><h2 id="Unicode-variable-names"><a class="docs-heading-anchor" href="#Unicode-variable-names">Unicode variable names</a><a id="Unicode-variable-names-1"></a><a class="docs-heading-anchor-permalink" href="#Unicode-variable-names" title="Permalink"></a></h2><p>Unicode variables allow you to use a wider range of characters, including mathematical symbols, Greek letters, and other special characters. To create a Unicode variable, type a backslash <code>\</code> followed by the Unicode character name, and then press the <code>Tab</code> key to convert it into the corresponding Unicode symbol. For example, type <code>\alpha</code> and then press <code>Tab</code> to create the <code>α</code> variable. If you are interested you can find a <a href="https://docs.julialang.org/en/v1/manual/unicode-input/">table of all available unicode characters</a> and how to type them out in the Julia documentation.</p><pre><code class="language-julia hljs">α = 0.05
+β₁ = 1.2
+Δt = 0.01</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">0.01</code></pre><h3 id="Exercises"><a class="docs-heading-anchor" href="#Exercises">Exercises</a><a id="Exercises-1"></a><a class="docs-heading-anchor-permalink" href="#Exercises" title="Permalink"></a></h3><ol><li>Assign the <code>Integer</code> value <code>42</code> to a variable named <code>the_answer_to_life</code>.</li><li>Assign the <code>String</code> <code>&quot;Julia is fun!&quot;</code> to a variable named <code>yay</code>.</li><li>Assign the value of <code>1 + √2</code> divided by <code>2</code> to the variable <code>φ</code> (phi). Remember to use the Unicode character: type <code>\phi</code> or <code>\sqrt</code> and press <code>Tab</code> to convert it.</li></ol><details>
+<summary>Show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">    # 1. Assign the integer value 42 to a variable named the_answer_to_life.
+    the_answer_to_life = 42
+
+    # 2. Assign the string &quot;Julia is fun!&quot; to a variable named yay.
+    yay = &quot;Julia is fun!&quot;
+
+    # 3. Assign the value of 1 + √2 divided by 2 to the variable φ (phi).
+    φ = (1 + sqrt(2)) / 2
+
+    # Print out the variables.
+    println(&quot;The answer to life: &quot;, the_answer_to_life)
+    println(&quot;Yay: &quot;, yay)
+    println(&quot;Phi: &quot;, φ)</code></pre></div></div></details><h2 id="Functions"><a class="docs-heading-anchor" href="#Functions">Functions</a><a id="Functions-1"></a><a class="docs-heading-anchor-permalink" href="#Functions" title="Permalink"></a></h2><p>Excellent! Now that you have an understanding of  variables, let&#39;s dive into the topic of functions.</p><p>In programming, functions are reusable blocks of code that serve a specific purpose. They play a crucial role in organizing and modularizing code, which in turn enhances its readability and maintainability. For instance, if you&#39;ve written a chunk of code that performs a specific task or multiple tasks, it would be beneficial to break down the code into individual functions and give each a descriptive name. This approach makes your code more comprehensible and easier to work with. Functions also enable code reuse, minimizing redundancy and simplifying updates, which can save time and effort in the long run.</p><p>The basic syntax for defining a function in Julia is as follows:</p><pre><code class="language-julia hljs">function function_name(arguments)
+    # function body
+    return output
+end</code></pre><p>The <code>return</code> keyword plays a vital role in specifying the value that a <code>function</code> should output. When no return statement is explicitly provided, the function will return the value of the last expression evaluated in the function body.</p><p>However, it is generally good practice to include a <code>return</code> statement when defining functions using the <code>function</code> keyword, even if the function returns <code>nothing</code>. This approach helps to eliminate ambiguity and ensures that the function&#39;s expected output is clear to anyone who reads it.</p><p>For example:</p><pre><code class="language-julia hljs">function add(x, y)
+    return x + y
+end</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">add (generic function with 1 method)</code></pre><p>You can also write:</p><pre><code class="language-julia hljs">my_function(arguments) = &quot;function body&quot;</code></pre><p>For example:</p><pre><code class="language-julia hljs">square(x) = x * x</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">square (generic function with 1 method)</code></pre><h3 id="Exercises-2"><a class="docs-heading-anchor" href="#Exercises-2">Exercises</a><a class="docs-heading-anchor-permalink" href="#Exercises-2" title="Permalink"></a></h3><ol><li>Write a function called divide that takes two arguments and returns the result of dividing the first argument by the second.</li><li>Write a function called cube that takes one argument and returns the cube of the input number.</li><li>Write a function that checks if a number is even. The function should take one argument and return a <code>Bool</code>.</li></ol><details>
+<summary>Show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs"># 1. Write a function called divide that takes two arguments and returns the result of dividing the first argument by the second.
+function divide(a, b)
+    return a / b
+end
+
+# 2. Write a function called cube that takes one argument and returns the cube of the input number.
+cube(x) = x ^ 3
+
+# 3. Write a function that checks if a number is even. The function should take one argument and return a `Bool`.
+function is_even(n)
+    return n % 2 == 0
+end</code></pre></div></div></details><h2 id="Vectors"><a class="docs-heading-anchor" href="#Vectors">Vectors</a><a id="Vectors-1"></a><a class="docs-heading-anchor-permalink" href="#Vectors" title="Permalink"></a></h2><p>In Julia, vectors are a fundamental data structure used to store and manipulate collections of values. A vector is a one-dimensional array that can store elements of the same type (e.g., integers, floating-point numbers, or strings). Vectors are useful for representing and processing sequences of data, such as time series, feature vectors, or lists of names.</p><p>To create a vector in Julia, you can use square brackets [] and separate the elements by commas. For example, to create a vector of integers, you would write:</p><pre><code class="language-julia hljs">integer_vector = [1, 2, 3, 4, 5]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">5-element Vector{Int64}:
+ 1
+ 2
+ 3
+ 4
+ 5</code></pre><p>You can access elements of a vector by specifying the index in square brackets. Note that Julia uses 1-based indexing, which means the first element has an index of 1:</p><pre><code class="language-julia hljs">first_element = integer_vector[1]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">1</code></pre><p>You can also assign a new value to an element of a vector by specifying the index in square brackets and using the assignment operator:</p><pre><code class="language-julia hljs">integer_vector[1] = 10</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">10</code></pre><p>However, you cannot assign a new value to an element of a vector if the vector is of a fixed size. For example, if you try to assign a value to index 6 you will get an <code>BoundsError</code>. To add a new element to a vector, you can use the <code>push!</code> function:</p><pre><code class="language-julia hljs">push!(integer_vector, 6)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">6-element Vector{Int64}:
+ 10
+  2
+  3
+  4
+  5
+  6</code></pre><p>Notice the exclamation mark at the end of the function name. This is a convention in Julia that indicates that the function mutates its arguments. This means that the function modifies the original data passed as an argument instead of creating a new copy of the data.</p><p>This will already help you to predict the behavior of the <code>pop!</code> function:</p><pre><code class="language-julia hljs">last_element = pop!(integer_vector)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">6</code></pre><p>Lets create two vectors and see what we can do with them:</p><pre><code class="language-julia hljs">vector1 = [1, 2, 3]
+vector2 = [4, 5, 6]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">3-element Vector{Int64}:
+ 4
+ 5
+ 6</code></pre><p>When you use standard arithmetic operators (+, -) on vectors, Julia performs element-wise operations.</p><pre><code class="language-julia hljs">added_vectors = vector1 + vector2
+subtracted_vectors = vector1 - vector2</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">3-element Vector{Int64}:
+ -3
+ -3
+ -3</code></pre><p>Scalar multiplication and division using the standard arithmetic operators (*, /):</p><pre><code class="language-julia hljs">multiplied_vector = 2 * vector1
+divided_vector = vector1 / 2</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">3-element Vector{Float64}:
+ 0.5
+ 1.0
+ 1.5</code></pre><p>Vectors can be concatenated with the <code>vcat</code> function or the <code>;</code> operator:</p><pre><code class="language-julia hljs">concatenated_vector = vcat(vector1, vector2)
+concatenated_vector = [vector1; vector2]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">6-element Vector{Int64}:
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6</code></pre><p>However, when we want to multiply two vectors like this:</p><pre><code class="language-julia hljs">multiplied_vectors = vector1 * vector2</code></pre><pre><code class="nohighlight hljs">MethodError: no method matching *(::Vector{Int64}, ::Vector{Int64})</code></pre><p>We get a <code>MethodError</code> because the <code>*</code> operator is not defined for <code>Vector</code>s.</p><p>Now, it depends on what we mean when we want to multiply two vectors. If we want to perform an element-wise multiplication, we need to use the broadcast <code>.</code> operator:</p><pre><code class="language-julia hljs">vector1 .* vector2</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">3-element Vector{Int64}:
+  4
+ 10
+ 18</code></pre><p>However, maybe you want to perform the dot product, that is related to matrix multiplication. It is also known as the scalar product, because it always returns a single number, i.e., a scalar. We can do this with the <code>dot</code> function or the <code>⋅</code> operator from the LinearAlgebra package:</p><pre><code class="language-julia hljs">using LinearAlgebra
+dot_product = dot(vector1, vector2)
+dot_product = vector1 ⋅ vector2</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">32</code></pre><p>Now, at last we can transpose a vector with the <code>transpose</code> function or the <code>&#39;</code> operator:</p><pre><code class="language-julia hljs">transposed_vector = transpose(vector1)
+transposed_vector = vector1&#39;</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">1×3 adjoint(::Vector{Int64}) with eltype Int64:
+ 1  2  3</code></pre><p>Equipped with the transpose operator <code>&#39;</code>, we can now multiply two vectors:</p><pre><code class="language-julia hljs">dot_product = vector1&#39; * vector2</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">32</code></pre><p>Arithmetically, this is the same as the dot product!</p><p>Another important concept before we move on is the concept of sequences in Julia.</p><p>In programming, sequences are ordered collections of elements, typically used to represent a series of values or data points. Sequences are essential in various applications, such as iterating through data, generating series of numbers, and organizing data in specific orders.</p><p>In Julia, sequences can be created using ranges. Ranges represent a series of evenly spaced values and can be created using the colon operator <code>:</code> or the <code>range</code> function.</p><p>For example, you can create a <code>range</code> (Start:End) of <code>Integer</code>s from 1 to 10:</p><pre><code class="language-julia hljs">integer_sequence = 1:10</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">1:10</code></pre><p>To create a <code>range</code> with a specific step size (Start:Step:End), you can use the following syntax:</p><pre><code class="language-julia hljs">even_sequence = 2:2:10</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">2:2:10</code></pre><p>To convert a sequence to a <code>Vector</code>, you can use the <code>collect</code> function:</p><pre><code class="language-julia hljs">integer_vector = collect(integer_sequence)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">10-element Vector{Int64}:
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10</code></pre><pre><code class="language-julia hljs">integer_vector = collect(even_sequence)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">5-element Vector{Int64}:
+  2
+  4
+  6
+  8
+ 10</code></pre><h3 id="Exercises-3"><a class="docs-heading-anchor" href="#Exercises-3">Exercises</a><a class="docs-heading-anchor-permalink" href="#Exercises-3" title="Permalink"></a></h3><ol><li>Create a <code>Vector</code> of strings and concatenate it with another <code>Vector</code> of <code>String</code>s.</li><li>Create a <code>Vector</code> and perform an element-wise square of it.</li><li>Calculate the scalar product of the <code>Vector</code> in the way you like.</li><li>Read out an index, set an index, append an element, and pop an element from a vector.</li></ol><details>
+<summary>Show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">    # 1. Create a vector of strings and concatenate it with another vector of strings.
+    somestrings = [&quot;this&quot;, &quot;is&quot;, &quot;a&quot;, &quot;vector&quot;]
+    somemore = [&quot;this&quot;, &quot;is&quot;, &quot;another&quot;, &quot;vector&quot;]
+    vcat(somestrings, somemore)
+
+    # 2. Create a vector and perform an element-wise square of it.
+    avec = [1, 2, 3]
+    avec .^2
+
+    # 3. Calculate the scalar product of the vector in the way you like.
+    42 * avec
+
+    # 4. Read out an index, set an index, append an element, and pop an element from a vector.
+    avec[1]
+
+    avec[2] = 4
+    avec
+
+    push!(avec, 5)
+    pop!(avec)</code></pre></div></div></details><h1 id="Matrices"><a class="docs-heading-anchor" href="#Matrices">Matrices</a><a id="Matrices-1"></a><a class="docs-heading-anchor-permalink" href="#Matrices" title="Permalink"></a></h1><p>In Julia, matrices are a fundamental data structure used to store and manipulate two-dimensional arrays of values. A matrix is a rectangular grid of elements, organized into rows and columns, where each element can be accessed by its row and column indices. Matrices are useful for representing and processing structured data, such as images, tables, or linear systems of equations.</p><p>To create a <code>Matrix</code> in Julia, you can use square brackets <code>[]</code> and separate the elements within each row by spaces or commas, and separate the rows by semicolons <code>;</code>. For example, to create a square matrix of integers, you would write:</p><pre><code class="language-julia hljs">square_matrix = [1 2 3; 4 5 6; 7 8 9]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">3×3 Matrix{Int64}:
+ 1  2  3
+ 4  5  6
+ 7  8  9</code></pre><p>You can access elements of a matrix by specifying the row and column indices in square brackets, separated by a comma. Note that Julia uses 1-based indexing, which means the first row and column have an index of 1:</p><pre><code class="language-julia hljs">upper_left_element = square_matrix[1, 1]
+lower_right_element = square_matrix[3, 3]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">9</code></pre><p>As you can see, many things are the same as with vectors, which is not surprising, since vectors are just 1-dimensional matrices.</p><p>Lets define a 2x3 <code>Matrix</code> ...</p><pre><code class="language-julia hljs">non_square_matrix = [1 2 3; 4 5 6]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">2×3 Matrix{Int64}:
+ 1  2  3
+ 4  5  6</code></pre><p>... and transpose it with the <code>transpose</code> function or the quote <code>&#39;</code> operator:</p><pre><code class="language-julia hljs">transposed_matrix = transpose(non_square_matrix)
+transposed_matrix = non_square_matrix&#39;</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">3×2 adjoint(::Matrix{Int64}) with eltype Int64:
+ 1  4
+ 2  5
+ 3  6</code></pre><p>Let&#39;s create two matrices and see what we can do with them:</p><pre><code class="language-julia hljs">matrix1 = [1 2; 3 4]
+matrix2 = [5 6; 7 8]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">2×2 Matrix{Int64}:
+ 5  6
+ 7  8</code></pre><p>We already know from the chapter about <code>Vector</code>s that we can use the vcat function or semicolon <code>;</code> for vertical concatenation:</p><pre><code class="language-julia hljs">vertically_concatenated_matrix = vcat(matrix1, matrix2)  # Returns [1 2; 3 4; 5 6; 7 8]
+vertically_concatenated_matrix = [matrix1; matrix2]      # Also returns [1 2; 3 4; 5 6; 7 8]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">4×2 Matrix{Int64}:
+ 1  2
+ 3  4
+ 5  6
+ 7  8</code></pre><p>Concatenate two matrices horizontally using the hcat function or space <code></code> :</p><pre><code class="language-julia hljs">concatenated_matrix = hcat(matrix1, matrix2)
+concatenated_matrix = [matrix1 matrix2]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">2×4 Matrix{Int64}:
+ 1  2  5  6
+ 3  4  7  8</code></pre><h3 id="Exercises-4"><a class="docs-heading-anchor" href="#Exercises-4">Exercises</a><a class="docs-heading-anchor-permalink" href="#Exercises-4" title="Permalink"></a></h3><ol><li>Define two square matrices and add and subtract them with each other.</li><li>Perform an element-wise multiplication of two matrices and then a matrix multiplication.</li><li>Write a vector with spaces, e.g.,: [1 2 3]. Is that really a vector?</li><li>Find out what else you can do with matrices by writing <code>methodswith(Matrix)</code> in the REPL.</li><li>Look into the documentation of <code>?something</code> you are interested in, then try it out in the REPL.</li></ol><details>
+<summary>Show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">    # 1. Define two square matrices and add and subtract them with each other.
+    matrixA = [1 2; 3 4]
+    matrixB = [5 6; 7 8]
+    matrixAddition = matrixA + matrixB
+    matrixSubtraction = matrixA - matrixB
+
+    # 2. Perform an element-wise multiplication of two matrices and then a matrix multiplication.
+    elementWiseMultiplication = matrixA .* matrixB
+    matrixMultiplication = matrixA * matrixB
+
+    # 3. Write a vector with spaces, e.g.,: [1 2 3]. Is that really a vector?
+    vec = [1 2 3]
+    println(&quot;1D Matrix: &quot;)
+    println(vec)
+    vec = [1, 2, 3]
+
+    # Note: For the 4th and 5th task, you&#39;ll have to use Julia&#39;s REPL (Read-Eval-Print Loop).
+    # It&#39;s not possible to run these commands here.
+
+    # 4. methodswith(Matrix) # Uncomment this line in the Julia REPL to get the methods for Matrix.
+
+    # 5. ?rand # Uncomment this line in the Julia REPL to get the documentation for the rand function.
+</code></pre></div></div></details><h3 id="Arrays"><a class="docs-heading-anchor" href="#Arrays">Arrays</a><a id="Arrays-1"></a><a class="docs-heading-anchor-permalink" href="#Arrays" title="Permalink"></a></h3><p>Without going too much into the details, it is important to know about the concept of arrays in Julia.</p><p>Arrays are a fundamental data structure in Julia that can be used to represent and manipulate multi-dimensional collections of values. Vectors and matrices are special cases of arrays, where vectors are one-dimensional arrays and matrices are two-dimensional arrays. Arrays can have more than two dimensions, allowing you to work with higher-dimensional data structures in a consistent and efficient way.</p><p>The concept of arrays generalizes vectors and matrices by extending their properties and operations to multiple dimensions. This means that most of the functions and operations you have learned for vectors and matrices can be applied to arrays with higher dimensions as well.</p><h2 id="Control-Flow"><a class="docs-heading-anchor" href="#Control-Flow">Control Flow</a><a id="Control-Flow-1"></a><a class="docs-heading-anchor-permalink" href="#Control-Flow" title="Permalink"></a></h2><p>Control flow refers to the order in which statements or instructions are executed in a program. It is an essential concept in programming, as it allows you to create more dynamic and flexible code. Two fundamental control flow structures are loops and conditional statements. Loops allow you to repeat a block of code multiple times, while conditional statements enable you to execute a block of code only if certain conditions are met.</p><h2 id="For-Loops"><a class="docs-heading-anchor" href="#For-Loops">For Loops</a><a id="For-Loops-1"></a><a class="docs-heading-anchor-permalink" href="#For-Loops" title="Permalink"></a></h2><p>For loops in Julia are used to iterate over a range of values or the elements of a collection, such as an <code>Array</code>. The syntax for a <code>for</code> loop is as follows:</p><pre><code class="language-julia hljs">for variable in collection
+    # Code to be executed for each value in the collection
+end</code></pre><p>For example:</p><pre><code class="language-julia hljs">for i in 1:5
+    println(i^2)
+end</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">1
+4
+9
+16
+25</code></pre><p>If statements in Julia are used to execute a block of code only if a specific condition is met. The syntax for an <code>if</code> statement is as follows:</p><pre><code class="language-julia hljs">if condition
+    # Code to be executed if the condition is true
+end</code></pre><p>You can also use <code>elseif</code> and <code>else</code> to test multiple conditions:</p><pre><code class="language-julia hljs">if condition1
+    # Code to be executed if condition1 is true
+elseif condition2
+    # Code to be executed if condition1 is false and condition2 is true
+else
+    # Code to be executed if both condition1 and condition2 are false
+end</code></pre><p>For example, to check if a number is positive, negative, or zero:</p><pre><code class="language-julia hljs">number = -3
+
+if number &gt; 0
+    println(&quot;The number is positive&quot;)
+elseif number &lt; 0
+    println(&quot;The number is negative&quot;)
+else
+    println(&quot;The number is zero&quot;)
+end</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">The number is negative</code></pre><p>Let&#39;s remember what we learned about functions!</p><pre><code class="language-julia hljs">function classify_sign(number)
+    if number &gt; 0
+        println(&quot;The number is positive&quot;)
+    elseif number &lt; 0
+        println(&quot;The number is negative&quot;)
+    else
+        println(&quot;The number is zero&quot;)
+    end
+end</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">classify_sign (generic function with 1 method)</code></pre><p>Now we can use the function to classify any number we want:</p><pre><code class="language-julia hljs">classify_sign(3)
+classify_sign(-3)
+classify_sign(0)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">The number is positive
+The number is negative
+The number is zero</code></pre><h3 id="Exercises-5"><a class="docs-heading-anchor" href="#Exercises-5">Exercises</a><a class="docs-heading-anchor-permalink" href="#Exercises-5" title="Permalink"></a></h3><ol><li>Write a for loop that prints the first 10 even numbers.</li><li>Create a 2x2 Matrix and print out the value of each index. Tip: use the <code>length</code> function.</li><li>Write a nested loop with <code>i</code> and <code>j</code> and add each index if both are equal and prints the result.</li><li>Create a 3-dimension and 4-dimensional array and call <code>size</code> and <code>length</code> on them.</li></ol><details>
+<summary>Show solution</summary>
+<br><div class="admonition is-success"><header class="admonition-header">Solution</header><div class="admonition-body"><pre><code class="language-julia hljs">    # 1. Write a for loop that prints the first 10 even numbers.
+    println(&quot;First 10 even numbers: &quot;)
+    for i in 1:10
+        println(2 * i)
+    end
+
+    # 2. Create a 2x2 Matrix and print out the value of each index. Tip: use the `length` function.
+    matrix = [1 2; 3 4]
+    println(&quot;Values in the 2x2 matrix: &quot;)
+    for i in 1:length(matrix)
+        println(matrix[i])
+    end
+
+    # 3. Write a nested loop with `i` and `j` and add each index if both are equal and prints the result.
+    println(&quot;Results from nested loop: &quot;)
+    for i in 1:5
+        for j in 1:5
+            if i == j
+                println(i + j)
+            end
+        end
+    end
+
+    # 4. Create a 3-dimension and 4-dimensional array and call `size` and `length` on them.
+    threeDArray = rand(3, 3, 3)
+    fourDArray = rand(3, 3, 3, 3)
+    println(&quot;Size and length of the 3D array: &quot;)
+    println(size(threeDArray))
+    println(length(threeDArray))
+    println(&quot;Size and length of the 4D array: &quot;)
+    println(size(fourDArray))
+    println(length(fourDArray))</code></pre></div></div></details></article><nav class="docs-footer"><p class="footer-message">Got a question? Something confuses you? <a href="https://github.com/formal-methods-mpi/Workshop.jl/issues/new">Don&#39;t hesitate to open an issue to ask for help!</a></p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="auto">Automatic (OS)</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.1.2 on <span class="colophon-date" title="Wednesday 8 November 2023 10:53">Wednesday 8 November 2023</span>. Using Julia version 1.9.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
