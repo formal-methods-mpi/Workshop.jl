@@ -15,6 +15,10 @@ Julia is not only known for its ease of use, but also its incredible speed and f
 3. Advanced support for Unicode and $\LaTeX$ characters: Julia makes it simple to incorporate Unicode and $\LaTeX$ characters into your code. Say goodbye to "alpha" and "beta" and embrace the elegance of α and β.
 4. Rapid prototyping: With Julia, it's easy to add and prototype new algorithms right from the start, allowing you to quickly create efficient, high-performance solutions.
 
+We think it is worthwile to learn Julia, even if you do not plan on using it every day because Julia taught us so much about how to be better programmers (including in other languages).
+
+"A language that doesn't affect the way you think about programming is not worth knowing." --- Alan Perlis
+
 # How to get started
 
 As this is an asynchronous workshop, you might be reading this before, during, or after the workshop. Regardless of when you're engaging with the material, we hope you'll find this workshop useful and informative.
