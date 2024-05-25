@@ -17,7 +17,7 @@ Julia is not only known for its ease of use, but also its incredible speed and f
 
 We think it is worthwile to learn Julia, even if you do not plan on using it every day because Julia taught us so much about how to be better programmers (including in other languages).
 
-"A language that doesn't affect the way you think about programming is not worth knowing." --- Alan Perlis
+"A language that doesn't affect the way you think about programming is not worth knowing." — Alan Perlis
 
 # How to get started
 
